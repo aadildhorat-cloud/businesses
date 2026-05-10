@@ -383,6 +383,14 @@ footer { background: linear-gradient(160deg, #8B1E1E 0%, #5C1212 100%); color: #
           <div class="share-section"><a href="#" class="share-btn facebook" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" class="share-btn whatsapp" title="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a><a href="#" class="share-btn email" title="Share via Email"><i class="fas fa-envelope"></i></a></div>
         </div>
       </article>
+       <!-- Bake N Co -->
+      <article class="block" id="business-bake-n-co" data-niche="baking" data-location="johannesburg">
+        <a href="https://bakenco.hivetimes.co.za/" target="_blank" rel="noopener"><img src="images-logo/bakenco-logo.jpg" alt="Bake N Co" width="400" height="300" loading="lazy"></a>
+        <div class="info"><h3>Bake N Co</h3><p>Custom cakes and baked goods for special occasions</p>
+          <div class="block-actions"><a href="https://bakenco.hivetimes.co.za" class="cta-btn primary"><i class="fas fa-globe"></i> Visit Website</a></div>
+          <div class="share-section"><a href="#" class="share-btn facebook"><i class="fab fa-facebook-f"></i></a><a href="#" class="share-btn whatsapp"><i class="fab fa-whatsapp"></i></a><a href="#" class="share-btn email"><i class="fas fa-envelope"></i></a></div>
+        </div>
+      </article>
          <!-- SweetLane -->
       <article class="block" id="business-sweetlane" data-niche="baking" data-location="johannesburg">
         <a href="https://sweetlane.hivetimes.co.za/" target="_blank" rel="noopener"><img src="images-logo/sweetlane-logo.jpg" alt="Sweet Lane" width="400" height="300" loading="lazy"></a>
@@ -392,7 +400,7 @@ footer { background: linear-gradient(160deg, #8B1E1E 0%, #5C1212 100%); color: #
         </div>
       </article>
       <!-- BUTCHER BLOCK -->
-      <article class="block" id="business-butcher-block" data-niche="food-beverages" data-location="leslie">
+      <article class="block" id="business-butcher-block" data-niche="food-beverages" data-location="johannesburg">
         <a href="https://butcherblock.hivetimes.co.za/" target="_blank" rel="noopener"><img src="images-logo/butcherblock-logo.jpg" alt="Butcher Block Wholesale" width="400" height="300" loading="lazy"></a>
         <div class="info"><h3>Butcher Block Wholesale</h3><p>Premium meat supplier for retailers and foodservice</p>
           <div class="block-actions"><a href="https://butcherblock.hivetimes.co.za" class="cta-btn primary"><i class="fas fa-globe"></i> Visit Website</a>
@@ -763,7 +771,7 @@ fetch('slider.html').then(res => res.ok ? res.text() : Promise.reject('slider.ht
   if (typeof Swiper !== 'undefined') {
     new Swiper('.mySwiper', {
       spaceBetween: 0, centeredSlides: true,
-      autoplay: { delay: 3000, disableOnInteraction: false },
+      autoplay: { delay: 1500, disableOnInteraction: false },
       pagination: { el: '.swiper-pagination', clickable: true },
       navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
       loop: true, effect: 'fade', fadeEffect: { crossFade: true }
