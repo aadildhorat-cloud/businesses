@@ -44,6 +44,179 @@ gtag('config', 'G-DTPGZ964FD');
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 <style>
+  /* ===== 🏢 BUSINESS CATEGORY SECTION - MOBILE OPTIMIZED ===== */
+.business-categories {
+  padding: 1.5rem 0 2rem;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.category-section-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.category-section-title {
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.category-section-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--primary);
+  margin: 0.4rem auto 0;
+  border-radius: 3px;
+}
+
+.category-section-subtitle {
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 0.75rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.category-card {
+  background: var(--white);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 0.875rem 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 85px;
+}
+
+.category-card:hover,
+.category-card:focus {
+  border-color: var(--primary);
+  background: rgba(139, 0, 0, 0.03);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  outline: none;
+}
+
+.category-card .icon {
+  font-size: 1.5rem;
+  color: var(--primary);
+  transition: var(--transition);
+  line-height: 1;
+}
+
+.category-card:hover .icon,
+.category-card:focus .icon {
+  transform: scale(1.1);
+  color: var(--primary-dark);
+}
+
+.category-card span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--secondary);
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.category-card.active {
+  border-color: var(--primary);
+  background: rgba(139, 0, 0, 0.08);
+  box-shadow: 0 0 0 2px rgba(139, 0, 0, 0.1);
+}
+
+.category-card.active .icon {
+  color: var(--primary-dark);
+}
+
+.category-card.active span {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* Tablet - 4 columns */
+@media (max-width: 1024px) {
+  .category-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 0.625rem;
+  }
+  .category-card {
+    padding: 0.75rem 0.5rem;
+    min-height: 80px;
+  }
+  .category-card .icon { font-size: 1.4rem; }
+  .category-card span { font-size: 0.725rem; }
+}
+
+/* Mobile - 5 columns */
+@media (max-width: 768px) {
+  .business-categories { padding: 1.25rem 0 1.5rem; }
+  .category-section-header { margin-bottom: 1.25rem; }
+  .category-section-title { font-size: 1.4rem; }
+  .category-section-subtitle { font-size: 0.825rem; }
+  .category-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+  }
+  .category-card {
+    padding: 0.625rem 0.375rem;
+    min-height: 75px;
+    border-radius: 8px;
+    border-width: 1.5px;
+  }
+  .category-card .icon { font-size: 1.25rem; }
+  .category-card span { font-size: 0.65rem; line-height: 1.1; }
+}
+
+/* Small Mobile - 4 columns */
+@media (max-width: 480px) {
+  .category-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.45rem;
+  }
+  .category-card {
+    padding: 0.5rem 0.3125rem;
+    min-height: 70px;
+    gap: 0.375rem;
+  }
+  .category-card .icon { font-size: 1.125rem; }
+  .category-card span { font-size: 0.625rem; }
+}
+
+/* Extra Small Mobile - 3 columns */
+@media (max-width: 360px) {
+  .category-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.4rem;
+  }
+  .category-card {
+    padding: 0.5rem 0.25rem;
+    min-height: 68px;
+  }
+  .category-card .icon { font-size: 1.1rem; }
+  .category-card span { font-size: 0.6rem; }
+}
   /* === FUTURISTIC RED HIVE PATTERN - VISIBLE & PROFESSIONAL === */
 #featured-products-section {
     background-color: #FFF2F2;
@@ -266,19 +439,116 @@ footer { background: linear-gradient(160deg, #8B1E1E 0%, #5C1212 100%); color: #
 /* 📱 RESPONSIVE */
 @media (max-width: 1024px) { .filter-dropdown { max-width: 180px; } }
 @media (max-width: 768px) {
-  .header-inner { justify-content: space-between; padding: 0 12px; }
-  .search-bar { order: 4; max-width: 100%; width: 100%; margin-top: 0.75rem; }
-  .logo img { height: 38px; } .logo-text { display: none; }
+  .header-inner { 
+    justify-content: flex-start; 
+    padding: 0 10px; 
+    flex-wrap: nowrap; /* Force single row */
+    gap: 8px;
+    align-items: center;
+  }
+  
+  /* Mobile order: Logo (1) → Search (2) → Hamburger (3) */
+  .logo { 
+    order: 1; 
+    flex-shrink: 0; 
+    margin-left: 0; 
+  }
+  .logo img { 
+    height: 36px; 
+    width: auto; 
+  } 
+  .logo-text { display: none; }
+  
+  .search-bar { 
+    order: 2; 
+    flex: 1; 
+    min-width: 0; /* Allows flex item to shrink below content size */
+    max-width: none;
+    margin: 0;
+  }
+  .search-bar input {
+    padding: 8px 12px 8px 36px;
+    font-size: 0.85rem;
+    border-radius: 30px;
+    height: 38px;
+  }
+  .search-bar i {
+    left: 12px;
+    font-size: 0.8rem;
+  }
+  
+  .hamburger { 
+    order: 3; 
+    flex-shrink: 0;
+    padding: 8px;
+    margin-left: 0;
+  }
+  .hamburger span {
+    width: 22px;
+    height: 2px;
+  }
+  
+  /* Keep grid and other mobile styles */
   .businesses-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-  .block { padding: 1.25rem; } .block h3 { font-size: 1rem; } .cta-btn { padding: 8px 14px; font-size: 0.8rem; }
+  .block { padding: 1.25rem; } 
+  .block h3 { font-size: 1rem; } 
+  .cta-btn { padding: 8px 14px; font-size: 0.8rem; }
   .filter-bar-compact { padding: 0.5rem; gap: 8px; }
   .footer-grid { grid-template-columns: 1fr; text-align: center; }
   .footer-brand, .footer-links, .social-links { justify-content: center; }
 }
 @media (max-width: 480px) {
-  .businesses-grid { grid-template-columns: 1fr; }
-  .block-actions { flex-direction: column; }
-  .cta-btn { width: 100%; justify-content: center; }
+ .businesses-grid { 
+    grid-template-columns: repeat(2, 1fr); /* 🔥 Exactly 2 columns */
+    gap: 0.75rem; /* Tight but professional spacing */
+    padding: 0 8px 2rem; /* Add horizontal padding to prevent edge crowding */
+  }
+  
+  .block {
+    padding: 0.9rem 0.75rem; /* Compact padding for 2-col layout */
+    border-radius: 10px;
+  }
+  
+  .block img {
+    aspect-ratio: 4 / 3; /* Slightly taller images for better mobile visibility */
+    border-radius: 6px;
+    margin-bottom: 0.75rem;
+  }
+  
+  .block h3 {
+    font-size: 0.9rem;
+    min-height: 2.2rem; /* 2 lines max */
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+  }
+  
+  .block p {
+    font-size: 0.75rem;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    margin-bottom: 0.75rem;
+  }
+  
+  .block-actions {
+    gap: 4px;
+    padding-top: 0.25rem;
+  }
+  
+  .cta-btn {
+    padding: 6px 10px;
+    font-size: 0.7rem;
+    border-radius: 40px;
+  }
+  
+  .share-section {
+    gap: 6px;
+    margin-top: 0.5rem;
+  }
+  .share-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
   .filter-dropdown { min-width: 140px; max-width: 100%; flex: 1; }
   .filter-menu { left: 50%; transform: translateX(-50%) translateY(-8px); min-width: 90vw; }
   .filter-menu.show { transform: translateX(-50%) translateY(0); }
@@ -367,11 +637,134 @@ footer { background: linear-gradient(160deg, #8B1E1E 0%, #5C1212 100%); color: #
 </div>
 <div class="active-filters-wrapper" id="activeFiltersWrapper"></div>
 <div id="resultsCount" class="results-count"></div>
-
+<!-- 🏢 BUSINESS CATEGORY BROWSER -->
+<section class="business-categories" aria-labelledby="categorySectionTitle">
+  <div class="container">
+    <div class="category-section-header">
+      <h2 id="categorySectionTitle" class="category-section-title">Explore  FeaturedBusiness </h2>
+      <p class="category-section-subtitle">
+        Browse trusted South African businesses by category. 
+        Click any category to filter the directory below.
+      </p>
+    </div>
+    
+    <div class="category-grid" role="list">
+      <!-- All Categories (Default Active) -->
+      <button class="category-card active" 
+              data-category="all" 
+              onclick="HiveDir.setNiche('all'); syncCategoryCards('all');" 
+              role="listitem" 
+              aria-pressed="true">
+        <span class="icon" aria-hidden="true">🐝</span>
+        <span>All Businesses</span>
+      </button>
+      
+      <!-- Automotive -->
+      <button class="category-card" 
+              data-category="automotive" 
+              onclick="HiveDir.setNiche('automotive'); syncCategoryCards('automotive');" 
+              role="listitem" 
+              aria-pressed="false">
+        <span class="icon" aria-hidden="true">🚗</span>
+        <span>Automotive</span>
+      </button>
+      
+      <!-- Baking & Bakery -->
+      <button class="category-card" 
+              data-category="baking" 
+              onclick="HiveDir.setNiche('baking'); syncCategoryCards('baking');" 
+              role="listitem" 
+              aria-pressed="false">
+        <span class="icon" aria-hidden="true">🍰</span>
+        <span>Baking</span>
+      </button>
+      
+      <!-- Clothing & Fashion -->
+      <button class="category-card" 
+              data-category="clothing" 
+              onclick="HiveDir.setNiche('clothing'); syncCategoryCards('clothing');" 
+              role="listitem" 
+              aria-pressed="false">
+        <span class="icon" aria-hidden="true">👕</span>
+        <span>Clothing</span>
+      </button>
+      
+      <!-- Wholesale & Cash & Carry -->
+      <button class="category-card" 
+              data-category="wholesale" 
+              onclick="HiveDir.setNiche('wholesale'); syncCategoryCards('wholesale');" 
+              role="listitem" 
+              aria-pressed="false">
+        <span class="icon" aria-hidden="true">📦</span>
+        <span>Wholesale</span>
+      </button>
+      
+      <!-- Furniture & Home -->
+      <button class="category-card" 
+              data-category="furniture" 
+              onclick="HiveDir.setNiche('furniture'); syncCategoryCards('furniture');" 
+              role="listitem" 
+              aria-pressed="false">
+        <span class="icon" aria-hidden="true">🛋️</span>
+        <span>Furniture</span>
+      </button>
+      
+      <!-- Food & Beverages -->
+      <button class="category-card" 
+              data-category="food-beverages" 
+              onclick="HiveDir.setNiche('food-beverages'); syncCategoryCards('food-beverages');" 
+              role="listitem" 
+              aria-pressed="false">
+        <span class="icon" aria-hidden="true">🍽️</span>
+        <span>Food & Bev</span>
+      </button>
+      
+      <!-- Electronics & Tech -->
+      <button class="category-card" 
+              data-category="electronics" 
+              onclick="HiveDir.setNiche('electronics'); syncCategoryCards('electronics');" 
+              role="listitem" 
+              aria-pressed="false">
+        <span class="icon" aria-hidden="true">💻</span>
+        <span>Electronics</span>
+      </button>
+      
+      <!-- Lighting & Electrical -->
+      <button class="category-card" 
+              data-category="lighting-electrical" 
+              onclick="HiveDir.setNiche('lighting-electrical'); syncCategoryCards('lighting-electrical');" 
+              role="listitem" 
+              aria-pressed="false">
+        <span class="icon" aria-hidden="true">💡</span>
+        <span>Electrical</span>
+      </button>
+      
+      <!-- Sweets & Confectionery -->
+      <button class="category-card" 
+              data-category="sweet-shop" 
+              onclick="HiveDir.setNiche('sweet-shop'); syncCategoryCards('sweet-shop');" 
+              role="listitem" 
+              aria-pressed="false">
+        <span class="icon" aria-hidden="true">🍬</span>
+        <span>Sweets</span>
+      </button>
+      
+      <!-- Cleaning Supplies -->
+      <button class="category-card" 
+              data-category="cleaning" 
+              onclick="HiveDir.setNiche('cleaning'); syncCategoryCards('cleaning');" 
+              role="listitem" 
+              aria-pressed="false">
+        <span class="icon" aria-hidden="true">🧼</span>
+        <span>Cleaning</span>
+      </button>
+    </div>
+  </div>
+</section>
 <main id="main-content" class="container">
   <h1 class="sr-only">Hive Times Local Business Directory</h1>
   <section id="businesses">
-    <h2 class="section-title">Featured Local Businesses</h2>
+    <h2 class="section-title"></h2>
     <div class="businesses-grid" id="businessGrid">
       <!-- N2 Auto Dealership -->
       <article class="block" id="business-n2-auto" data-niche="automotive" data-location="sandton">
@@ -788,6 +1181,44 @@ fetch('slider.html').then(res => res.ok ? res.text() : Promise.reject('slider.ht
   document.getElementById('sidebarYear').textContent = new Date().getFullYear();
   applyFilters();
 })();
+// === CATEGORY CARD SYNC HELPER ===
+// Syncs the visual active state of category cards with HiveDir filter state
+function syncCategoryCards(activeCategory) {
+  document.querySelectorAll('.category-card').forEach(card => {
+    const isActive = card.dataset.category === activeCategory;
+    card.classList.toggle('active', isActive);
+    card.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+  });
+}
+
+// === ENHANCE HIVE DIR TO SYNC CATEGORY CARDS ===
+// Wrap the original setNiche to also update category card visuals
+(function enhanceHiveDir() {
+  const originalSetNiche = window.HiveDir?.setNiche;
+  if (originalSetNiche) {
+    window.HiveDir.setNiche = function(value) {
+      originalSetNiche.call(this, value);
+      syncCategoryCards(value);
+    };
+  }
+  
+  // Also sync on page load from URL params or default state
+  document.addEventListener('DOMContentLoaded', () => {
+    // Sync with current filter state on load
+    const currentNiche = window.state?.niche || 'all';
+    syncCategoryCards(currentNiche);
+  });
+})();
+
+// === OPTIONAL: Add keyboard navigation support ===
+document.querySelectorAll('.category-card').forEach(card => {
+  card.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      card.click();
+    }
+  });
+});
 </script>
 </body>
 </html>
