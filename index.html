@@ -43,7 +43,137 @@ gtag('config', 'G-DTPGZ964FD');
 </script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+<!-- 🔗 Favicon -->
+<link rel="icon" type="image/png" href="images-logo/hive-times-logo.png">
+<link rel="apple-touch-icon" href="images-logo/hive-times-logo.png">
 <style>
+  /* ==========================================
+MOBILE-OPTIMIZED HIVE MODAL STYLES
+========================================== */
+:root {
+    --hive-yellow: #FFC107;
+    --hive-yellow-dark: #FFB300;
+    --hive-dark: #1a1a2e;
+    --hive-text: #2d2d2d;
+    --hive-text-light: #666666;
+    --hive-border: #e0e0e0;
+    --hive-bg: #ffffff;
+    --hive-success: #4CAF50;
+    --hive-error: #f44336;
+    --hive-radius: 16px;
+    --hive-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    --hive-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hive-modal-overlay {
+    position: fixed; inset: 0; z-index: 9999;
+    background: rgba(26, 26, 46, 0.85);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    display: flex; align-items: center; justify-content: center;
+    padding: 16px; opacity: 0; visibility: hidden;
+    transition: var(--hive-transition);
+}
+.hive-modal-overlay.active { opacity: 1; visibility: visible; }
+
+.hive-modal-content {
+    background: var(--hive-bg);
+    width: 100%; max-width: 480px; max-height: 90dvh;
+    border-radius: var(--hive-radius);
+    box-shadow: var(--hive-shadow);
+    position: relative; overflow: hidden;
+    transform: scale(0.95) translateY(20px);
+    transition: var(--hive-transition);
+    display: flex; flex-direction: column;
+}
+.hive-modal-overlay.active .hive-modal-content { transform: scale(1) translateY(0); }
+
+.hive-modal-header {
+    background: linear-gradient(135deg, var(--hive-yellow) 0%, var(--hive-yellow-dark) 100%);
+    padding: 24px 20px; text-align: center; position: relative;
+}
+.hive-modal-header h2 { color: var(--hive-dark); font-size: 26px; font-weight: 800; margin: 0; }
+.hive-modal-header p { color: #333; margin: 6px 0 0; font-size: 15px; opacity: 0.9; }
+.hive-modal-icon { font-size: 42px; display: block; margin-bottom: 8px; animation: hive-float 3s ease-in-out infinite; }
+@keyframes hive-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+.hive-close-btn {
+    position: absolute; top: 12px; right: 12px; width: 36px; height: 36px;
+    background: rgba(255,255,255,0.4); border: none; border-radius: 50%;
+    font-size: 22px; color: var(--hive-dark); cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: var(--hive-transition); z-index: 2;
+}
+.hive-close-btn:hover, .hive-close-btn:focus { background: rgba(255,255,255,0.7); transform: rotate(90deg); }
+
+.hive-modal-body { padding: 24px; overflow-y: auto; overscroll-behavior: contain; flex: 1; }
+.hive-step { transition: var(--hive-transition); }
+.hive-step.hidden { display: none; }
+.hive-step.fade-in { animation: hive-fadeUp 0.4s ease; }
+@keyframes hive-fadeUp { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+
+.hive-progress { display: flex; justify-content: center; gap: 8px; margin-bottom: 20px; }
+.hive-progress-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--hive-border); transition: var(--hive-transition); }
+.hive-progress-dot.active { background: var(--hive-yellow); transform: scale(1.4); box-shadow: 0 0 8px rgba(255, 193, 7, 0.5); }
+
+.hive-form-group { margin-bottom: 18px; }
+.hive-form-group label { font-weight: 600; font-size: 13px; color: var(--hive-text); display: block; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+.hive-form-group input, .hive-form-group textarea {
+    width: 100%; padding: 14px 16px; border: 2px solid var(--hive-border); border-radius: 12px;
+    font-size: 16px; /* Prevents iOS zoom */ line-height: 1.5; background: #fafafa;
+    transition: var(--hive-transition); box-sizing: border-box;
+}
+.hive-form-group input:focus, .hive-form-group textarea:focus {
+    outline: none; border-color: var(--hive-yellow); background: #fff;
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.15);
+}
+.hive-form-group textarea { resize: vertical; min-height: 100px; }
+
+.hive-btn {
+    width: 100%; padding: 14px 20px; border-radius: 12px; font-size: 15px; font-weight: 700;
+    cursor: pointer; border: none; display: flex; align-items: center; justify-content: center; gap: 8px;
+    transition: var(--hive-transition); text-transform: uppercase; letter-spacing: 0.5px;
+    min-height: 48px; /* Touch-friendly */
+}
+.hive-btn:active { transform: scale(0.98); }
+.hive-btn span { font-size: 18px; }
+.hive-btn-primary { background: var(--hive-yellow); color: var(--hive-dark); box-shadow: 0 4px 12px rgba(255, 193, 7, 0.35); }
+.hive-btn-primary:hover, .hive-btn-primary:focus { background: var(--hive-yellow-dark); box-shadow: 0 6px 18px rgba(255, 193, 7, 0.45); }
+.hive-btn-secondary { background: var(--hive-dark); color: #fff; box-shadow: 0 4px 12px rgba(26, 26, 46, 0.3); }
+.hive-btn-secondary:hover, .hive-btn-secondary:focus { background: #222240; }
+.hive-btn-outline { background: transparent; color: var(--hive-text-light); border: 2px solid var(--hive-border); }
+.hive-btn-outline:hover, .hive-btn-outline:focus { border-color: var(--hive-yellow); color: var(--hive-yellow-dark); }
+
+.hive-divider { margin: 22px 0; text-align: center; position: relative; }
+.hive-divider::before { content: ''; position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--hive-border), transparent); }
+.hive-divider span { background: var(--hive-bg); padding: 0 12px; position: relative; color: var(--hive-text-light); font-size: 12px; font-weight: 600; }
+
+.hive-success-box { text-align: center; padding: 20px 0; }
+.hive-success-icon { font-size: 56px; color: var(--hive-success); margin-bottom: 16px; animation: hive-pop 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+@keyframes hive-pop { 0% { transform: scale(0); } 50% { transform: scale(1.15); } 100% { transform: scale(1); } }
+.hive-success-box h3 { color: var(--hive-text); margin: 0 0 8px; font-size: 22px; }
+.hive-success-box p { color: var(--hive-text-light); margin: 0 0 20px; font-size: 15px; }
+
+.hive-error { color: var(--hive-error); font-size: 12px; margin-top: 4px; display: none; }
+.hive-error.show { display: block; }
+.hive-form-group input.error, .hive-form-group textarea.error { border-color: var(--hive-error); animation: hive-shake 0.4s; }
+@keyframes hive-shake { 0%,100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
+
+/* 📱 MOBILE OPTIMIZATIONS */
+@media (max-width: 480px) {
+.hive-modal-overlay { padding: 16px; align-items: center; background: rgba(26, 26, 46, 0.9); }
+.hive-modal-content { max-width: 100%; max-height: 85dvh; border-radius: 24px; margin: 0; }
+.hive-modal-header { padding: 20px 16px; }
+.hive-modal-header h2 { font-size: 24px; }
+.hive-modal-body { padding: 20px 16px 30px; }
+.hive-btn { padding: 12px 16px; font-size: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hive-modal-overlay, .hive-modal-content, .hive-step, .hive-btn, .hive-progress-dot {
+        animation: none !important; transition: none !important;
+    }
+}
   /* ===== 🏢 BUSINESS CATEGORY SECTION - MOBILE OPTIMIZED ===== */
 .business-categories {
   padding: 1.5rem 0 2rem;
@@ -587,6 +717,85 @@ footer { background: linear-gradient(160deg, #8B1E1E 0%, #5C1212 100%); color: #
       <i class="fas fa-search"></i>
       <input type="search" id="businessSearch" placeholder="Search businesses, services..." aria-label="Search businesses">
     </div>
+    <!-- ==========================================
+JOIN THE HIVE MODAL (Mobile-Optimized)
+========================================== -->
+<div id="hiveModal" class="hive-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="hive-modal-title">
+    <div class="hive-modal-content">
+        <button class="hive-close-btn" onclick="closeHiveModal()" aria-label="Close modal">&times;</button>
+        
+        <div class="hive-modal-header">
+            <span class="hive-modal-icon" aria-hidden="true">🐝</span>
+            <h2 id="hive-modal-title">Join the Hive</h2>
+            <p>Expand Your Digital Presence Today</p>
+        </div>
+
+        <div class="hive-modal-body">
+            <div class="hive-progress" aria-label="Form progress">
+                <div class="hive-progress-dot active" data-step="1"></div>
+                <div class="hive-progress-dot" data-step="2"></div>
+            </div>
+
+            <!-- STEP 1: Existing Website -->
+            <div id="hive-step-1" class="hive-step fade-in">
+                <div class="hive-form-group">
+                    <label for="hive-existingUrl">🌐 Already Have a Website?</label>
+                    <input type="url" id="hive-existingUrl" placeholder="https://www.yourbusiness.com" autocomplete="url">
+                    <span class="hive-error" id="hive-url-error">Please enter a valid website URL</span>
+                </div>
+                <button type="button" class="hive-btn hive-btn-primary" onclick="submitExistingHiveWebsite()">
+                    <span>📤</span> Submit Existing Website
+                </button>
+                <div class="hive-divider"><span>OR CREATE NEW</span></div>
+                <button type="button" class="hive-btn hive-btn-secondary" onclick="showHiveStep(2)">
+                    <span>✨</span> Create a New Website
+                </button>
+            </div>
+
+            <!-- STEP 2: New Business Form -->
+            <div id="hive-step-2" class="hive-step hidden">
+                <form id="hive-businessForm" onsubmit="submitNewHiveWebsite(event)" novalidate>
+                    <div class="hive-form-group">
+                        <label for="hive-bizName">🏢 Business Name</label>
+                        <input type="text" id="hive-bizName" required placeholder="e.g. Acme Corporation" autocomplete="organization">
+                        <span class="hive-error" id="hive-name-error">Business name is required</span>
+                    </div>
+                    <div class="hive-form-group">
+                        <label for="hive-bizAbout">📖 About Your Business</label>
+                        <textarea id="hive-bizAbout" required placeholder="Tell us about your history, mission, and vision..."></textarea>
+                        <span class="hive-error" id="hive-about-error">Please describe your business</span>
+                    </div>
+                    <div class="hive-form-group">
+                        <label for="hive-bizServices">🛠️ Products / Services</label>
+                        <textarea id="hive-bizServices" required placeholder="What do you sell or provide? e.g. Web design, Coffee, Consulting..."></textarea>
+                        <span class="hive-error" id="hive-services-error">Please list your products or services</span>
+                    </div>
+                    <div class="hive-form-group">
+                        <label for="hive-bizLocation">📍 Location</label>
+                        <input type="text" id="hive-bizLocation" required placeholder="City, State/Province, Country" autocomplete="address-level2">
+                        <span class="hive-error" id="hive-location-error">Location is required</span>
+                    </div>
+                    <button type="submit" class="hive-btn hive-btn-primary">
+                        <span>💬</span> Request Quote via WhatsApp
+                    </button>
+                    <button type="button" class="hive-btn hive-btn-outline" onclick="showHiveStep(1)">
+                        <span>←</span> Back
+                    </button>
+                </form>
+            </div>
+
+            <!-- SUCCESS STATE -->
+            <div id="hive-success" class="hive-step hidden">
+                <div class="hive-success-box">
+                    <div class="hive-success-icon">✓</div>
+                    <h3>Message Sent!</h3>
+                    <p>We'll get back to you shortly via WhatsApp.</p>
+                    <button type="button" class="hive-btn hive-btn-secondary" onclick="closeHiveModal()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <a href="/" class="logo" aria-label="Hive Times Home">
       <img src="images-logo/hive-times-logo.png" alt="Hive Times" width="42" height="42" loading="lazy">
       <span class="logo-text">Hive Times</span>
@@ -802,7 +1011,7 @@ footer { background: linear-gradient(160deg, #8B1E1E 0%, #5C1212 100%); color: #
       </article>
       <!-- Dough & Co -->
       <article class="block" id="business-dough-and-co" data-niche="baking" data-location="johannesburg">
-        <a href="doughandco.hivetimes.co.za" target="_blank" rel="noopener"><img src="images-logo/doughandco-logo.jpg" alt="Dough & Co" width="400" height="300" loading="lazy"></a>
+        <a href="doughandco.hivetimes.co.za" target="_blank" rel="noopener"><img src="images-logo/doughandco.logo.jpg" alt="Dough & Co" width="400" height="300" loading="lazy"></a>
         <div class="info"><h3>Dough & Co</h3><p>Freshly baked bread, pastries, and sweet treats</p>
           <div class="block-actions"><a href="https://hivetimes.co.za/doughandco/index.html" class="cta-btn primary"><i class="fas fa-globe"></i> Visit Website</a>
           <div class="share-section"><a href="#" class="share-btn facebook"><i class="fab fa-facebook-f"></i></a><a href="#" class="share-btn whatsapp"><i class="fab fa-whatsapp"></i></a><a href="#" class="share-btn email"><i class="fas fa-envelope"></i></a></div>
@@ -1157,24 +1366,42 @@ footer { background: linear-gradient(160deg, #8B1E1E 0%, #5C1212 100%); color: #
     });
   });
 
-  // === SLIDER ===
-fetch('slider.html').then(res => res.ok ? res.text() : Promise.reject('slider.html not found'))
-.then(html => {
-  document.getElementById('slider-container').innerHTML = html;
-  if (typeof Swiper !== 'undefined') {
-    new Swiper('.mySwiper', {
-      spaceBetween: 0, centeredSlides: true,
-      autoplay: { delay: 1500, disableOnInteraction: false },
-      pagination: { el: '.swiper-pagination', clickable: true },
-      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-      loop: true, effect: 'fade', fadeEffect: { crossFade: true }
-    });
+// === IMPROVED SLIDER LOGIC ===
+function initSlider() {
+  if (typeof Swiper === 'undefined') {
+    console.warn('Swiper JS not loaded. Waiting...');
+    setTimeout(initSlider, 200); // Retry until Swiper is ready
+    return;
   }
-}).catch(err => {
-  console.error('Slider error:', err);
-  document.getElementById('slider-container').innerHTML = `<div style="text-align:center;padding:40px;color:var(--primary);">⚠️ Slider unavailable</div>`;
-});
 
+  fetch('slider.html')
+    .then(res => res.ok ? res.text() : Promise.reject('slider.html not found'))
+    .then(html => {
+      document.getElementById('slider-container').innerHTML = html;
+      new Swiper('.mySwiper', {
+        spaceBetween: 0,
+        centeredSlides: true,
+        autoplay: { delay: 3000, disableOnInteraction: false },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+        loop: true,
+        effect: 'fade',
+        fadeEffect: { crossFade: true }
+      });
+    })
+    .catch(err => {
+      console.error('Slider error:', err);
+      document.getElementById('slider-container').innerHTML = 
+        `<div style="text-align:center;padding:40px;color:var(--primary);">⚠️ Slider unavailable. Check console.</div>`;
+    });
+}
+
+// Run on DOM ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initSlider);
+} else {
+  initSlider();
+}
 
   // === INIT ===
   document.getElementById('currentYear').textContent = new Date().getFullYear();
@@ -1218,6 +1445,146 @@ document.querySelectorAll('.category-card').forEach(card => {
       card.click();
     }
   });
+});
+// ==========================================
+// HIVE MODAL LOGIC (Mobile-Optimized)
+// ==========================================
+const hiveConfig = {
+    phone: "27649220145", // Change to your number
+    waUrl: "https://wa.me/"
+};
+
+let hiveCurrentStep = 1;
+
+function openHiveModal() {
+    const modal = document.getElementById('hiveModal');
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Lock background scroll
+    showHiveStep(1);
+    // Focus first input for accessibility & mobile keyboard
+    setTimeout(() => {
+        document.getElementById('hive-existingUrl')?.focus();
+    }, 300);
+}
+
+function closeHiveModal() {
+    const modal = document.getElementById('hiveModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = ''; // Restore scroll
+    setTimeout(() => {
+        resetHiveForm();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 300);
+}
+
+function showHiveStep(step) {
+    hiveCurrentStep = step;
+    document.querySelectorAll('.hive-step').forEach(el => {
+        el.classList.add('hidden');
+        el.classList.remove('fade-in');
+    });
+    const target = document.getElementById(`hive-step-${step}`);
+    target.classList.remove('hidden');
+    void target.offsetWidth; // Trigger reflow
+    target.classList.add('fade-in');
+    
+    // Update progress dots
+    document.querySelectorAll('.hive-progress-dot').forEach(dot => {
+        dot.classList.toggle('active', parseInt(dot.dataset.step) <= step);
+    });
+    
+    // Auto-focus first field in current step
+    setTimeout(() => {
+        const firstInput = target.querySelector('input, textarea');
+        if (firstInput) firstInput.focus();
+    }, 100);
+}
+
+function validateHiveField(id, errorId, isValid) {
+    const field = document.getElementById(id);
+    const error = document.getElementById(errorId);
+    if (!isValid) {
+        field.classList.add('error');
+        error.classList.add('show');
+        return false;
+    }
+    field.classList.remove('error');
+    error.classList.remove('show');
+    return true;
+}
+
+function validateHiveUrl(url) {
+    return /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/.test(url);
+}
+
+function submitExistingHiveWebsite() {
+    const url = document.getElementById('hive-existingUrl').value.trim();
+    if (!validateHiveField('hive-existingUrl', 'hive-url-error', url && validateHiveUrl(url))) return;
+    
+    sendHiveToWhatsApp(`*Website URL:* ${url}\n\nI want to place my existing website on your platform. How much will it cost?`);
+}
+
+function submitNewHiveWebsite(e) {
+    e.preventDefault();
+    const name = document.getElementById('hive-bizName').value.trim();
+    const about = document.getElementById('hive-bizAbout').value.trim();
+    const services = document.getElementById('hive-bizServices').value.trim();
+    const location = document.getElementById('hive-bizLocation').value.trim();
+
+    const v1 = validateHiveField('hive-bizName', 'hive-name-error', name.length >= 2);
+    const v2 = validateHiveField('hive-bizAbout', 'hive-about-error', about.length >= 10);
+    const v3 = validateHiveField('hive-bizServices', 'hive-services-error', services.length >= 5);
+    const v4 = validateHiveField('hive-bizLocation', 'hive-location-error', location.length >= 3);
+
+    if (!v1 || !v2 || !v3 || !v4) return;
+
+    const msg = `*🏢 Business Name:* ${name}\n*📖 About:* ${about}\n*🛠️ Services:* ${services}\n*📍 Location:* ${location}\n\nPlease provide a quote for creating my website.`;
+    sendHiveToWhatsApp(msg);
+}
+
+function sendHiveToWhatsApp(text) {
+    const encoded = encodeURIComponent(text);
+    const url = `${hiveConfig.waUrl}${hiveConfig.phone}?text=${encoded}`;
+    
+    // Hide forms, show success
+    document.querySelectorAll('.hive-step').forEach(el => el.classList.add('hidden'));
+    document.getElementById('hive-success').classList.remove('hidden');
+    
+    // Open WhatsApp after short delay
+    setTimeout(() => window.open(url, '_blank'), 600);
+}
+
+function resetHiveForm() {
+    document.getElementById('hive-businessForm').reset();
+    document.getElementById('hive-existingUrl').value = '';
+    document.querySelectorAll('.hive-error').forEach(e => e.classList.remove('show'));
+    document.querySelectorAll('.hive-form-group input, .hive-form-group textarea').forEach(f => f.classList.remove('error'));
+    hiveCurrentStep = 1;
+    document.querySelectorAll('.hive-progress-dot').forEach(d => d.classList.remove('active'));
+    document.querySelectorAll('.hive-progress-dot')[0].classList.add('active');
+}
+
+// Clear errors on input
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('#hiveModal input, #hiveModal textarea').forEach(field => {
+        field.addEventListener('input', function() {
+            if (this.classList.contains('error')) {
+                this.classList.remove('error');
+                const errId = this.id.replace('hive-', 'hive-') + '-error';
+                const err = document.getElementById(errId);
+                if (err) err.classList.remove('show');
+            }
+        });
+    });
+
+    // Close on ESC & backdrop click
+    window.addEventListener('keydown', e => { if (e.key === 'Escape') closeHiveModal(); });
+    document.getElementById('hiveModal').addEventListener('click', e => {
+        if (e.target === document.getElementById('hiveModal')) closeHiveModal();
+    });
+    
+    // Auto-open on load (optional - remove if not needed)
+    setTimeout(openHiveModal, 800);
 });
 </script>
 </body>
