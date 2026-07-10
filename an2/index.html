@@ -950,6 +950,158 @@
         }
 
         /* ============================================
+           BRAND SEARCH SECTION (NEW from anwholesaler)
+           ============================================ */
+        .brand-search-section {
+            padding: var(--space-lg) 0;
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .brand-search-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-mesh);
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        .brand-search-inner {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .brand-search-text .section-label {
+            margin-bottom: 1rem;
+        }
+
+        .brand-search-text h2 {
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+            margin-bottom: 1rem;
+            line-height: 1.15;
+        }
+
+        .brand-search-text p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .brand-search-box {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-md);
+        }
+
+        .brand-search-input-wrap {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .brand-search-input-wrap i {
+            position: absolute;
+            left: 1.25rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-tertiary);
+            font-size: 1.1rem;
+        }
+
+        .brand-search-input {
+            width: 100%;
+            padding: 1rem 1.25rem 1rem 3.25rem;
+            border-radius: var(--radius-full);
+            border: 1.5px solid var(--border-medium);
+            background: var(--bg-primary);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--text-primary);
+            transition: all var(--duration-normal) var(--ease-out);
+            outline: none;
+        }
+
+        .brand-search-input:focus {
+            border-color: var(--accent-orange);
+            box-shadow: 0 0 0 4px rgba(255, 87, 34, 0.1);
+        }
+
+        .brand-search-input::placeholder {
+            color: var(--text-tertiary);
+        }
+
+        .brand-search-results {
+            min-height: 60px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .brand-search-result-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 1rem;
+            background: var(--bg-tertiary);
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            font-weight: 500;
+            animation: fadeInUp 0.3s var(--ease-out);
+        }
+
+        .brand-search-result-item .match-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.25rem 0.75rem;
+            background: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .brand-search-no-match {
+            padding: 0.75rem 1rem;
+            background: rgba(255, 87, 34, 0.08);
+            color: var(--accent-orange);
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .brand-search-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--bg-dark);
+            color: white;
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all var(--duration-normal) var(--ease-out);
+        }
+
+        .brand-search-cta:hover {
+            background: var(--accent-orange);
+            transform: translateY(-2px);
+        }
+
+        /* ============================================
            MARQUEE BRANDS
            ============================================ */
         .marquee {
@@ -1207,6 +1359,97 @@
         }
 
         /* ============================================
+           SERVICES SECTION (NEW from anwholesaler)
+           ============================================ */
+        .services-section {
+            background: var(--bg-tertiary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .services-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-mesh);
+            opacity: 0.4;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            border: 1px solid var(--border-light);
+            transition: all var(--duration-normal) var(--ease-out);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gradient-warm);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform var(--duration-normal) var(--ease-out);
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            background: var(--bg-tertiary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-orange);
+            font-size: 1.4rem;
+            margin-bottom: 1.25rem;
+            transition: all var(--duration-normal) var(--ease-out);
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--gradient-warm);
+            color: white;
+            transform: rotate(-8deg) scale(1.08);
+        }
+
+        .service-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+            line-height: 1.25;
+        }
+
+        .service-description {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ============================================
            PROCESS TIMELINE
            ============================================ */
         .process {
@@ -1409,6 +1652,252 @@
 
         .product-card:hover .product-link {
             gap: 0.75rem;
+        }
+
+        /* ============================================
+           BRAND PORTFOLIO SECTION (NEW from anwholesaler)
+           ============================================ */
+        .brand-portfolio {
+            background: var(--bg-secondary);
+            position: relative;
+        }
+
+        .brand-portfolio-tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0.5rem;
+            background: var(--bg-tertiary);
+            border-radius: var(--radius-full);
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .brand-tab {
+            padding: 0.65rem 1.25rem;
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: all var(--duration-normal) var(--ease-out);
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .brand-tab.active {
+            background: var(--bg-dark);
+            color: white;
+        }
+
+        .brand-tab:hover:not(.active) {
+            color: var(--text-primary);
+            background: var(--bg-card);
+        }
+
+        .brand-wall {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .brand-logo-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            text-align: center;
+            transition: all var(--duration-normal) var(--ease-out);
+            position: relative;
+            overflow: hidden;
+            min-height: 160px;
+        }
+
+        .brand-logo-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-warm);
+            opacity: 0;
+            transition: opacity var(--duration-normal) var(--ease-out);
+            z-index: 0;
+        }
+
+        .brand-logo-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+
+        .brand-logo-card:hover::before {
+            opacity: 1;
+        }
+
+        .brand-logo-card:hover .brand-logo-icon,
+        .brand-logo-card:hover .brand-logo-name,
+        .brand-logo-card:hover .brand-logo-supplier {
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .brand-logo-icon {
+            font-size: 2.5rem;
+            color: var(--accent-orange);
+            transition: all var(--duration-normal) var(--ease-out);
+            position: relative;
+            z-index: 1;
+        }
+
+        .brand-logo-card:hover .brand-logo-icon {
+            transform: scale(1.15) rotate(-5deg);
+        }
+
+        .brand-logo-name {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            position: relative;
+            z-index: 1;
+            transition: color var(--duration-normal) var(--ease-out);
+        }
+
+        .brand-logo-supplier {
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 500;
+            position: relative;
+            z-index: 1;
+            transition: color var(--duration-normal) var(--ease-out);
+        }
+
+        /* ============================================
+           LOCATIONS SECTION (NEW from anwholesaler)
+           ============================================ */
+        .locations-section {
+            background: var(--bg-dark);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .locations-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-mesh);
+            opacity: 0.6;
+        }
+
+        .locations-section .section-label {
+            color: var(--accent-orange);
+        }
+
+        .locations-section .section-title {
+            color: white;
+        }
+
+        .locations-section .section-description {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .location-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            transition: all var(--duration-normal) var(--ease-out);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .location-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gradient-warm);
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform var(--duration-normal) var(--ease-out);
+        }
+
+        .location-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: var(--accent-orange);
+            transform: translateY(-4px);
+        }
+
+        .location-card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .location-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 0.9rem;
+            background: rgba(255, 87, 34, 0.15);
+            color: var(--accent-orange);
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.25rem;
+        }
+
+        .location-title {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .location-description {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .location-features {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .location-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .location-feature i {
+            color: var(--accent-orange);
+            font-size: 0.85rem;
         }
 
         /* ============================================
@@ -1840,6 +2329,240 @@
         }
 
         /* ============================================
+           ENQUIRY FORM SECTION (NEW from anwholesaler)
+           ============================================ */
+        .enquiry-section {
+            background: var(--bg-tertiary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .enquiry-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-mesh);
+            opacity: 0.4;
+        }
+
+        .enquiry-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 3rem;
+            align-items: start;
+            position: relative;
+            z-index: 1;
+        }
+
+        .enquiry-info {
+            padding: 2rem;
+        }
+
+        .enquiry-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .enquiry-info p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .enquiry-channels {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .enquiry-channel {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-light);
+            transition: all var(--duration-normal) var(--ease-out);
+        }
+
+        .enquiry-channel:hover {
+            border-color: var(--accent-orange);
+            transform: translateX(4px);
+        }
+
+        .enquiry-channel-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: var(--bg-tertiary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-orange);
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .enquiry-channel-label {
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.15rem;
+        }
+
+        .enquiry-channel-value {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .enquiry-hours {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-top: 2rem;
+            padding: 1rem;
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-light);
+            font-size: 0.9rem;
+        }
+
+        .enquiry-hours i {
+            color: var(--accent-orange);
+            font-size: 1.2rem;
+        }
+
+        .enquiry-form-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .enquiry-form-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .enquiry-form-subtitle {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group.full {
+            grid-column: span 2;
+        }
+
+        .form-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .form-input,
+        .form-textarea,
+        .form-select {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            border-radius: var(--radius-sm);
+            border: 1.5px solid var(--border-medium);
+            background: var(--bg-primary);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            transition: all var(--duration-normal) var(--ease-out);
+            outline: none;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus,
+        .form-select:focus {
+            border-color: var(--accent-orange);
+            box-shadow: 0 0 0 4px rgba(255, 87, 34, 0.1);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit {
+            margin-top: 1.5rem;
+            width: 100%;
+            padding: 1rem;
+            background: var(--bg-dark);
+            color: white;
+            border-radius: var(--radius-full);
+            font-size: 0.95rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            transition: all var(--duration-normal) var(--ease-out);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-submit::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--gradient-warm);
+            transform: translateX(-100%);
+            transition: transform var(--duration-normal) var(--ease-out);
+        }
+
+        .form-submit span,
+        .form-submit i {
+            position: relative;
+            z-index: 1;
+        }
+
+        .form-submit:hover::before {
+            transform: translateX(0);
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .form-note {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: var(--text-tertiary);
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .form-note i {
+            color: #25D366;
+        }
+
+        /* ============================================
            FOOTER
            ============================================ */
         .footer {
@@ -2087,6 +2810,22 @@
                 display: none;
             }
 
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .brand-search-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .locations-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .enquiry-grid {
+                grid-template-columns: 1fr;
+            }
+
             .faq-grid,
             .contact-grid {
                 grid-template-columns: 1fr;
@@ -2165,6 +2904,22 @@
                 grid-template-columns: 1fr;
             }
 
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .brand-wall {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full {
+                grid-column: span 1;
+            }
+
             .footer-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
@@ -2202,14 +2957,16 @@
                 justify-content: center;
             }
 
-            .products-tabs {
+            .products-tabs,
+            .brand-portfolio-tabs {
                 width: 100%;
                 overflow-x: auto;
                 justify-content: flex-start;
                 border-radius: var(--radius-md);
             }
 
-            .products-tab {
+            .products-tab,
+            .brand-tab {
                 white-space: nowrap;
             }
 
@@ -2220,6 +2977,10 @@
             .cta-actions .btn {
                 width: 100%;
                 justify-content: center;
+            }
+
+            .brand-wall {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -2258,8 +3019,10 @@
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="#home" class="nav-link">Home</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
                     <li><a href="#products" class="nav-link">Products</a></li>
-                    <li><a href="#process" class="nav-link">Process</a></li>
+                    <li><a href="#brands" class="nav-link">Brands</a></li>
+                    <li><a href="#locations" class="nav-link">Locations</a></li>
                     <li><a href="#faq" class="nav-link">FAQ</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
@@ -2268,7 +3031,7 @@
                     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                         <i class="fas fa-moon" id="themeIcon"></i>
                     </button>
-                    <a href="#contact" class="nav-cta">
+                    <a href="#enquiry" class="nav-cta">
                         <span>Get Quote</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -2302,18 +3065,18 @@
                     </h1>
 
                     <p class="hero-description">
-                        OB Distributors supplies everyday retail categories to keep your shelves stocked. 
-                        Serving retailers, wholesalers, and spaza shops across Mpumalanga with premium 
-                        groceries, beverages, and household products.
+                        AN Wholesalers and Retail CC t/a OB Distributors supplies food, beverages, 
+                        household goods, and personal care products to retailers, wholesalers, spaza 
+                        shops, and commercial buyers across Mbombela, Nelspruit, and Mpumalanga.
                     </p>
 
                     <div class="hero-actions">
-                        <a href="#contact" class="btn btn-primary magnetic">
-                            <span>Request a Quote</span>
+                        <a href="#enquiry" class="btn btn-primary magnetic">
+                            <span>Contact Us</span>
                             <i class="fas fa-arrow-right btn-icon"></i>
                         </a>
-                        <a href="#products" class="btn btn-secondary magnetic">
-                            <span>View Products</span>
+                        <a href="#brands" class="btn btn-secondary magnetic">
+                            <span>View Our Brands</span>
                         </a>
                     </div>
 
@@ -2413,6 +3176,35 @@
         </div>
     </section>
 
+    <!-- Brand Search Section (NEW) -->
+    <section class="brand-search-section">
+        <div class="container">
+            <div class="brand-search-inner reveal">
+                <div class="brand-search-text">
+                    <div class="section-label">Instant Brand Search</div>
+                    <h2>Search the brands we carry through one dependable <span style="font-family: var(--font-serif); font-style: italic; color: var(--accent-orange);">wholesale pipeline.</span></h2>
+                    <p>Type a brand name to check whether AN Wholesalers and Retail CC t/a OB Distributors carries it, then move straight into a wholesale enquiry.</p>
+                </div>
+
+                <div class="brand-search-box">
+                    <div class="brand-search-input-wrap">
+                        <i class="fas fa-search"></i>
+                        <input type="text" class="brand-search-input" id="brandSearchInput" placeholder="Search catalogue (e.g. Koo, Liqui-Fresh, Simba)...">
+                    </div>
+                    <div class="brand-search-results" id="brandSearchResults">
+                        <div style="color: var(--text-tertiary); font-size: 0.85rem; padding: 0.5rem 0;">
+                            <i class="fas fa-info-circle"></i> Start typing to search our brand portfolio
+                        </div>
+                    </div>
+                    <a href="#enquiry" class="brand-search-cta" id="brandSearchCta" style="display: none;">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Enquire About This Brand</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Marquee Brands -->
     <section class="marquee">
         <div class="marquee-track">
@@ -2438,12 +3230,12 @@
     <section class="section" id="about">
         <div class="container">
             <div class="section-header reveal">
-                <div class="section-label">About Us</div>
-                <h2 class="section-title">Built for retailers, <span class="serif">by people</span> who understand retail.</h2>
+                <div class="section-label">Company</div>
+                <h2 class="section-title">Wholesale supply support for <span class="serif">independent retailers</span> and trade buyers.</h2>
                 <p class="section-description">
-                    AN Wholesalers and Retail CC, trading as OB Distributors, is a trusted wholesale 
-                    distribution company based in Mbombela, Mpumalanga. We simplify B2B procurement 
-                    with reliable service, transparent pricing, and comprehensive category coverage.
+                    From its Mbombela warehouse, AN Wholesalers and Retail CC t/a OB Distributors 
+                    supports everyday retail demand with practical category coverage, clear communication, 
+                    and dependable account handling. AN Wholesalers and Retail trades as OB Distributors.
                 </p>
             </div>
 
@@ -2501,6 +3293,94 @@
                     </div>
                     <h3 class="bento-title" style="font-size: 1.3rem;">Fast, flexible delivery</h3>
                     <p class="bento-description">Dispatch shaped around route realities and replenishment windows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section (NEW) -->
+    <section class="section services-section" id="services">
+        <div class="container">
+            <div class="section-header center reveal">
+                <div class="section-label" style="justify-content: center;">Services</div>
+                <h2 class="section-title">Built to keep your shelves stocked and your <span class="serif">ordering process</span> simple.</h2>
+                <p class="section-description">
+                    The business supports repeat buying with practical assortments, clear quoting, 
+                    and delivery planning suited to trade customers in Mpumalanga.
+                </p>
+            </div>
+
+            <div class="services-grid reveal-stagger">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <h3 class="service-title">Supply reliability</h3>
+                    <p class="service-description">Consistent access to grocery, beverage, household, and personal care ranges for repeat wholesale ordering.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-truck-fast"></i>
+                    </div>
+                    <h3 class="service-title">Fast, flexible delivery</h3>
+                    <p class="service-description">Dispatch planning shaped around route realities, replenishment windows, and store-level delivery needs in Mpumalanga.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3 class="service-title">One procurement process</h3>
+                    <p class="service-description">A simpler buying workflow with clear quoting, substitutions, and category consolidation under one supplier.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-map-location-dot"></i>
+                    </div>
+                    <h3 class="service-title">Regional rollout support</h3>
+                    <p class="service-description">Commercial support for Mpumalanga coverage with structure that can extend into broader regional trade routes.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-magnifying-glass"></i>
+                    </div>
+                    <h3 class="service-title">Search product lines</h3>
+                    <p class="service-description">Find grocery, beverage, cleaning, and personal care ranges from one wholesaler in Mbombela.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="service-title">Build assortments</h3>
+                    <p class="service-description">Build practical wholesale orders around everyday retail demand, margin, and repeat turnover.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3 class="service-title">Plan delivery</h3>
+                    <p class="service-description">Coordinate dispatch around your route, store rhythm, and replenishment frequency across Mpumalanga.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="service-title">Commercial confidence</h3>
+                    <p class="service-description">A straightforward B2B buying process for independent retailers, bulk buyers, and trade customers.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-boxes-stacked"></i>
+                    </div>
+                    <h3 class="service-title">Complete category coverage</h3>
+                    <p class="service-description">Food, beverages, household goods, and personal care supply aligned to everyday retail demand.</p>
                 </div>
             </div>
         </div>
@@ -2575,7 +3455,7 @@
                         Quality staples, canned goods, snacks, and everyday essentials to meet 
                         your customers' daily needs.
                     </p>
-                    <a href="#contact" class="product-link">
+                    <a href="#enquiry" class="product-link">
                         <span>Enquire Now</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -2590,7 +3470,7 @@
                         Complete selection of soft drinks, juices, water, and popular branded 
                         drinks from leading manufacturers.
                     </p>
-                    <a href="#contact" class="product-link">
+                    <a href="#enquiry" class="product-link">
                         <span>Enquire Now</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -2605,7 +3485,7 @@
                         Cleaning supplies, detergents, paper products, and home maintenance 
                         items for every retail shelf.
                     </p>
-                    <a href="#contact" class="product-link">
+                    <a href="#enquiry" class="product-link">
                         <span>Enquire Now</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -2620,10 +3500,217 @@
                         Hygiene essentials, skincare, haircare, and grooming products from 
                         trusted brands your customers love.
                     </p>
-                    <a href="#contact" class="product-link">
+                    <a href="#enquiry" class="product-link">
                         <span>Enquire Now</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Portfolio Section (NEW) -->
+    <section class="section brand-portfolio" id="brands">
+        <div class="container">
+            <div class="section-header center reveal">
+                <div class="section-label" style="justify-content: center;">Our Brand Portfolio</div>
+                <h2 class="section-title">Recognisable FMCG brands, <span class="serif">shown the way</span> buyers expect to browse them.</h2>
+                <p class="section-description">
+                    A selection from the current portfolio across beverages, grocery, and household 
+                    staples. Filter by supplier, then scan the range as a clean logo wall.
+                </p>
+            </div>
+
+            <div class="brand-portfolio-tabs reveal">
+                <div class="brand-tab active" data-brand="all">All Brands</div>
+                <div class="brand-tab" data-brand="brenner">Brenner Brands</div>
+                <div class="brand-tab" data-brand="diplomat">Diplomat South Africa</div>
+                <div class="brand-tab" data-brand="kingsley">Kingsley Beverages</div>
+                <div class="brand-tab" data-brand="nbl">National Brands Limited</div>
+                <div class="brand-tab" data-brand="pepsico">PepsiCo South Africa</div>
+                <div class="brand-tab" data-brand="rcl">RCL Foods</div>
+                <div class="brand-tab" data-brand="tiger">Tiger Brands</div>
+            </div>
+
+            <div class="brand-wall reveal-stagger" id="brandWall">
+                <!-- Tiger Brands -->
+                <div class="brand-logo-card" data-brand="tiger">
+                    <i class="fas fa-paw brand-logo-icon"></i>
+                    <div class="brand-logo-name">Koo</div>
+                    <div class="brand-logo-supplier">Tiger Brands</div>
+                </div>
+                <div class="brand-logo-card" data-brand="tiger">
+                    <i class="fas fa-wheat-awn brand-logo-icon"></i>
+                    <div class="brand-logo-name">Elephant</div>
+                    <div class="brand-logo-supplier">Tiger Brands</div>
+                </div>
+                <div class="brand-logo-card" data-brand="tiger">
+                    <i class="fas fa-mug-hot brand-logo-icon"></i>
+                    <div class="brand-logo-name">Jungle Oats</div>
+                    <div class="brand-logo-supplier">Tiger Brands</div>
+                </div>
+                <div class="brand-logo-card" data-brand="tiger">
+                    <i class="fas fa-bread-slice brand-logo-icon"></i>
+                    <div class="brand-logo-name">Star Soaked</div>
+                    <div class="brand-logo-supplier">Tiger Brands</div>
+                </div>
+
+                <!-- PepsiCo -->
+                <div class="brand-logo-card" data-brand="pepsico">
+                    <i class="fas fa-bottle-water brand-logo-icon"></i>
+                    <div class="brand-logo-name">Lays</div>
+                    <div class="brand-logo-supplier">PepsiCo SA</div>
+                </div>
+                <div class="brand-logo-card" data-brand="pepsico">
+                    <i class="fas fa-wine-bottle brand-logo-icon"></i>
+                    <div class="brand-logo-name">Simba</div>
+                    <div class="brand-logo-supplier">PepsiCo SA</div>
+                </div>
+                <div class="brand-logo-card" data-brand="pepsico">
+                    <i class="fas fa-glass-water brand-logo-icon"></i>
+                    <div class="brand-logo-name">Liqui-Fresh</div>
+                    <div class="brand-logo-supplier">PepsiCo SA</div>
+                </div>
+
+                <!-- RCL Foods -->
+                <div class="brand-logo-card" data-brand="rcl">
+                    <i class="fas fa-egg brand-logo-icon"></i>
+                    <div class="brand-logo-name">Tastic</div>
+                    <div class="brand-logo-supplier">RCL Foods</div>
+                </div>
+                <div class="brand-logo-card" data-brand="rcl">
+                    <i class="fas fa-seedling brand-logo-icon"></i>
+                    <div class="brand-logo-name">Snowflake</div>
+                    <div class="brand-logo-supplier">RCL Foods</div>
+                </div>
+                <div class="brand-logo-card" data-brand="rcl">
+                    <i class="fas fa-drumstick-bite brand-logo-icon"></i>
+                    <div class="brand-logo-name">Albany</div>
+                    <div class="brand-logo-supplier">RCL Foods</div>
+                </div>
+
+                <!-- National Brands Limited -->
+                <div class="brand-logo-card" data-brand="nbl">
+                    <i class="fas fa-cookie brand-logo-icon"></i>
+                    <div class="brand-logo-name">Lucky Star</div>
+                    <div class="brand-logo-supplier">National Brands</div>
+                </div>
+                <div class="brand-logo-card" data-brand="nbl">
+                    <i class="fas fa-fish brand-logo-icon"></i>
+                    <div class="brand-logo-name">Blue Band</div>
+                    <div class="brand-logo-supplier">National Brands</div>
+                </div>
+
+                <!-- Kingsley Beverages -->
+                <div class="brand-logo-card" data-brand="kingsley">
+                    <i class="fas fa-glass-water brand-logo-icon"></i>
+                    <div class="brand-logo-name">Stoney</div>
+                    <div class="brand-logo-supplier">Kingsley Beverages</div>
+                </div>
+                <div class="brand-logo-card" data-brand="kingsley">
+                    <i class="fas fa-mug-saucer brand-logo-icon"></i>
+                    <div class="brand-logo-name">Quencher</div>
+                    <div class="brand-logo-supplier">Kingsley Beverages</div>
+                </div>
+
+                <!-- Diplomat South Africa -->
+                <div class="brand-logo-card" data-brand="diplomat">
+                    <i class="fas fa-spray-can-sparkles brand-logo-icon"></i>
+                    <div class="brand-logo-name">Sunlight</div>
+                    <div class="brand-logo-supplier">Diplomat SA</div>
+                </div>
+                <div class="brand-logo-card" data-brand="diplomat">
+                    <i class="fas fa-soap brand-logo-icon"></i>
+                    <div class="brand-logo-name">Omo</div>
+                    <div class="brand-logo-supplier">Diplomat SA</div>
+                </div>
+
+                <!-- Brenner Brands -->
+                <div class="brand-logo-card" data-brand="brenner">
+                    <i class="fas fa-jar brand-logo-icon"></i>
+                    <div class="brand-logo-name">All Gold</div>
+                    <div class="brand-logo-supplier">Brenner Brands</div>
+                </div>
+                <div class="brand-logo-card" data-brand="brenner">
+                    <i class="fas fa-pepper-hot brand-logo-icon"></i>
+                    <div class="brand-logo-name">Nola</div>
+                    <div class="brand-logo-supplier">Brenner Brands</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations Section (NEW) -->
+    <section class="section locations-section" id="locations">
+        <div class="container">
+            <div class="section-header center reveal">
+                <div class="section-label" style="justify-content: center;">Locations</div>
+                <h2 class="section-title">Strategically positioned for <span class="serif">Mpumalanga</span> wholesale coverage.</h2>
+                <p class="section-description">
+                    Our operating footprint is designed to serve independent retailers, wholesalers, 
+                    spaza shops, and growing multi-location buying groups across the region.
+                </p>
+            </div>
+
+            <div class="locations-grid reveal-stagger">
+                <div class="location-card">
+                    <div class="location-badge">
+                        <i class="fas fa-star"></i>
+                        <span>Primary Hub</span>
+                    </div>
+                    <h3 class="location-title">Nelspruit (Mbombela)</h3>
+                    <p class="location-description">
+                        Core operating base in Mbombela for wholesale coordination, quote handling, 
+                        and dispatch planning across Mpumalanga.
+                    </p>
+                    <div class="location-features">
+                        <div class="location-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Warehouse & dispatch center</span>
+                        </div>
+                        <div class="location-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Quote handling & account management</span>
+                        </div>
+                        <div class="location-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Local buyer collection available</span>
+                        </div>
+                        <div class="location-feature">
+                            <i class="fas fa-check"></i>
+                            <span>SHOP 1, 5 Petroleum St, Mbombela, 1214</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="location-card">
+                    <div class="location-badge">
+                        <i class="fas fa-map"></i>
+                        <span>Regional Reach</span>
+                    </div>
+                    <h3 class="location-title">Mpumalanga and Beyond</h3>
+                    <p class="location-description">
+                        Delivery planning that supports independent retailers, wholesalers, spaza 
+                        shops, and growing multi-location buying groups.
+                    </p>
+                    <div class="location-features">
+                        <div class="location-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Structured route planning</span>
+                        </div>
+                        <div class="location-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Store-level delivery coordination</span>
+                        </div>
+                        <div class="location-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Scope for broader regional routes</span>
+                        </div>
+                        <div class="location-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Support for multi-location buyers</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2710,12 +3797,13 @@
             <div class="faq-grid">
                 <div class="reveal">
                     <div class="section-label">FAQ</div>
-                    <h2 class="section-title">Questions? <span class="serif">Answers.</span></h2>
+                    <h2 class="section-title">Your questions, <span class="serif">answered.</span></h2>
                     <p class="section-description" style="margin-top: 1.5rem;">
-                        Everything you need to know about working with OB Distributors. 
-                        Can't find what you're looking for? Get in touch directly.
+                        Common questions about products, delivery coverage, response times, and 
+                        the Mbombela warehouse location. Can't find what you're looking for? 
+                        Get in touch directly.
                     </p>
-                    <a href="#contact" class="btn btn-primary" style="margin-top: 2rem;">
+                    <a href="#enquiry" class="btn btn-primary" style="margin-top: 2rem;">
                         <span>Contact Us</span>
                         <i class="fas fa-arrow-right btn-icon"></i>
                     </a>
@@ -2723,6 +3811,74 @@
 
                 <div class="faq-list reveal">
                     <div class="faq-item active">
+                        <div class="faq-question">
+                            <span>What does AN Wholesaler supply?</span>
+                            <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                We supply everyday retail categories including groceries, beverages, 
+                                household products, and personal care ranges for business buyers.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Which brands do you carry?</span>
+                            <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                We work with a trusted supplier base that includes major South African 
+                                FMCG manufacturers, distributors, and category leaders across everyday 
+                                retail lines — including Brenner Brands, Diplomat SA, Kingsley Beverages, 
+                                National Brands Limited, PepsiCo SA, RCL Foods, and Tiger Brands.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Which areas do you deliver to?</span>
+                            <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                The business is based in Mbombela (Nelspruit) and serves buyers across 
+                                Mpumalanga, with scope to support broader regional delivery routes.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Where is AN Wholesalers and Retail CC t/a OB Distributors based?</span>
+                            <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                The warehouse is located at SHOP 1, 5 Petroleum St, Mbombela, 1214, 
+                                making it easy for local buyers to find the business and request directions.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How quickly do you respond?</span>
+                            <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                The intended standard is a business-day response within 24 hours for 
+                                quote and account enquiries. Our operating hours are Monday to Friday, 
+                                08:00 to 17:00 SAST.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
                         <div class="faq-question">
                             <span>What is the minimum order value?</span>
                             <div class="faq-toggle"><i class="fas fa-plus"></i></div>
@@ -2738,54 +3894,13 @@
 
                     <div class="faq-item">
                         <div class="faq-question">
-                            <span>Which areas do you deliver to?</span>
-                            <div class="faq-toggle"><i class="fas fa-plus"></i></div>
-                        </div>
-                        <div class="faq-answer">
-                            <div class="faq-answer-content">
-                                Our core hub is in Mbombela (Nelspruit), Mpumalanga. We provide 
-                                structured delivery planning for retailers across Mpumalanga, with 
-                                the scope to extend into broader regional trade routes.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <span>How quickly do you respond to enquiries?</span>
-                            <div class="faq-toggle"><i class="fas fa-plus"></i></div>
-                        </div>
-                        <div class="faq-answer">
-                            <div class="faq-answer-content">
-                                We respond within 24 hours on business days for quotes and account 
-                                enquiries. Our operating hours are Monday to Friday, 08:00 to 17:00 SAST.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <span>Which brands do you carry?</span>
-                            <div class="faq-toggle"><i class="fas fa-plus"></i></div>
-                        </div>
-                        <div class="faq-answer">
-                            <div class="faq-answer-content">
-                                We carry recognizable FMCG brands from major South African manufacturers 
-                                including Brenner Brands, Diplomat SA, Kingsley Beverages, National 
-                                Brands Limited, PepsiCo SA, RCL Foods, and Tiger Brands.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question">
                             <span>How do I place an order?</span>
                             <div class="faq-toggle"><i class="fas fa-plus"></i></div>
                         </div>
                         <div class="faq-answer">
                             <div class="faq-answer-content">
                                 Simply reach out via WhatsApp (+27 62 525 4796), phone (013 794 0150), 
-                                or our contact form. We'll provide a clear quote, and once confirmed, 
+                                or our enquiry form. We'll provide a clear quote, and once confirmed, 
                                 your pallet-ready order will be dispatched according to our delivery schedule.
                             </div>
                         </div>
@@ -2800,10 +3915,10 @@
         <div class="container">
             <div class="cta-card reveal">
                 <div class="cta-content">
-                    <h2 class="cta-title">Ready to stock your <span class="serif">shelves?</span></h2>
+                    <h2 class="cta-title">Ready to discuss your next <span class="serif">wholesale order?</span></h2>
                     <p class="cta-description">
-                        Partner with OB Distributors for reliable wholesale distribution in Mpumalanga. 
-                        Get in touch today for a quote and discover how we can support your business growth.
+                        Contact OB Distributors directly for pricing, availability, brand enquiries, 
+                        and delivery planning across Mbombela and the wider Mpumalanga region.
                     </p>
                     <div class="cta-actions">
                         <a href="https://wa.me/27625254796" target="_blank" class="btn btn-primary magnetic">
@@ -2820,15 +3935,130 @@
         </div>
     </section>
 
+    <!-- Enquiry Form Section (NEW) -->
+    <section class="section enquiry-section" id="enquiry">
+        <div class="container">
+            <div class="section-header center reveal">
+                <div class="section-label" style="justify-content: center;">Get in Touch</div>
+                <h2 class="section-title">Ready to discuss your next <span class="serif">wholesale order?</span></h2>
+                <p class="section-description">
+                    Contact OB Distributors directly for pricing, availability, brand enquiries, 
+                    and delivery planning across Mbombela and the wider Mpumalanga region.
+                </p>
+            </div>
+
+            <div class="enquiry-grid">
+                <div class="enquiry-info reveal">
+                    <h3>Direct Channels</h3>
+                    <p>Reach us through any of the channels below. We respond within 24 hours on business days.</p>
+
+                    <div class="enquiry-channels">
+                        <a href="https://wa.me/27625254796" target="_blank" class="enquiry-channel">
+                            <div class="enquiry-channel-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <div class="enquiry-channel-label">WhatsApp</div>
+                                <div class="enquiry-channel-value">+27 62 525 4796</div>
+                            </div>
+                        </a>
+
+                        <a href="tel:0137940150" class="enquiry-channel">
+                            <div class="enquiry-channel-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <div class="enquiry-channel-label">Phone</div>
+                                <div class="enquiry-channel-value">013 794 0150</div>
+                            </div>
+                        </a>
+
+                        <a href="https://maps.google.com/?q=5+Petroleum+St+Mbombela" target="_blank" class="enquiry-channel">
+                            <div class="enquiry-channel-icon">
+                                <i class="fas fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <div class="enquiry-channel-label">Warehouse</div>
+                                <div class="enquiry-channel-value">SHOP 1, 5 Petroleum St, Mbombela, 1214</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="enquiry-hours">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Mon – Fri: 08:00 – 17:00</strong>
+                            <div style="font-size: 0.8rem; color: var(--text-tertiary);">SAST (South African Standard Time)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="enquiry-form-card reveal">
+                    <h3 class="enquiry-form-title">Send an Enquiry</h3>
+                    <p class="enquiry-form-subtitle">Your enquiry will be prepared in WhatsApp for you to send directly.</p>
+
+                    <form id="enquiryForm" class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" for="enqName">Your Name</label>
+                            <input type="text" id="enqName" class="form-input" placeholder="John Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="enqCompany">Company</label>
+                            <input type="text" id="enqCompany" class="form-input" placeholder="Your business name">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="enqPhone">Phone Number</label>
+                            <input type="tel" id="enqPhone" class="form-input" placeholder="+27 XX XXX XXXX" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="enqArea">Delivery Area</label>
+                            <select id="enqArea" class="form-select">
+                                <option value="">Select area</option>
+                                <option value="Mbombela / Nelspruit">Mbombela / Nelspruit</option>
+                                <option value="White River">White River</option>
+                                <option value="Hazyview">Hazyview</option>
+                                <option value="Nkomazi">Nkomazi</option>
+                                <option value="Barberton">Barberton</option>
+                                <option value="Middelburg">Middelburg</option>
+                                <option value="Witbank / eMalahleni">Witbank / eMalahleni</option>
+                                <option value="Other Mpumalanga">Other Mpumalanga</option>
+                                <option value="Outside Mpumalanga">Outside Mpumalanga</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full">
+                            <label class="form-label" for="enqDetails">Enquiry Details</label>
+                            <textarea id="enqDetails" class="form-textarea" placeholder="Tell us about the brands, products, or quantities you're looking for..." required></textarea>
+                        </div>
+
+                        <div class="form-group full">
+                            <button type="submit" class="form-submit">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>Send via WhatsApp</span>
+                            </button>
+                            <div class="form-note">
+                                <i class="fab fa-whatsapp"></i>
+                                Your enquiry will be prepared in WhatsApp for you to send directly.
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="section" id="contact">
         <div class="container">
             <div class="section-header reveal">
-                <div class="section-label">Contact</div>
-                <h2 class="section-title">Let's <span class="serif">talk</span> business.</h2>
+                <div class="section-label">Find Us</div>
+                <h2 class="section-title">Visit our warehouse in <span class="serif">Mbombela.</span></h2>
                 <p class="section-description">
-                    Ready to place an order or have questions? Reach out through any channel below. 
-                    We respond within 24 hours on business days.
+                    SHOP 1, 5 Petroleum St, Mbombela, 1214. Easy to find for local buyers — 
+                    request directions or plan your visit below.
                 </p>
             </div>
 
@@ -2840,7 +4070,7 @@
                         </div>
                         <div>
                             <div class="contact-label">Visit Us</div>
-                            <div class="contact-value">Shop 1, 5 Petroleum St, Mbombela, 1214</div>
+                            <div class="contact-value">SHOP 1, 5 Petroleum St, Mbombela, 1214</div>
                         </div>
                     </a>
 
@@ -2873,6 +4103,16 @@
                             <div class="contact-value">Mon – Fri: 08:00 – 17:00 (SAST)</div>
                         </div>
                     </div>
+
+                    <a href="https://maps.google.com/?q=5+Petroleum+St+Mbombela" target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-location-dot"></i>
+                        </div>
+                        <div>
+                            <div class="contact-label">Directions</div>
+                            <div class="contact-value">Open in Google Maps →</div>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="contact-map reveal">
@@ -2903,8 +4143,9 @@
                             </div>
                         </a>
                         <p>
-                            Your trusted wholesale distribution partner in Mpumalanga. Supplying quality 
-                            groceries, beverages, and household products to retailers across the region.
+                            AN Wholesalers and Retail CC t/a OB Distributors — your trusted wholesale 
+                            distribution partner in Mpumalanga. Supplying quality groceries, beverages, 
+                            and household products to retailers across the region.
                         </p>
                         <div class="footer-social">
                             <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -2919,8 +4160,10 @@
                         <ul class="footer-links">
                             <li><a href="#home">Home</a></li>
                             <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
                             <li><a href="#products">Products</a></li>
-                            <li><a href="#process">Process</a></li>
+                            <li><a href="#brands">Brands</a></li>
+                            <li><a href="#locations">Locations</a></li>
                             <li><a href="#faq">FAQ</a></li>
                         </ul>
                     </div>
@@ -2998,7 +4241,7 @@
         animateRing();
 
         // Hover effect on interactive elements
-        const hoverElements = document.querySelectorAll('a, button, .product-card, .bento-card, .faq-question');
+        const hoverElements = document.querySelectorAll('a, button, .product-card, .bento-card, .service-card, .brand-logo-card, .faq-question');
         hoverElements.forEach(el => {
             el.addEventListener('mouseenter', () => cursorRing.classList.add('hover'));
             el.addEventListener('mouseleave', () => cursorRing.classList.remove('hover'));
@@ -3138,6 +4381,82 @@
         counters.forEach(counter => counterObserver.observe(counter));
 
         // ============================================
+        // BRAND SEARCH FUNCTIONALITY
+        // ============================================
+        const brandDatabase = [
+            { name: 'Koo', supplier: 'Tiger Brands', category: 'food' },
+            { name: 'Elephant', supplier: 'Tiger Brands', category: 'food' },
+            { name: 'Jungle Oats', supplier: 'Tiger Brands', category: 'food' },
+            { name: 'Star Soaked', supplier: 'Tiger Brands', category: 'food' },
+            { name: 'Lays', supplier: 'PepsiCo SA', category: 'food' },
+            { name: 'Simba', supplier: 'PepsiCo SA', category: 'food' },
+            { name: 'Liqui-Fresh', supplier: 'PepsiCo SA', category: 'beverages' },
+            { name: 'Tastic', supplier: 'RCL Foods', category: 'food' },
+            { name: 'Snowflake', supplier: 'RCL Foods', category: 'food' },
+            { name: 'Albany', supplier: 'RCL Foods', category: 'food' },
+            { name: 'Lucky Star', supplier: 'National Brands', category: 'food' },
+            { name: 'Blue Band', supplier: 'National Brands', category: 'food' },
+            { name: 'Stoney', supplier: 'Kingsley Beverages', category: 'beverages' },
+            { name: 'Quencher', supplier: 'Kingsley Beverages', category: 'beverages' },
+            { name: 'Sunlight', supplier: 'Diplomat SA', category: 'household' },
+            { name: 'Omo', supplier: 'Diplomat SA', category: 'household' },
+            { name: 'All Gold', supplier: 'Brenner Brands', category: 'food' },
+            { name: 'Nola', supplier: 'Brenner Brands', category: 'food' },
+            { name: 'Brenner Brands', supplier: 'Brenner Brands', category: 'all' },
+            { name: 'Diplomat South Africa', supplier: 'Diplomat SA', category: 'all' },
+            { name: 'Kingsley Beverages', supplier: 'Kingsley Beverages', category: 'all' },
+            { name: 'National Brands Limited', supplier: 'National Brands', category: 'all' },
+            { name: 'PepsiCo South Africa', supplier: 'PepsiCo SA', category: 'all' },
+            { name: 'RCL Foods', supplier: 'RCL Foods', category: 'all' },
+            { name: 'Tiger Brands', supplier: 'Tiger Brands', category: 'all' }
+        ];
+
+        const brandSearchInput = document.getElementById('brandSearchInput');
+        const brandSearchResults = document.getElementById('brandSearchResults');
+        const brandSearchCta = document.getElementById('brandSearchCta');
+
+        brandSearchInput.addEventListener('input', (e) => {
+            const query = e.target.value.trim().toLowerCase();
+            
+            if (query.length === 0) {
+                brandSearchResults.innerHTML = `
+                    <div style="color: var(--text-tertiary); font-size: 0.85rem; padding: 0.5rem 0;">
+                        <i class="fas fa-info-circle"></i> Start typing to search our brand portfolio
+                    </div>
+                `;
+                brandSearchCta.style.display = 'none';
+                return;
+            }
+
+            const matches = brandDatabase.filter(brand => 
+                brand.name.toLowerCase().includes(query) || 
+                brand.supplier.toLowerCase().includes(query)
+            );
+
+            if (matches.length === 0) {
+                brandSearchResults.innerHTML = `
+                    <div class="brand-search-no-match">
+                        <i class="fas fa-circle-xmark"></i>
+                        <span>No brands found for "${e.target.value}". Contact us to check availability.</span>
+                    </div>
+                `;
+                brandSearchCta.style.display = 'inline-flex';
+                brandSearchCta.href = `https://wa.me/27625254796?text=${encodeURIComponent(`Hi, I'm looking for the brand "${e.target.value}". Do you carry it?`)}`;
+                return;
+            }
+
+            brandSearchResults.innerHTML = matches.slice(0, 4).map(brand => `
+                <div class="brand-search-result-item">
+                    <span><i class="fas fa-check-circle" style="color: #10b981; margin-right: 0.5rem;"></i>${brand.name}</span>
+                    <span class="match-badge"><i class="fas fa-check"></i> In Stock</span>
+                </div>
+            `).join('');
+
+            brandSearchCta.style.display = 'inline-flex';
+            brandSearchCta.href = `https://wa.me/27625254796?text=${encodeURIComponent(`Hi, I'm interested in ordering "${matches[0].name}" (${matches[0].supplier}). Can I get a quote?`)}`;
+        });
+
+        // ============================================
         // PRODUCT FILTER TABS
         // ============================================
         const tabs = document.querySelectorAll('.products-tab');
@@ -3154,6 +4473,38 @@
                     const category = card.getAttribute('data-category');
                     if (filter === 'all' || category === filter) {
                         card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 50);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 400);
+                    }
+                });
+            });
+        });
+
+        // ============================================
+        // BRAND PORTFOLIO FILTER
+        // ============================================
+        const brandTabs = document.querySelectorAll('.brand-tab');
+        const brandCards = document.querySelectorAll('.brand-logo-card');
+
+        brandTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                brandTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                const filter = tab.getAttribute('data-brand');
+                
+                brandCards.forEach(card => {
+                    const brand = card.getAttribute('data-brand');
+                    if (filter === 'all' || brand === filter) {
+                        card.style.display = 'flex';
                         setTimeout(() => {
                             card.style.opacity = '1';
                             card.style.transform = 'translateY(0)';
@@ -3226,6 +4577,29 @@
                     item.classList.add('active');
                 }
             });
+        });
+
+        // ============================================
+        // ENQUIRY FORM - WhatsApp Integration
+        // ============================================
+        const enquiryForm = document.getElementById('enquiryForm');
+        enquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('enqName').value;
+            const company = document.getElementById('enqCompany').value;
+            const phone = document.getElementById('enqPhone').value;
+            const area = document.getElementById('enqArea').value;
+            const details = document.getElementById('enqDetails').value;
+
+            let message = `*New Wholesale Enquiry*%0A%0A`;
+            message += `*Name:* ${name}%0A`;
+            if (company) message += `*Company:* ${company}%0A`;
+            message += `*Phone:* ${phone}%0A`;
+            if (area) message += `*Delivery Area:* ${area}%0A`;
+            message += `%0A*Enquiry Details:*%0A${details}`;
+
+            window.open(`https://wa.me/27625254796?text=${message}`, '_blank');
         });
 
         // ============================================
