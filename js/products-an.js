@@ -6,7 +6,7 @@
 (function () {
 // 🎛️ CONFIGURATION
 const CONFIG = {
-    SHEETS_API_URL: "https://script.google.com/macros/s/AKfycbxxuoRYa2qwzS0cqAbvJvK3AS-Q6_eefetP3rMi1XCvjj6n2Y_NwygUucrFeKxT9Qcn/exec",
+    SHEETS_API_URL: "https://script.google.com/macros/s/AKfycby0HsCmA3mYRVQJsRG54Y5rkUsMH1P3iPWMpf1HmTXnnrS1AkdqNfxWxXnylgcAn18s/exec",
     basePath: "",
     imageDir: "/an/images",
     fallbackImage: "/an/images/an-logo.jpg",
