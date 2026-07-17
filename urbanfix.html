@@ -1,0 +1,2034 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Powerhouse: Primary Meta Tags -->
+    <title>UrbanFix | Expert Mobile Phone & Laptop Repairs at Your Doorstep | Mpumalanga</title>
+    <meta name="description" content="Expert doorstep phone, laptop, tablet & smartwatch repairs in Mbombela, White River & Mpumalanga. Fast, affordable, guaranteed parts. Get a free WhatsApp quote today!">
+    <meta name="keywords" content="phone repair Mbombela, mobile repair Mpumalanga, laptop repair White River, screen replacement Nelspruit, UrbanFix, doorstep device repair">
+    <meta name="author" content="UrbanFix">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://urbanfix.co.za/">
+    
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://urbanfix.co.za/">
+    <meta property="og:title" content="UrbanFix | Expert Doorstep Device Repairs in Mpumalanga">
+    <meta property="og:description" content="Cracked screen? Slow laptop? We come to you! Professional, guaranteed repairs for phones, laptops, and tablets. Get a quote in minutes via WhatsApp.">
+    <meta property="og:image" content="https://urbanfix.co.za/og-image.jpg">
+    <meta property="og:locale" content="en_ZA">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://urbanfix.co.za/">
+    <meta property="twitter:title" content="UrbanFix | Expert Doorstep Device Repairs">
+    <meta property="twitter:description" content="Professional, guaranteed repairs for phones, laptops, and tablets right at your doorstep in Mpumalanga.">
+    <meta property="twitter:image" content="https://urbanfix.co.za/og-image.jpg">
+
+    <!-- Modern Font: Plus Jakarta Sans for professional, clean readability -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- JSON-LD Structured Data: LocalBusiness & FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "MobilePhoneStore",
+          "name": "UrbanFix",
+          "image": "https://urbanfix.co.za/logo.png",
+          "description": "Professional mobile repair services at your doorstep. Phone, laptop, tablet & smartwatch repairs in Mpumalanga.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Mbombela",
+            "addressRegion": "Mpumalanga",
+            "addressCountry": "ZA"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-25.4753",
+            "longitude": "30.9700"
+          },
+          "url": "https://urbanfix.co.za",
+          "telephone": "+27656754332",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "08:00",
+              "closes": "18:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Saturday",
+              "opens": "09:00",
+              "closes": "16:00"
+            }
+          ],
+          "priceRange": "$$"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How long does a typical repair take?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Most phone repairs are completed within 1-2 hours. Complex repairs like water damage or motherboard issues may take 24-48 hours."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you offer warranty on repairs?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes! All our repairs come with a warranty period (typically 3-6 months depending on the repair type)."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* =========================================
+           1. MODERN GLOBAL RESET & VARIABLES
+           ========================================= */
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #06b6d4; /* Vibrant Cyan for abstract/advanced feel */
+            --accent: #3b82f6;
+            --dark: #0f172a;
+            --darker: #020617;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --success: #10b981;
+            --whatsapp: #25D366;
+            --whatsapp-dark: #128C7E;
+            --glass-bg: rgba(15, 23, 42, 0.85);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-glow: 0 0 20px rgba(37, 99, 235, 0.3);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* =========================================
+           2. ADVANCED NAVIGATION (Fixed & Glassmorphism)
+           ========================================= */
+        nav {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--glass-border);
+            transition: var(--transition);
+        }
+
+        nav.scrolled {
+            padding: 0.75rem 0;
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white !important;
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+        }
+
+        .cta-button::after { display: none !important; }
+
+        /* 3D Advanced Hamburger Menu */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 32px;
+            height: 24px;
+            cursor: pointer;
+            z-index: 1002;
+            perspective: 100px;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: white;
+            border-radius: 3px;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            transform-origin: center;
+        }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: translateY(10.5px) rotate(45deg);
+            background: var(--secondary);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+            transform: rotateY(90deg);
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: translateY(-10.5px) rotate(-45deg);
+            background: var(--secondary);
+        }
+
+        /* Mobile Nav Overlay */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 85%;
+            max-width: 380px;
+            height: 100vh;
+            background: linear-gradient(180deg, var(--darker) 0%, var(--dark) 100%);
+            backdrop-filter: blur(20px);
+            z-index: 1001;
+            transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+            padding: 6rem 2rem 2rem;
+            box-shadow: -10px 0 40px rgba(0,0,0,0.6);
+            overflow-y: auto;
+        }
+
+        .mobile-nav.active {
+            right: 0;
+        }
+
+        .mobile-nav-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .mobile-nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .mobile-nav-links a:hover {
+            color: var(--secondary);
+            transform: translateX(10px);
+        }
+
+        /* Submenu Styling */
+        .has-submenu {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .has-submenu::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--secondary);
+            transition: var(--transition);
+        }
+
+        .has-submenu.open::after {
+            transform: rotate(45deg);
+        }
+
+        .submenu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            padding-left: 1rem;
+            border-left: 2px solid var(--primary);
+            margin-top: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .submenu.open {
+            max-height: 400px;
+        }
+
+        .submenu a {
+            font-size: 1rem !important;
+            font-weight: 500 !important;
+            color: #94a3b8 !important;
+        }
+
+        .submenu a:hover {
+            color: var(--secondary) !important;
+            transform: translateX(5px) !important;
+        }
+
+        .mobile-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .mobile-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* =========================================
+           3. HERO SECTION
+           ========================================= */
+        .hero {
+            margin-top: 0;
+            background: linear-gradient(135deg, var(--darker) 0%, #1e293b 100%);
+            color: white;
+            padding: 10rem 1.5rem 6rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+            animation: pulse 15s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1rem;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-tagline {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            margin-bottom: 1.5rem;
+            color: var(--secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero-description {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            margin-bottom: 2.5rem;
+            color: #cbd5e1;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+            background: rgba(255,255,255,0.05);
+            padding: 1.5rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.1);
+            min-width: 140px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--secondary);
+            display: block;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            touch-action: manipulation;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--whatsapp), var(--whatsapp-dark));
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        /* =========================================
+           4. SECTION UTILITIES & ANIMATIONS
+           ========================================= */
+        section {
+            padding: 5rem 1.5rem;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            color: var(--dark);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+            font-weight: 800;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            max-width: 650px;
+            margin: 1.5rem auto 0;
+        }
+
+        /* Scroll Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================================
+           5. SERVICES & SEARCH FILTER
+           ========================================= */
+        .services {
+            background: var(--light);
+        }
+
+        /* Vibrant AI-style Search Bar */
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1.2rem 1.5rem 1.2rem 3.5rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: var(--transition);
+            background: white;
+            color: var(--dark);
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1), var(--shadow-glow);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1.25rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+            font-size: 1.2rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(6, 182, 212, 0.1));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .service-card:hover .service-icon span {
+            filter: grayscale(1) brightness(10);
+        }
+
+        .service-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            flex-grow: 1;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: var(--whatsapp);
+            color: white;
+            padding: 0.9rem 1.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            width: 100%;
+            font-size: 0.95rem;
+        }
+
+        .whatsapp-btn:hover {
+            background: var(--whatsapp-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        /* =========================================
+           6. ABOUT SECTION (3D & Professional)
+           ========================================= */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            font-weight: 800;
+        }
+
+        .about-text p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .features-list li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .features-list li::before {
+            content: '✓';
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, var(--success), #059669);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: var(--transition);
+        }
+
+        .about-image:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+
+        .about-image-placeholder {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 6rem;
+            position: relative;
+        }
+
+        .about-image-placeholder::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('data:image/svg+xml,<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="1" fill="rgba(255,255,255,0.2)"/></svg>');
+        }
+
+        .map-container {
+            margin-top: 1.5rem;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            border: 2px solid white;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 250px;
+            border: 0;
+            display: block;
+        }
+
+        /* =========================================
+           7. HOW IT WORKS & COVERAGE
+           ========================================= */
+        .how-it-works {
+            background: white;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            position: relative;
+        }
+
+        .step-card {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            position: relative;
+            background: var(--light);
+            border-radius: 20px;
+            transition: var(--transition);
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+        }
+
+        .step-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        .step-card p {
+            color: var(--gray);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .coverage-box {
+            background: linear-gradient(135deg, var(--dark), #1e293b);
+            color: white;
+            padding: 3.5rem 2rem;
+            border-radius: 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .coverage-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.2) 0%, transparent 70%);
+        }
+
+        .coverage-box h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            font-weight: 800;
+        }
+
+        .coverage-areas {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2.5rem 0;
+            position: relative;
+        }
+
+        .area-tag {
+            background: rgba(255,255,255,0.1);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.2);
+            font-weight: 500;
+            transition: var(--transition);
+            backdrop-filter: blur(5px);
+        }
+
+        .area-tag:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* =========================================
+           8. TESTIMONIALS & FAQ
+           ========================================= */
+        .testimonials {
+            background: var(--light);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .stars {
+            color: #fbbf24;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            color: var(--gray);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--dark);
+            font-size: 1.1rem;
+        }
+
+        .testimonial-role {
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 0.25rem;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 16px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .faq-question {
+            padding: 1.5rem 2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            color: var(--dark);
+            transition: var(--transition);
+            font-size: 1.05rem;
+        }
+
+        .faq-question:hover {
+            background: #f8fafc;
+        }
+
+        .faq-question span {
+            transition: transform 0.3s ease;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .faq-answer {
+            padding: 0 2rem 1.5rem;
+            color: var(--gray);
+            line-height: 1.8;
+            display: none;
+            font-size: 1rem;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary);
+        }
+
+        .faq-item.active .faq-question span {
+            transform: rotate(180deg);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* =========================================
+           9. CONTACT & FOOTER
+           ========================================= */
+        .contact {
+            background: linear-gradient(135deg, var(--darker), var(--dark));
+            color: white;
+        }
+
+        .contact .section-header h2 {
+            color: white;
+        }
+
+        .contact .section-header p {
+            color: #94a3b8;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.05);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255,255,255,0.1);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 0.75rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .contact-card p, .contact-card a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 1.05rem;
+            transition: var(--transition);
+        }
+
+        .contact-card a:hover {
+            color: var(--secondary);
+        }
+
+        .hours {
+            background: rgba(37, 99, 235, 0.2);
+            color: var(--secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        footer {
+            background: var(--darker);
+            color: white;
+            padding: 4rem 1.5rem 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #94a3b8;
+            text-decoration: none;
+            line-height: 2;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: var(--secondary);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px) translateX(0);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        /* =========================================
+           10. FLOATING ELEMENTS
+           ========================================= */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 65px;
+            height: 65px;
+            background: var(--whatsapp);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            cursor: pointer;
+            z-index: 999;
+            transition: var(--transition);
+            text-decoration: none;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--dark);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: var(--shadow-md);
+            cursor: pointer;
+            z-index: 998;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            border: none;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        /* =========================================
+           11. RESPONSIVE DESIGN (Mobile First)
+           ========================================= */
+        @media (max-width: 1024px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .about-image {
+                transform: none;
+                order: -1;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .hero {
+                padding: 8rem 1.5rem 4rem;
+            }
+
+            .hero-stats {
+                gap: 1rem;
+            }
+
+            .stat-item {
+                min-width: 120px;
+                padding: 1rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 4rem 1.5rem;
+            }
+
+            .features-list {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            .footer-section a:hover {
+                transform: translateX(0) scale(1.05);
+            }
+            
+            .floating-whatsapp {
+                width: 55px;
+                height: 55px;
+                font-size: 1.75rem;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .back-to-top {
+                bottom: 20px;
+                left: 20px;
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                width: 100%;
+                padding: 1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Accessibility: Respect user's preference for reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar" role="navigation" aria-label="Main Navigation">
+        <div class="nav-container">
+            <a href="#home" class="logo" aria-label="UrbanFix Home">
+                URBAN<span>FIX</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#coverage">Coverage</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://wa.me/27656754332?text=Hi%20UrbanFix%2C%20I%27d%20like%20to%20book%20a%20repair%20service" class="cta-button" target="_blank" rel="noopener noreferrer">Get Quote</a></li>
+            </ul>
+
+            <button class="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+    <div class="mobile-nav" id="mobile-nav" role="dialog" aria-label="Mobile navigation">
+        <ul class="mobile-nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Business</a></li>
+            <li>
+                <div class="has-submenu" role="button" tabindex="0" aria-expanded="false">Services</div>
+                <div class="submenu">
+                    <a href="#services">Phone Repairs</a>
+                    <a href="#services">Laptop Repairs</a>
+                    <a href="#services">Tablet Repairs</a>
+                    <a href="#services">Smartwatch Repairs</a>
+                </div>
+            </li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#coverage">Coverage Area</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li style="margin-top: 1rem;">
+                <a href="https://wa.me/27656754332?text=Hi%20UrbanFix%2C%20I%27d%20like%20to%20book%20a%20repair%20service" class="btn btn-primary" style="width: 100%; text-align: center;" target="_blank" rel="noopener noreferrer">
+                    💬 Get WhatsApp Quote
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content reveal">
+                <h1>EXPERT <span>DEVICE REPAIRS</span> & ACCESSORIES</h1>
+                <p class="hero-tagline">Right at Your Doorstep</p>
+                <p class="hero-description">
+                    Professional repair services for phones, laptops, tablets, and smartwatches. 
+                    We come to you — fast, reliable, and affordable repairs with a 100% quality guarantee.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Repairs Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">2h</span>
+                        <span class="stat-label">Avg. Turnaround</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Satisfaction</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5.0</span>
+                        <span class="stat-label">Star Rating</span>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="https://wa.me/27656754332?text=Hi%20UrbanFix%2C%20I%27d%20like%20to%20book%20a%20repair%20service" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        📱 Book Repair Now
+                    </a>
+                    <a href="#services" class="btn btn-secondary">
+                        View Services
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text reveal">
+                        <h3>Your Trusted Mobile Repair Partner</h3>
+                        <p>
+                            UrbanFix is your go-to solution for expert device repairs and quality accessories. 
+                            We bring professional repair services directly to your doorstep, saving you time 
+                            and the hassle of traveling to a shop.
+                        </p>
+                        <p>
+                            Whether it's a cracked screen, battery replacement, water damage, or software issues, 
+                            our skilled technicians have you covered. We also offer certified pre-owned phones at competitive prices.
+                        </p>
+                        <ul class="features-list">
+                            <li>Doorstep service - we come to you</li>
+                            <li>Fast turnaround time</li>
+                            <li>Quality guaranteed parts</li>
+                            <li>Affordable, transparent pricing</li>
+                            <li>Expert certified technicians</li>
+                            <li>Warranty on all repairs</li>
+                        </ul>
+                    </div>
+                    <div class="about-image reveal">
+                        <div class="about-image-placeholder" role="img" aria-label="Technician repairing a device">🔧</div>
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114584.725842407!2d30.9000!3d-25.4753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec0439c3b6b6b6b%3A0x1234567890abcdef!2sMbombela%2C%20South%20Africa!5e0!3m2!1sen!2sza!4v1600000000000!5m2!1sen!2sza" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="UrbanFix Service Area Map"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Our Premium Services</h2>
+                    <p>Comprehensive repair solutions for all your devices. Use the search bar to find your specific need, then click to WhatsApp us directly.</p>
+                </div>
+
+                <!-- Advanced Text-Based Search Filter -->
+                <div class="search-container reveal">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="service-search" class="search-input" placeholder="What needs fixing? (e.g., iPhone screen, laptop battery, tablet)" aria-label="Search services">
+                </div>
+
+                <div class="services-grid" id="services-grid">
+                    <!-- Phone Repairs -->
+                    <article class="service-card reveal">
+                        <div class="service-icon"><span>📱</span></div>
+                        <h3>Phone Repairs</h3>
+                        <p>Screen replacements, battery changes, charging port repairs, water damage restoration, camera fixes, and software issues for iPhone, Samsung, Huawei, Xiaomi, Oppo, and more.</p>
+                        <a href="https://wa.me/27656754332?text=Hi%20UrbanFix%2C%20I%20need%20help%20with%20my%20phone%20repair.%20My%20phone%20model%20is%20%5Binsert%20model%5D%20and%20the%20issue%20is%20%5Bdescribe%20issue%5D.%20Please%20advise%20on%20pricing%20and%20availability." class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+                            <span>💬</span> Enquire About Phone Repair
+                        </a>
+                    </article>
+
+                    <!-- Laptop Repairs -->
+                    <article class="service-card reveal">
+                        <div class="service-icon"><span>💻</span></div>
+                        <h3>Laptop Repairs</h3>
+                        <p>Screen repairs, keyboard replacement, battery issues, virus removal, software installation, hardware upgrades, data recovery, and general maintenance for all laptop brands.</p>
+                        <a href="https://wa.me/27656754332?text=Hi%20UrbanFix%2C%20I%20need%20assistance%20with%20my%20laptop.%20Model%3A%20%5Binsert%20model%5D%2C%20Issue%3A%20%5Bdescribe%20problem%5D.%20Can%20you%20please%20provide%20a%20quote%20and%20availability%3F" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+                            <span>💬</span> Enquire About Laptop Repair
+                        </a>
+                    </article>
+
+                    <!-- Tablet Repairs -->
+                    <article class="service-card reveal">
+                        <div class="service-icon"><span>📟</span></div>
+                        <h3>Tablet Repairs</h3>
+                        <p>iPad and Android tablet repairs including screen replacement, battery issues, charging problems, water damage, button repairs, and software troubleshooting.</p>
+                        <a href="https://wa.me/27656754332?text=Hi%20UrbanFix%2C%20My%20tablet%20needs%20repair.%20Device%3A%20%5BiPad%2FAndroid%20tablet%20model%5D%2C%20Problem%3A%20%5Bdescribe%20issue%5D.%20Please%20send%20me%20pricing%20and%20booking%20details." class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+                            <span>💬</span> Enquire About Tablet Repair
+                        </a>
+                    </article>
+
+                    <!-- Smartwatch Repairs -->
+                    <article class="service-card reveal">
+                        <div class="service-icon"><span>⌚</span></div>
+                        <h3>Smartwatch Repairs</h3>
+                        <p>Apple Watch, Samsung Galaxy Watch, and other smartwatch repairs. Screen replacement, battery issues, band replacement, water damage, and connectivity problems.</p>
+                        <a href="https://wa.me/27656754332?text=Hi%20UrbanFix%2C%20I%20have%20a%20smartwatch%20issue.%20Watch%20model%3A%20%5Binsert%20model%5D%2C%20Issue%3A%20%5Bdescribe%20problem%5D.%20What%20are%20my%20options%20and%20costs%3F" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+                            <span>💬</span> Enquire About Smartwatch Repair
+                        </a>
+                    </article>
+
+                    <!-- Pre-owned Phones -->
+                    <article class="service-card reveal">
+                        <div class="service-icon"><span>📲</span></div>
+                        <h3>Pre-owned Phone Sales</h3>
+                        <p>Quality checked, certified pre-owned smartphones at affordable prices. All devices are thoroughly tested, cleaned, and come with a warranty. Great deals on iPhones and Samsung.</p>
+                        <a href="https://wa.me/27656754332?text=Hi%20UrbanFix%2C%20I%27m%20interested%20in%20buying%20a%20pre-owned%20phone.%20I%27m%20looking%20for%20%5Bbrand%2Fmodel%5D%20with%20a%20budget%20of%20%5Bamount%5D.%20What%20do%20you%20have%20available%3F" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+                            <span>💬</span> View Available Phones
+                        </a>
+                    </article>
+
+                    <!-- Accessories -->
+                    <article class="service-card reveal">
+                        <div class="service-icon"><span>🎧</span></div>
+                        <h3>Quality Accessories</h3>
+                        <p>Chargers, cables, screen protectors, cases, earphones, power banks, and other mobile accessories. Original and high-quality compatible products at competitive prices.</p>
+                        <a href="https://wa.me/27656754332?text=Hi%20UrbanFix%2C%20I%20need%20accessories%20for%20my%20device.%20Device%20model%3A%20%5Binsert%20model%5D%2C%20Looking%20for%3A%20%5Bcharger%2Fcase%2Fscreen%20protector%2Fetc%5D.%20What%20do%20you%20have%20in%20stock%3F" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+                            <span>💬</span> Browse Accessories
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="how-it-works" id="how-it-works">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>How It Works</h2>
+                    <p>Getting your device repaired has never been easier. Just follow these simple steps.</p>
+                </div>
+
+                <div class="steps-grid">
+                    <div class="step-card reveal">
+                        <div class="step-number">01</div>
+                        <h3>Send Enquiry</h3>
+                        <p>WhatsApp us with your device model and the issue you're experiencing. We'll respond within minutes.</p>
+                    </div>
+                    <div class="step-card reveal">
+                        <div class="step-number">02</div>
+                        <h3>Get Quote</h3>
+                        <p>Receive a transparent quote with pricing and estimated turnaround time. No hidden fees, ever.</p>
+                    </div>
+                    <div class="step-card reveal">
+                        <div class="step-number">03</div>
+                        <h3>Book Appointment</h3>
+                        <p>Schedule a convenient time and location for our technician to meet you at your doorstep.</p>
+                    </div>
+                    <div class="step-card reveal">
+                        <div class="step-number">04</div>
+                        <h3>We Fix It</h3>
+                        <p>Our expert technician repairs your device on-site or collects it for complex repairs, with a warranty.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coverage Area -->
+        <section id="coverage">
+            <div class="container">
+                <div class="coverage-box reveal">
+                    <h3>📍 Service Coverage Area</h3>
+                    <p style="color: #cbd5e1; max-width: 600px; margin: 0 auto;">We offer fast, reliable doorstep repair services across the following areas in Mpumalanga:</p>
+                    <div class="coverage-areas">
+                        <span class="area-tag">Mbombela / Nelspruit</span>
+                        <span class="area-tag">White River</span>
+                        <span class="area-tag">Hazyview</span>
+                        <span class="area-tag">Nkomazi</span>
+                        <span class="area-tag">Barberton</span>
+                        <span class="area-tag">Middelburg</span>
+                        <span class="area-tag">Witbank / eMalahleni</span>
+                        <span class="area-tag">Mpumalanga Region</span>
+                    </div>
+                    <p style="margin-top: 2rem; color: #94a3b8; font-size: 0.95rem;">
+                        Outside these areas? Contact us - we may still be able to help!
+                    </p>
+                    <a href="https://wa.me/27656754332?text=Hi%20UrbanFix%2C%20I%27m%20located%20in%20%5Byour%20area%5D.%20Do%20you%20offer%20service%20in%20my%20area%3F" class="btn btn-primary" style="margin-top: 1.5rem;" target="_blank" rel="noopener noreferrer">
+                        Check My Area
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>What Our Customers Say</h2>
+                    <p>Don't just take our word for it - hear from our satisfied customers across Mpumalanga.</p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <article class="testimonial-card reveal">
+                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <p class="testimonial-text">"UrbanFix saved my phone! Cracked my screen and they replaced it within 2 hours at my office. Professional service and great price. Highly recommend!"</p>
+                        <div class="testimonial-author">Thabo M.</div>
+                        <div class="testimonial-role">Mbombela</div>
+                    </article>
+
+                    <article class="testimonial-card reveal">
+                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <p class="testimonial-text">"Bought a pre-owned iPhone from them. Device was in excellent condition, better than expected. They even threw in a free case and screen protector."</p>
+                        <div class="testimonial-author">Lerato N.</div>
+                        <div class="testimonial-role">White River</div>
+                    </article>
+
+                    <article class="testimonial-card reveal">
+                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <p class="testimonial-text">"My laptop was running super slow. UrbanFix cleaned it up, removed viruses, and upgraded the SSD. It's like having a brand new laptop. Fantastic!"</p>
+                        <div class="testimonial-author">Pieter V.</div>
+                        <div class="testimonial-role">eMalahleni</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Find answers to common questions about our services, warranty, and process.</p>
+                </div>
+
+                <div class="faq-container reveal">
+                    <div class="faq-item active">
+                        <div class="faq-question" role="button" tabindex="0" aria-expanded="true">
+                            How long does a typical repair take?
+                            <span>▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Most phone repairs are completed within 1-2 hours. Complex repairs like water damage or motherboard issues may take 24-48 hours. We'll always give you an accurate timeframe before starting the repair.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                            Do you offer warranty on repairs?
+                            <span>▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            Yes! All our repairs come with a warranty period (typically 3-6 months depending on the repair type). If you experience any issues related to the repair within this period, we'll fix it free of charge.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                            What areas do you service?
+                            <span>▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            We primarily serve Mbombela/Nelspruit, White River, Hazyview, Nkomazi, Barberton, Middelburg, Witbank/eMalahleni, and surrounding areas in Mpumalanga. Contact us if you're outside these areas.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                            Are your parts original/OEM?
+                            <span>▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            We use high-quality parts that meet or exceed OEM standards. For certain repairs, we can offer both original and premium compatible options at different price points. We'll always inform you of what we're using.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                            What payment methods do you accept?
+                            <span>▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            We accept cash, EFT, and card payments. Payment is typically required upon completion of the repair, though we may require a deposit for certain services or parts ordering.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Get In Touch</h2>
+                    <p>Ready to fix your device? Contact us now for a quick quote or to book a repair.</p>
+                </div>
+
+                <div class="contact-grid reveal">
+                    <div class="contact-card">
+                        <div class="contact-icon">💬</div>
+                        <h3>WhatsApp</h3>
+                        <a href="https://wa.me/27656754332" target="_blank" rel="noopener noreferrer">+27 65 675 4332</a>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #94a3b8;">Fastest response time</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">📞</div>
+                        <h3>Phone Call</h3>
+                        <a href="tel:+27656754332">+27 65 675 4332</a>
+                        <div class="hours">Mon - Fri: 8AM - 6PM<br>Sat: 9AM - 4PM</div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">📍</div>
+                        <h3>Service Area</h3>
+                        <p>Mbombela & Surrounding Areas<br>Mpumalanga, South Africa</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">✉️</div>
+                        <h3>Email</h3>
+                        <a href="mailto:info@urbanfix.co.za">info@urbanfix.co.za</a>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #94a3b8;">We respond within 24h</p>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 3.5rem;" class="reveal">
+                    <a href="https://wa.me/27656754332?text=Hi%20UrbanFix%2C%20I%27d%20like%20to%20make%20an%20enquiry%20about%20your%20services." class="btn btn-primary" style="padding: 1.2rem 3rem; font-size: 1.1rem;" target="_blank" rel="noopener noreferrer">
+                        💬 Chat on WhatsApp Now
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>UrbanFix</h3>
+                <p>Expert Phone Repairs & Accessories - Right at Your Doorstep.</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">Professional, reliable, and affordable repair services for all your devices in Mpumalanga.</p>
+                <div class="social-links">
+                    <a href="https://facebook.com/urbanfix" target="_blank" rel="noopener noreferrer" aria-label="Facebook">📘</a>
+                    <a href="https://instagram.com/urbanfix" target="_blank" rel="noopener noreferrer" aria-label="Instagram">📷</a>
+                    <a href="https://wa.me/27656754332" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">💬</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#services">Services</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#faq">FAQ</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <a href="#services">Phone Repairs</a>
+                <a href="#services">Laptop Repairs</a>
+                <a href="#services">Tablet Repairs</a>
+                <a href="#services">Smartwatch Repairs</a>
+                <a href="#services">Pre-owned Phones</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>📱 +27 65 675 4332</p>
+                <p>✉️ info@urbanfix.co.za</p>
+                <p>📍 Mbombela, Mpumalanga</p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--secondary);">🕐 Mon-Fri: 8AM-6PM | Sat: 9AM-4PM</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 UrbanFix. All Rights Reserved. | Designed with ❤️ in Mpumalanga</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/27656754332?text=Hi%20UrbanFix%2C%20I%20need%20help%20with%20my%20device." class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp" title="Chat on WhatsApp">
+        💬
+    </a>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <!-- JavaScript -->
+    <script>
+        // ==========================================
+        // 1. Mobile Menu Toggle (3D Animation)
+        // ==========================================
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const mobileOverlay = document.querySelector('.mobile-overlay');
+        const hasSubmenus = document.querySelectorAll('.has-submenu');
+
+        function toggleMenu() {
+            const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+            mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+            mobileMenuBtn.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            mobileOverlay.classList.toggle('active');
+            document.body.style.overflow = isExpanded ? '' : 'hidden';
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        mobileOverlay.addEventListener('click', toggleMenu);
+
+        // Submenu Toggle
+        hasSubmenus.forEach(submenu => {
+            submenu.addEventListener('click', () => {
+                submenu.classList.toggle('open');
+                const isExpanded = submenu.getAttribute('aria-expanded') === 'true';
+                submenu.setAttribute('aria-expanded', !isExpanded);
+                const panel = submenu.nextElementSibling;
+                panel.classList.toggle('open');
+            });
+            
+            // Keyboard accessibility
+            submenu.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    submenu.click();
+                }
+            });
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (mobileNav.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // ==========================================
+        // 2. Scroll Animations (Intersection Observer)
+        // ==========================================
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target); // Only animate once
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ==========================================
+        // 3. Navbar Scroll Effect
+        // ==========================================
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // ==========================================
+        // 4. FAQ Accordion
+        // ==========================================
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                    question.setAttribute('aria-expanded', 'true');
+                }
+            });
+
+            // Keyboard accessibility for FAQ
+            question.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    question.click();
+                }
+            });
+        });
+
+        // ==========================================
+        // 5. Advanced Service Search Filter
+        // ==========================================
+        const searchInput = document.getElementById('service-search');
+        const serviceCards = document.querySelectorAll('.service-card');
+
+        searchInput.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase().trim();
+            
+            serviceCards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                if (text.includes(term)) {
+                    card.style.display = 'flex';
+                    // Re-trigger animation
+                    card.style.animation = 'none';
+                    card.offsetHeight; // Trigger reflow
+                    card.style.animation = 'fadeIn 0.5s ease forwards';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // ==========================================
+        // 6. Back to Top Button
+        // ==========================================
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // ==========================================
+        // 7. Smooth Scrolling with Offset for Fixed Header
+        // ==========================================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerOffset = 80;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
