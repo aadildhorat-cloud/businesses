@@ -254,6 +254,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;back
 .skeleton-content{padding:1rem}
 .skeleton-line{height:14px;margin-bottom:.7rem}
 @media print{header,.side-menu,.menu-overlay,.cart-sidebar,.overlay,.modal-overlay,.whatsapp-float,.toast,footer,.back-to-top,.search-filter-bar{display:none!important}}
+
 </style>
 </head>
 <body>
@@ -268,6 +269,294 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;back
         <p>Wholesale &amp; Distribution</p>
       </div>
     </div>
+    <!-- START HIVE TIMES BADGE (YELLOW EDITION) -->
+<style>
+  /* Badge Container */
+  .hive-badge-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFD700; /* Bright Honey Yellow */
+    border: 2px solid #E5C100; /* Slightly darker yellow border */
+    border-radius: 50px; /* Pill shape */
+    padding: 6px 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* The Honeycomb Icon (SVG) */
+  .hive-icon-svg {
+    width: 18px;
+    height: 18px;
+    fill: #000000; /* Black icon for contrast against yellow */
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  /* Text Container */
+  .hive-text-group {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+
+  /* Main Text */
+  .hive-text {
+    color: #000000; /* Black text for readability */
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Sub Text */
+  .hive-subtext {
+    font-size: 9px;
+    font-weight: 600;
+    color: #333333;
+    text-transform: uppercase;
+  }
+
+  /* Hover Effects */
+  .hive-badge-link:hover {
+    background-color: #E5C100; /* Darker yellow on hover */
+    border-color: #C9A900;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .hive-badge-link:hover .hive-icon-svg {
+    transform: scale(1.1); /* Icon grows slightly */
+  }
+
+  /* Mobile Adjustments */
+  @media (max-width: 480px) {
+    .hive-badge-link {
+      padding: 5px 10px;
+    }
+    .hive-icon-svg {
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+    }
+    .hive-text {
+      font-size: 11px;
+    }
+    .hive-subtext {
+      font-size: 8px;
+      /* Keep subtext on mobile but ensure it fits */
+    }
+  }
+  /* ===== MOBILE HEADER ENHANCEMENTS ===== */
+
+/* Better mobile header spacing and alignment */
+@media (max-width: 768px) {
+  header {
+    padding: 0.5rem 0;
+    border-bottom: 2px solid var(--primary);
+  }
+  
+  .header-container {
+    padding: 0 0.75rem;
+    gap: 0.5rem;
+  }
+  
+  /* Logo adjustments for mobile */
+  .logo {
+    flex: 1;
+    min-width: 0;
+    gap: 0.5rem;
+  }
+  
+  .logo img {
+    width: 42px;
+    height: 42px;
+    border-width: 2px;
+  }
+  
+  .logo-text h1 {
+    font-size: clamp(1rem, 4vw, 1.3rem);
+    letter-spacing: 0.3px;
+  }
+  
+  .logo-text p {
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    margin-top: -1px;
+  }
+  
+  /* Professional hamburger button */
+  .hamburger-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    order: -1; /* Move to far left */
+    flex-shrink: 0;
+  }
+  
+  .hamburger-btn span {
+    width: 20px;
+    height: 2px;
+    gap: 4px;
+  }
+  
+  /* Compact cart button */
+  .cart-btn {
+    padding: 0.5rem 0.75rem;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    min-height: 40px;
+    gap: 0.3rem;
+    flex-shrink: 0;
+  }
+  
+  .cart-btn i {
+    font-size: 0.9rem;
+  }
+  
+  .cart-count {
+    padding: 0.1rem 0.4rem;
+    font-size: 0.75rem;
+  }
+  
+  /* Hide or minimize Hive badge on mobile */
+  .hive-badge-link {
+    padding: 4px 8px;
+    margin-left: auto;
+    margin-right: 0.5rem;
+  }
+  
+  .hive-badge-link .hive-text {
+    font-size: 10px;
+  }
+  
+  .hive-badge-link .hive-subtext {
+    font-size: 7px;
+  }
+  
+  .hive-icon-svg {
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+  }
+  
+  /* Optional: Hide Hive badge on very small screens */
+  @media (max-width: 380px) {
+    .hive-badge-link {
+      display: none;
+    }
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .header-container {
+    padding: 0 0.5rem;
+  }
+  
+  .logo img {
+    width: 38px;
+    height: 38px;
+  }
+  
+  .logo-text h1 {
+    font-size: 1rem;
+  }
+  
+  .logo-text p {
+    display: none; /* Hide subtitle on very small screens */
+  }
+  
+  .cart-btn {
+    padding: 0.5rem 0.6rem;
+  }
+  
+  .cart-btn span:not(.cart-count) {
+    display: none; /* Hide "Cart" text, keep just icon and count */
+  }
+}
+
+/* Premium mobile header shadow effect */
+@media (max-width: 768px) {
+  header {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Subtle bottom accent line */
+  header::after {
+    height: 2px;
+    bottom: -4px;
+  }
+}
+
+/* Enhanced touch feedback for mobile */
+@media (max-width: 768px) {
+  .hamburger-btn:active,
+  .cart-btn:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+  }
+  
+  .hamburger-btn.active {
+    background: linear-gradient(135deg, var(--dark), var(--primary));
+  }
+}
+
+/* Professional mobile menu overlay improvements */
+@media (max-width: 768px) {
+  .side-menu {
+    width: 85%;
+    max-width: 340px;
+  }
+  
+  .menu-header {
+    padding: 1.25rem 1rem;
+  }
+  
+  .menu-header img {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .menu-header h2 {
+    font-size: 1.1rem;
+  }
+  
+  .menu-link {
+    padding: 0.95rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .menu-footer {
+    padding: 1rem;
+  }
+  
+  .menu-footer p {
+    font-size: 0.82rem;
+  }
+}
+</style>
+
+<!-- The Link -->
+<a href="https://hivetimes.co.za" class="hive-badge-link" target="_blank" rel="noopener" title="Visit Hive Times">
+  
+  <!-- Honeycomb SVG Icon -->
+  <svg class="hive-icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 2L14.5 6.5L19 6.5L16.5 11L19 15.5L14.5 15.5L12 20L9.5 15.5L5 15.5L7.5 11L5 6.5L9.5 6.5L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/>
+    <path d="M12 7L13.5 9.5L16 9.5L14.5 12L16 14.5L13.5 14.5L12 17L10.5 14.5L8 14.5L9.5 12L8 9.5L10.5 9.5L12 7Z" fill="currentColor"/>
+  </svg>
+
+  <div class="hive-text-group">
+    <span class="hive-text">HIVE</span>
+    <span class="hive-subtext">Member</span>
+  </div>
+
+</a>
+<!-- END HIVE TIMES BADGE -->
     <div class="header-actions">
       <button class="cart-btn" onclick="cart.toggleCart()"><i class="fas fa-shopping-cart"></i> Cart (<span id="cartCount">0</span>)</button>
     </div>
@@ -284,11 +573,11 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;back
     <a href="#" class="menu-link" onclick="scrollToTop(); toggleMenu(); return false;"><i class="fas fa-home"></i><span>Home</span></a>
     <div id="dynamicMenuCategories"></div>
     <!-- TODO: real contact details -->
-    <a href="tel:+27000000000" class="menu-link"><i class="fas fa-phone"></i><span>Contact Us</span></a>
+    <a href="tel:+27682923223" class="menu-link"><i class="fas fa-phone"></i><span>Contact Us</span></a>
   </div>
   <div class="menu-footer">
-    <p><i class="fas fa-phone"></i> +27 00 000 0000</p>
-    <p><i class="fas fa-envelope"></i> sales@zansho.co.za</p>
+    <p><i class="fas fa-phone"></i> +27 68 292 3223</p>
+    <p><i class="fas fa-envelope"></i> admin@zansho.co.za</p>
     <p><i class="fas fa-map-marker-alt"></i> South Africa</p>
     <p style="color:var(--accent);font-weight:700;margin-top:.8rem"><i class="fas fa-handshake"></i> Reseller &amp; Bulk Orders Welcome</p>
   </div>
@@ -411,12 +700,12 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;back
       <a href="#" onclick="scrollToTop(); return false;">Home</a>
       <a href="#catalogue" onclick="scrollToSection('catalogue'); return false;">Catalogue</a>
       <!-- TODO: real contact links -->
-      <a href="mailto:sales@zansho.co.za">Contact</a>
+      <a href="mailto:admin@zansho.co.za">Contact</a>
     </div>
     <div class="footer-section">
       <h4>Contact Us</h4>
-      <p><i class="fas fa-phone"></i> +27 00 000 0000</p>
-      <p><i class="fas fa-envelope"></i> sales@zansho.co.za</p>
+      <p><i class="fas fa-phone"></i> +27 68 292 3223</p>
+      <p><i class="fas fa-envelope"></i> admin@zansho.co.za</p>
       <p><i class="fas fa-map-marker-alt"></i> South Africa</p>
     </div>
     <div class="footer-section">
@@ -540,7 +829,7 @@ function openModal(id){
 }
 function setModalWa(){
   if(!currentProduct) return;
-  const wa=(window.ZANSHO_CONFIG&&window.ZANSHO_CONFIG.WHATSAPP_NUMBER)||'27000000000';
+  const wa=(window.ZANSHO_CONFIG&&window.ZANSHO_CONFIG.WHATSAPP_NUMBER)||'27682923223';
   const msg=`Hi Zansho! I'd like to order ${modalQuantity} x ${currentProduct.name} (wholesale R${(currentProduct.price||0).toFixed(2)}/unit). Please confirm availability & delivery.`;
   document.getElementById('modalWhatsappBtn').href=`https://wa.me/${wa}?text=${encodeURIComponent(msg)}`;
 }
@@ -611,7 +900,7 @@ const cart={
   },
   checkout(){
     if(!this.items.length){ this.showToast('🛒 Your cart is empty!'); return; }
-    const wa=(window.ZANSHO_CONFIG&&window.ZANSHO_CONFIG.WHATSAPP_NUMBER)||'27000000000';
+    const wa=(window.ZANSHO_CONFIG&&window.ZANSHO_CONFIG.WHATSAPP_NUMBER)||'27682923223';
     let msg=`📦 *New Wholesale Order – Zansho Website*\n*Order Type:* ${this.orderType}\n*Items:*\n`;
     this.items.forEach(i=>{ msg+=`▫️ ${i.name} (x${i.quantity} @ R${i.price.toFixed(2)}) = R${(i.price*i.quantity).toFixed(2)}\n`; });
     const total=this.items.reduce((s,i)=>s+i.price*i.quantity,0).toFixed(2);
@@ -623,7 +912,7 @@ const cart={
 };
 // ===== WHATSAPP LINK HYDRATION (also run by products-zansho.js) =====
 function hydrateWhatsAppLinks(){
-  const wa=(window.ZANSHO_CONFIG&&window.ZANSHO_CONFIG.WHATSAPP_NUMBER)||'27000000000';
+  const wa=(window.ZANSHO_CONFIG&&window.ZANSHO_CONFIG.WHATSAPP_NUMBER)||'27682923223';
   document.querySelectorAll('a[data-wa]').forEach(a=>{
     const msg=a.getAttribute('data-wa-msg')||"Hi Zansho! I'd like to enquire about your wholesale products.";
     a.href=`https://wa.me/${wa}?text=${encodeURIComponent(msg)}`;

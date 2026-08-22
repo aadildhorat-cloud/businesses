@@ -17,7 +17,7 @@ const CONFIG = {
   CACHE_KEY: "zansho_products_cache_v1",
   CACHE_TTL: 10 * 60 * 1000,
   // ⚠️ TODO: REPLACE with Zansho's real WhatsApp number (country code, no +)
-  WHATSAPP_NUMBER: "27000000000",
+  WHATSAPP_NUMBER: "27682923223",
   resolveImage: function (src) {
     if (!src) return CONFIG.fallbackImage;
     if (/^https?:\/\//.test(src)) return src;
