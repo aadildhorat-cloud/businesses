@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DTPGZ964FD"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#f26a1b">
+<title>Zansho Wholesale & Distribution | Electronics, Accessories & Homeware Wholesale</title>
+<meta name="description" content="Zansho Wholesale & Distribution - South African wholesaler of chargers, cables, earphones, headphones, smartwatches, power banks, speakers, gaming accessories and homeware. Bulk pricing with minimum order quantities for resellers.">
+<meta name="keywords" content="wholesale, distribution, chargers wholesale, earbuds wholesale, power banks wholesale, smartwatch wholesale, reseller, bulk electronics, South Africa, Zansho">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://zansho.co.za/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Zansho Wholesale & Distribution">
+<meta property="og:description" content="Bulk wholesale pricing on chargers, audio, gadgets & homeware. Reseller-friendly MOQs.">
+<meta property="og:image" content="https://user16425.na.imgto.link/public/20260821/image.avif">
+<link rel="icon" type="image/png" href="images/zansho-logo.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="js/products-zansho.js" as="script">
+<!-- TODO: Replace phone/email/address/hours below with real Zansho details -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WholesaleStore",
+  "name": "Zansho Wholesale & Distribution",
+  "url": "https://zansho.co.za/",
+  "logo": "https://zansho.co.za/images/zansho-logo.png",
+  "description": "Wholesale & distribution of mobile accessories, audio, gadgets and homeware in South Africa. Reseller-friendly minimum order quantities.",
+  "areaServed": { "@type": "Country", "name": "South Africa" },
+  "currenciesAccepted": "ZAR",
+  "paymentAccepted": "Cash, EFT",
+  "priceRange": "R"
+}
+</script>
+<style>
+:root{
+  --primary:#f26a1b; --dark:#c2410c; --accent:#ffb612; --black:#0a0a0a; --dark-gray:#1a1a1a;
+  --light:#fafafa; --white:#fff; --gray:#64748b; --border:#e2e8f0;
+  --sa-flag:linear-gradient(90deg,#00774f 0 25%,#ffb612 25% 50%,#e03c31 50% 75%,#001489 75% 100%);
+  --shadow-sm:0 2px 8px rgba(0,0,0,.08); --shadow-md:0 4px 16px rgba(0,0,0,.12); --shadow-lg:0 8px 32px rgba(0,0,0,.16);
+  --font-display:'Montserrat',sans-serif; --font-body:'Poppins',sans-serif;
+  --header-height:72px; --container-padding:clamp(1rem,3vw,2rem);
+  --tr:.3s cubic-bezier(.4,0,.2,1);
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--light);color:var(--black);line-height:1.6;overflow-x:hidden}
+img{max-width:100%}
+button{font-family:var(--font-body)}
+::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:var(--light)}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--primary),var(--dark));border-radius:10px}
+/* HEADER */
+header{position:sticky;top:0;z-index:1000;background:linear-gradient(135deg,var(--black),var(--dark-gray));color:#fff;
+  padding:.75rem 0;border-bottom:3px solid var(--primary);box-shadow:var(--shadow-lg)}
+header::after{content:'';display:block;position:absolute;left:0;right:0;bottom:-6px;height:3px;background:var(--sa-flag)}
+.header-container{max-width:1400px;margin:0 auto;padding:0 var(--container-padding);display:flex;align-items:center;gap:1rem;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:.75rem;min-width:0}
+.logo img{width:52px;height:52px;border-radius:50%;object-fit:cover;background:#fff;border:3px solid var(--primary);flex-shrink:0}
+.logo-text h1{font-family:var(--font-display);font-size:clamp(1.1rem,3.5vw,1.7rem);font-weight:900;color:#fff;letter-spacing:.5px;white-space:nowrap}
+.logo-text h1 span{color:var(--primary)}
+.logo-text p{font-size:.72rem;color:var(--accent);font-weight:600;letter-spacing:2px;text-transform:uppercase;white-space:nowrap}
+.header-actions{display:flex;gap:.5rem;align-items:center}
+.hamburger-btn{width:50px;height:50px;background:linear-gradient(135deg,var(--primary),var(--dark));border:none;border-radius:12px;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer;transition:var(--tr)}
+.hamburger-btn span{width:22px;height:3px;background:#fff;border-radius:3px;transition:var(--tr)}
+.hamburger-btn.active span:nth-child(1){transform:rotate(45deg) translate(6px,6px)}
+.hamburger-btn.active span:nth-child(2){opacity:0}
+.hamburger-btn.active span:nth-child(3){transform:rotate(-45deg) translate(6px,-6px)}
+.cart-btn{background:linear-gradient(135deg,var(--primary),var(--dark));color:#fff;border:none;padding:.65rem 1.1rem;border-radius:12px;
+  cursor:pointer;font-weight:700;font-size:.9rem;display:flex;align-items:center;gap:.45rem;transition:var(--tr);min-height:44px}
+.cart-btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(242,106,27,.5)}
+.cart-count{background:var(--black);padding:.15rem .55rem;border-radius:20px;font-size:.8rem;font-weight:800}
+.cart-count.bump{animation:bump .3s ease}
+@keyframes bump{50%{transform:scale(1.3);background:var(--accent);color:#000}}
+/* SIDE MENU */
+.menu-overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(6px);z-index:1999;opacity:0;visibility:hidden;transition:var(--tr)}
+.menu-overlay.active{opacity:1;visibility:visible}
+.side-menu{position:fixed;top:0;left:-100%;width:min(85%,380px);height:100dvh;background:linear-gradient(180deg,var(--black),var(--dark-gray));
+  z-index:2001;overflow-y:auto;transition:left .45s cubic-bezier(.68,-.55,.265,1.55);border-left:3px solid var(--primary)}
+.side-menu.active{left:0}
+.menu-header{background:linear-gradient(135deg,var(--dark),var(--primary));padding:1.5rem;display:flex;align-items:center;gap:1rem}
+.menu-header img{width:54px;height:54px;border-radius:50%;background:#fff;border:3px solid #fff}
+.menu-header h2{font-family:var(--font-display);color:#fff;font-size:1.25rem;font-weight:800}
+.menu-link{display:flex;align-items:center;padding:1.05rem var(--container-padding);color:rgba(255,255,255,.9);text-decoration:none;font-weight:500;transition:var(--tr);border-bottom:1px solid rgba(255,255,255,.05)}
+.menu-link:hover{color:var(--accent);padding-left:calc(var(--container-padding) + .6rem)}
+.menu-link i{width:26px;margin-right:.9rem;color:var(--accent);text-align:center}
+.menu-footer{padding:var(--container-padding);border-top:2px solid rgba(255,255,255,.1)}
+.menu-footer p{display:flex;gap:.7rem;align-items:center;color:rgba(255,255,255,.75);font-size:.9rem;margin:.4rem 0}
+.menu-footer i{color:var(--accent);width:20px}
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--black),var(--dark-gray));padding:clamp(3rem,7vw,5rem) 0;border-bottom:3px solid var(--primary);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 25% 40%,rgba(242,106,27,.12),transparent 55%)}
+.hero-container{max-width:1400px;margin:0 auto;padding:0 var(--container-padding);display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center;position:relative}
+.hero-visual{text-align:center}
+.hero-logo-circle{width:clamp(160px,30vw,240px);height:clamp(160px,30vw,240px);background:var(--primary);border-radius:50%;margin:0 auto 1.5rem;
+  display:flex;align-items:center;justify-content:center;box-shadow:0 0 60px rgba(242,106,27,.45);animation:float 6s ease-in-out infinite}
+.hero-logo-circle img{width:88%;height:88%;;border-radius:50%;object-fit:cover;background:#fff}
+@keyframes float{50%{transform:translateY(-12px)}}
+.hero-visual h2{font-family:var(--font-display);color:#fff;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900}
+.hero-visual h2 span{color:var(--primary)}
+.hero-visual p{color:rgba(255,255,255,.8);max-width:480px;margin:.8rem auto 0;font-size:clamp(.92rem,2vw,1.05rem)}
+.hero-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:24px;padding:clamp(1.5rem,4vw,2.5rem);backdrop-filter:blur(10px)}
+.section-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(242,106,27,.15);color:var(--primary);border:1px solid rgba(242,106,27,.35);padding:.45rem 1rem;border-radius:50px;font-weight:700;font-size:.82rem;margin-bottom:1rem}
+.hero-card h3{font-family:var(--font-display);color:#fff;font-size:clamp(1.3rem,3vw,1.8rem);margin-bottom:1.5rem}
+.services-list{list-style:none;margin-bottom:1.75rem}
+.services-list li{display:flex;gap:1rem;padding:1rem;border-radius:14px;margin-bottom:.75rem;border:1px solid transparent;transition:var(--tr)}
+.services-list li:hover{background:rgba(255,255,255,.05);border-color:rgba(242,106,27,.3);transform:translateX(6px)}
+.service-icon{width:46px;height:46px;background:linear-gradient(135deg,var(--primary),var(--dark));border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;flex-shrink:0}
+.service-text h4{color:#fff;font-size:1rem;font-weight:700}
+.service-text p{color:rgba(255,255,255,.6);font-size:.85rem}
+.cta-hero{display:flex;align-items:center;justify-content:center;gap:.7rem;width:100%;padding:1.1rem;background:linear-gradient(135deg,var(--primary),var(--dark));
+  color:#fff;font-weight:800;font-size:1rem;border-radius:14px;text-decoration:none;transition:var(--tr)}
+.cta-hero:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(242,106,27,.5)}
+@media(max-width:968px){.hero-container{grid-template-columns:1fr;text-align:center}.hero-visual p{margin-inline:auto}}
+/* SEARCH & FILTER */
+.search-filter-bar{position:sticky;top:var(--header-height);z-index:900;background:rgba(255,255,255,.97);backdrop-filter:blur(16px);padding:.8rem 0;box-shadow:var(--shadow-md);border-bottom:3px solid var(--primary)}
+.search-filter-container{max-width:1400px;margin:0 auto;padding:0 var(--container-padding);display:flex;gap:.75rem;flex-wrap:wrap;align-items:center}
+.search-box{flex:1;min-width:200px;position:relative}
+.search-box input{width:100%;padding:.8rem 1rem .8rem 2.7rem;border:2px solid var(--border);border-radius:12px;font-size:.95rem;background:#fff;outline:none;transition:var(--tr)}
+.search-box input:focus{border-color:var(--primary);box-shadow:0 0 0 4px rgba(242,106,27,.12)}
+.search-box>i{position:absolute;left:.9rem;top:50%;transform:translateY(-50%);color:var(--primary)}
+.clear-search{position:absolute;right:.6rem;top:50%;transform:translateY(-50%);border:none;background:none;color:#94a3b8;cursor:pointer;display:none;padding:.25rem}
+.clear-search.visible{display:block}
+.filter-chips{display:flex;gap:.5rem;flex-wrap:wrap}
+.filter-chip{padding:.55rem 1.1rem;background:#fff;border:2px solid var(--border);border-radius:20px;cursor:pointer;font-weight:600;font-size:.85rem;color:#334155;transition:var(--tr);white-space:nowrap}
+.filter-chip:hover{border-color:var(--primary);color:var(--primary)}
+.filter-chip.active{background:linear-gradient(135deg,var(--primary),var(--dark));color:#fff;border-color:var(--primary)}
+@media(max-width:768px){.filter-chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;width:100%}.filter-chips::-webkit-scrollbar{display:none}.filter-chip{flex-shrink:0}}
+/* MAIN / GRID / CARDS */
+.container{max-width:1400px;margin:0 auto;padding:clamp(2rem,5vw,3.5rem) var(--container-padding)}
+.category-section{margin-bottom:clamp(3rem,6vw,4.5rem);scroll-margin-top:calc(var(--header-height) + 90px)}
+.category-header{margin-bottom:1.5rem}
+.category-title{font-family:var(--font-display);font-size:clamp(1.4rem,4vw,2rem);font-weight:800;display:flex;align-items:center;gap:.8rem;flex-wrap:wrap}
+.category-title i{color:var(--primary)}
+.category-count{background:linear-gradient(135deg,var(--primary),var(--dark));color:#fff;padding:.35rem .9rem;border-radius:20px;font-size:.8rem;font-weight:700}
+.category-subtitle{color:var(--gray);font-size:.92rem;margin-top:.25rem}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,270px),1fr));gap:clamp(.9rem,2.5vw,1.5rem)}
+@media(max-width:768px){.products-grid{grid-template-columns:repeat(2,1fr);gap:.7rem}}
+@media(max-width:350px){.products-grid{grid-template-columns:1fr}}
+.product-card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:var(--shadow-md);cursor:pointer;border:2px solid transparent;transition:var(--tr);display:flex;flex-direction:column;position:relative}
+.product-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg);border-color:var(--primary)}
+.product-card.oos{opacity:.62;filter:grayscale(.4)}
+.product-image-wrap{height:190px;background:linear-gradient(135deg,#fff7ed,#ffedd5);display:flex;align-items:center;justify-content:center;padding:1rem;position:relative;overflow:hidden}
+.product-image{max-width:100%;max-height:100%;object-fit:contain;transition:var(--tr)}
+.product-card:hover .product-image{transform:scale(1.08)}
+.product-badge{position:absolute;top:.6rem;right:.6rem;background:linear-gradient(135deg,var(--dark),var(--primary));color:#fff;padding:.3rem .7rem;border-radius:20px;font-size:.7rem;font-weight:800;z-index:2}
+.product-badge.oos{background:#64748b}
+.product-info{padding:1rem;display:flex;flex-direction:column;flex:1}
+.product-name{font-family:var(--font-display);font-size:1rem;font-weight:800;margin-bottom:.35rem}
+.product-description{color:var(--gray);font-size:.82rem;line-height:1.5;margin-bottom:.6rem;display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;flex:1}
+.product-meta{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.6rem}
+.meta-pill{background:#fff7ed;color:var(--dark);border:1px solid #fed7aa;font-size:.68rem;font-weight:700;padding:.18rem .55rem;border-radius:12px}
+.meta-pill.rrp{background:#f0fdf4;color:#15803d;border-color:#bbf7d0}
+.product-price{font-size:1.3rem;font-weight:800;color:var(--primary);margin-bottom:.7rem}
+.product-price small{font-size:.7rem;color:var(--gray);font-weight:600}
+.product-actions{display:flex;gap:.45rem}
+.add-to-cart-btn{flex:1;border:none;padding:.7rem;border-radius:10px;font-weight:700;font-size:.85rem;cursor:pointer;background:linear-gradient(135deg,var(--primary),var(--dark));color:#fff;display:flex;align-items:center;justify-content:center;gap:.4rem;min-height:42px;transition:var(--tr)}
+.add-to-cart-btn:hover{transform:translateY(-2px);box-shadow:0 6px 15px rgba(242,106,27,.4)}
+.add-to-cart-btn:disabled{background:#94a3b8;cursor:not-allowed;transform:none;box-shadow:none}
+.whatsapp-product-btn{flex:0 0 42px;border:none;border-radius:10px;background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;cursor:pointer;font-size:1.05rem;text-decoration:none;display:flex;align-items:center;justify-content:center;transition:var(--tr)}
+.whatsapp-product-btn:hover{transform:scale(1.06)}
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;z-index:2000;padding:1rem}
+.modal-overlay.active{display:flex}
+.modal{background:#fff;border-radius:20px;max-width:880px;width:100%;max-height:90dvh;overflow-y:auto;display:grid;grid-template-columns:1fr 1fr;position:relative;animation:modalIn .35s cubic-bezier(.175,.885,.32,1.275)}
+@keyframes modalIn{from{opacity:0;transform:scale(.92) translateY(20px)}}
+@media(max-width:768px){.modal{grid-template-columns:1fr;max-height:92dvh;border-radius:24px 24px 0 0;align-self:end}}
+.modal-image-wrap{background:linear-gradient(135deg,#fff7ed,#ffedd5);display:flex;align-items:center;justify-content:center;padding:2rem;min-height:240px}
+.modal-image{max-width:100%;max-height:380px;object-fit:contain}
+.modal-content{padding:clamp(1.25rem,4vw,2.2rem);display:flex;flex-direction:column}
+.modal-close{position:absolute;top:1rem;right:1rem;background:var(--black);color:#fff;border:none;width:42px;height:42px;border-radius:50%;cursor:pointer;font-size:1.1rem;z-index:10;transition:var(--tr)}
+.modal-close:hover{background:var(--primary);transform:rotate(90deg)}
+.modal-badge{display:inline-block;background:linear-gradient(135deg,var(--primary),var(--dark));color:#fff;padding:.4rem 1rem;border-radius:20px;font-weight:700;font-size:.8rem;margin-bottom:.8rem;width:fit-content}
+.modal-title{font-family:var(--font-display);font-size:clamp(1.3rem,4vw,1.8rem);font-weight:800;margin-bottom:.6rem}
+.modal-price{font-size:clamp(1.5rem,5vw,2.1rem);font-weight:800;color:var(--primary);margin-bottom:1rem}
+.modal-price small{font-size:.85rem;color:var(--gray);font-weight:600}
+.modal-description{color:var(--gray);font-size:.92rem;line-height:1.7;margin-bottom:1rem}
+.modal-meta{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.2rem}
+.quantity-selector{background:#fff7ed;border:2px solid #fed7aa;padding:1rem;border-radius:12px;margin-bottom:1.2rem}
+.quantity-selector label{display:block;font-weight:700;font-size:.85rem;margin-bottom:.7rem}
+.qty-controls{display:flex;align-items:center;gap:.9rem}
+.qty-btn{width:44px;height:44px;border:2px solid var(--primary);background:#fff;color:var(--primary);font-size:1.25rem;font-weight:800;cursor:pointer;border-radius:10px;transition:var(--tr)}
+.qty-btn:hover{background:var(--primary);color:#fff}
+.qty-display{font-size:1.25rem;font-weight:800;min-width:50px;text-align:center}
+.moq-note{font-size:.75rem;color:var(--dark);margin-top:.5rem;font-weight:600}
+.modal-actions{display:flex;gap:.7rem;margin-top:auto;flex-wrap:wrap}
+.modal-add-to-cart,.modal-whatsapp-btn{flex:1;min-width:140px;color:#fff;border:none;padding:.95rem;border-radius:12px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;text-decoration:none;min-height:48px;transition:var(--tr)}
+.modal-add-to-cart{background:linear-gradient(135deg,var(--primary),var(--dark))}
+.modal-whatsapp-btn{background:linear-gradient(135deg,#25d366,#128c7e)}
+.modal-add-to-cart:hover,.modal-whatsapp-btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+/* CART */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;z-index:1999}
+.overlay.active{display:block}
+.cart-sidebar{position:fixed;right:-100%;top:0;width:min(100%,450px);height:100dvh;background:#fff;z-index:2000;display:flex;flex-direction:column;transition:right .4s cubic-bezier(.68,-.55,.265,1.55);border-left:3px solid var(--primary);box-shadow:var(--shadow-lg)}
+.cart-sidebar.active{right:0}
+.cart-header{background:linear-gradient(135deg,var(--dark),var(--primary));color:#fff;padding:1.4rem 1.5rem;display:flex;justify-content:space-between;align-items:center}
+.cart-header h3{font-family:var(--font-display);font-size:1.25rem;font-weight:800;display:flex;gap:.7rem;align-items:center}
+.close-cart{background:rgba(255,255,255,.15);border:none;color:#fff;width:42px;height:42px;border-radius:50%;cursor:pointer;font-size:1.1rem;transition:var(--tr)}
+.close-cart:hover{background:var(--primary);transform:rotate(90deg)}
+.cart-items{flex:1;overflow-y:auto;padding:1.2rem}
+.cart-item{display:flex;gap:.8rem;padding:1rem;background:#fff7ed;border-radius:12px;margin-bottom:.8rem;border-left:4px solid var(--primary);flex-wrap:wrap}
+.cart-item-image{width:64px;height:64px;object-fit:contain;background:#fff;border-radius:8px;padding:.4rem;flex-shrink:0}
+.cart-item-details{flex:1;min-width:0}
+.cart-item-name{font-weight:700;font-size:.92rem;margin-bottom:.3rem}
+.cart-item-price{color:var(--primary);font-weight:700;font-size:.95rem;margin-bottom:.6rem}
+.cart-item-price span{color:var(--gray);font-weight:500;font-size:.78rem}
+.cart-item-qty{display:flex;align-items:center;gap:.6rem}
+.cart-item-qty .qty-btn{width:34px;height:34px;font-size:.95rem}
+.cart-item-qty .remove-btn{margin-left:auto;background:#ef4444;color:#fff;border:none;padding:.5rem;border-radius:6px;cursor:pointer;min-width:34px;min-height:34px;transition:var(--tr)}
+.cart-item-qty .remove-btn:hover{background:#dc2626}
+.empty-cart{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:#475569;text-align:center}
+.empty-cart i{font-size:4rem;color:var(--primary);opacity:.3;margin-bottom:1rem}
+.cart-footer{padding:1.4rem;border-top:2px solid var(--light)}
+.cart-preference{background:#fff7ed;padding:.9rem;border-radius:12px;margin-bottom:.9rem;border:1px solid #fed7aa}
+.preference-label{display:block;font-weight:700;font-size:.85rem;margin-bottom:.6rem}
+.preference-options{display:flex;gap:1.4rem}
+.radio-option{display:flex;align-items:center;gap:.45rem;font-size:.87rem;font-weight:600;color:#475569;cursor:pointer}
+.radio-option input{accent-color:var(--primary);width:17px;height:17px}
+.cart-totals{background:#fff7ed;border-radius:12px;padding:.9rem 1.1rem;margin-bottom:1.1rem;border:2px solid #fed7aa}
+.cart-total-row{display:flex;justify-content:space-between;padding:.35rem 0;font-size:.95rem;color:#475569}
+.cart-total-row.grand-total{border-top:2px solid #fed7aa;margin-top:.6rem;padding-top:.8rem;font-weight:800;color:var(--black);font-size:1.1rem}
+.cart-total-row.grand-total span:last-child{color:var(--primary);font-size:1.35rem;font-weight:800}
+.checkout-btn{width:100%;background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;border:none;padding:1rem;border-radius:12px;font-weight:800;font-size:1rem;cursor:pointer;margin-bottom:.6rem;display:flex;align-items:center;justify-content:center;gap:.7rem;min-height:48px;transition:var(--tr)}
+.checkout-btn:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(37,211,102,.5)}
+.clear-cart-btn{width:100%;background:transparent;color:#ef4444;border:2px solid #ef4444;padding:.7rem;border-radius:12px;font-weight:600;font-size:.87rem;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:var(--tr)}
+.clear-cart-btn:hover{background:#ef4444;color:#fff}
+/* TOAST / FLOAT / FOOTER */
+.toast{position:fixed;bottom:calc(2rem + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%) translateY(100px);background:linear-gradient(135deg,var(--primary),var(--dark));color:#fff;padding:.85rem 1.6rem;border-radius:12px;box-shadow:var(--shadow-lg);opacity:0;visibility:hidden;z-index:3000;transition:.4s cubic-bezier(.68,-.55,.265,1.55);font-weight:600;font-size:.9rem;max-width:calc(100% - 2rem);text-align:center}
+.toast.show{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.whatsapp-float{position:fixed;right:20px;bottom:88px;z-index:3000}
+.whatsapp-link{display:flex;align-items:center;justify-content:center;width:58px;height:58px;color:#fff;border-radius:50%;background:linear-gradient(135deg,#25d366,#128c7e);box-shadow:0 4px 20px rgba(37,211,102,.5);font-size:1.7rem;text-decoration:none;transition:var(--tr);animation:pulse 2s infinite}
+.whatsapp-link:hover{transform:scale(1.12)}
+@keyframes pulse{50%{transform:scale(1.07)}}
+.back-to-top{position:fixed;bottom:20px;right:20px;width:50px;height:50px;background:linear-gradient(135deg,var(--primary),var(--dark));color:#fff;border:none;border-radius:50%;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transform:translateY(20px);transition:var(--tr);z-index:2999}
+.back-to-top.visible{opacity:1;visibility:visible;transform:translateY(0)}
+footer{background:linear-gradient(135deg,var(--black),var(--dark-gray));color:#fff;padding:3rem var(--container-padding) 1.25rem;border-top:3px solid var(--primary);position:relative}
+footer::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--sa-flag)}
+.footer-content{max-width:1400px;margin:0 auto 2rem;display:grid;grid-template-columns:1fr;gap:2rem}
+@media(min-width:481px){.footer-content{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.footer-content{grid-template-columns:repeat(4,1fr)}}
+.footer-section h4{font-family:var(--font-display);color:var(--primary);margin-bottom:1rem;font-weight:800}
+.footer-section p,.footer-section a{color:rgba(255,255,255,.8);text-decoration:none;line-height:1.9;display:block;font-size:.9rem}
+.footer-section a:hover{color:var(--accent)}
+.footer-bottom{text-align:center;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.55);font-size:.82rem}
+.no-results{text-align:center;padding:4rem 1rem;color:var(--gray)}
+.no-results i{font-size:4rem;opacity:.3;color:var(--primary);margin-bottom:1rem;display:block}
+.skeleton{background:linear-gradient(90deg,#f0f0f0 25%,#e0e0e0 50%,#f0f0f0 75%);background-size:200% 100%;animation:sk 1.5s infinite;border-radius:8px}
+@keyframes sk{0%{background-position:200% 0}100%{background-position:-200% 0}}
+.skeleton-card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:var(--shadow-md)}
+.skeleton-image{height:190px}
+.skeleton-content{padding:1rem}
+.skeleton-line{height:14px;margin-bottom:.7rem}
+@media print{header,.side-menu,.menu-overlay,.cart-sidebar,.overlay,.modal-overlay,.whatsapp-float,.toast,footer,.back-to-top,.search-filter-bar{display:none!important}}
+</style>
+</head>
+<body>
+
+<header id="mainHeader">
+  <div class="header-container">
+    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div class="logo">
+      <img src="https://user16425.na.imgto.link/public/20260821/image.avif" alt="Zansho Wholesale & Distribution Logo">
+      <div class="logo-text">
+        <h1>ZAN<span>SHO</span></h1>
+        <p>Wholesale &amp; Distribution</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="cart-btn" onclick="cart.toggleCart()"><i class="fas fa-shopping-cart"></i> Cart (<span id="cartCount">0</span>)</button>
+    </div>
+  </div>
+</header>
+
+<div class="menu-overlay" id="menuOverlay"></div>
+<nav class="side-menu" id="sideMenu" aria-label="Main navigation">
+  <div class="menu-header">
+    <img src="https://user16425.na.imgto.link/public/20260821/image.avif" alt="Zansho">
+    <h2>ZANSHO WHOLESALE</h2>
+  </div>
+  <div class="menu-items" id="menuItems">
+    <a href="#" class="menu-link" onclick="scrollToTop(); toggleMenu(); return false;"><i class="fas fa-home"></i><span>Home</span></a>
+    <div id="dynamicMenuCategories"></div>
+    <!-- TODO: real contact details -->
+    <a href="tel:+27000000000" class="menu-link"><i class="fas fa-phone"></i><span>Contact Us</span></a>
+  </div>
+  <div class="menu-footer">
+    <p><i class="fas fa-phone"></i> +27 00 000 0000</p>
+    <p><i class="fas fa-envelope"></i> sales@zansho.co.za</p>
+    <p><i class="fas fa-map-marker-alt"></i> South Africa</p>
+    <p style="color:var(--accent);font-weight:700;margin-top:.8rem"><i class="fas fa-handshake"></i> Reseller &amp; Bulk Orders Welcome</p>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-container">
+    <div class="hero-visual">
+      <div class="hero-logo-circle"><img src="https://user16425.na.imgto.link/public/20260821/image.avif" alt="Zansho Wholesale & Distribution"></div>
+      <h2>Zansho <span>Wholesale</span> &amp; Distribution</h2>
+      <p>Your trusted South African wholesale partner for mobile accessories, audio, smart gadgets and homeware. Stock your shop with proven fast-moving products at true wholesale prices.</p>
+    </div>
+    <div class="hero-card">
+      <div class="section-badge"><i class="fas fa-boxes-stacked"></i> Why Buy From Zansho</div>
+      <h3>Wholesale Built for Resellers</h3>
+      <ul class="services-list">
+        <li><div class="service-icon"><i class="fas fa-tags"></i></div><div class="service-text"><h4>True Wholesale Pricing</h4><p>Buy at cost-plus wholesale prices with healthy recommended retail margins.</p></div></li>
+        <li><div class="service-icon"><i class="fas fa-boxes-stacked"></i></div><div class="service-text"><h4>Low Minimum Orders</h4><p>Small, reseller-friendly MOQs per product so you can test and restock with ease.</p></div></li>
+        <li><div class="service-icon"><i class="fas fa-truck-fast"></i></div><div class="service-text"><h4>Fast Distribution</h4><p>Collection or delivery arrangements confirmed directly via WhatsApp.</p></div></li>
+        <li><div class="service-icon"><i class="fas fa-headset"></i></div><div class="service-text"><h4>Reseller Support</h4><p>Product advice and trending-item recommendations for your market.</p></div></li>
+      </ul>
+      <a href="#catalogue" class="cta-hero" onclick="scrollToSection('catalogue'); return false;"><span>Browse The Catalogue</span><i class="fas fa-arrow-down"></i></a>
+    </div>
+  </div>
+</section>
+
+<div class="search-filter-bar">
+  <div class="search-filter-container">
+    <div class="search-box">
+      <i class="fas fa-search"></i>
+      <input type="text" id="searchInput" placeholder="Search wholesale products..." aria-label="Search products">
+      <button class="clear-search" id="clearSearch" aria-label="Clear search"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="filter-chips" id="filterChips">
+      <button class="filter-chip active" data-filter="all" onclick="setFilter('all')"><i class="fas fa-th"></i> All</button>
+    </div>
+  </div>
+</div>
+
+<main class="container" id="catalogue">
+  <div id="dynamicCategoriesContainer">
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,270px),1fr));gap:1.2rem">
+      <div class="skeleton-card"><div class="skeleton skeleton-image"></div><div class="skeleton-content"><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div></div></div>
+      <div class="skeleton-card"><div class="skeleton skeleton-image"></div><div class="skeleton-content"><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div></div></div>
+      <div class="skeleton-card"><div class="skeleton skeleton-image"></div><div class="skeleton-content"><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div></div></div>
+      <div class="skeleton-card"><div class="skeleton skeleton-image"></div><div class="skeleton-content"><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line"></div></div></div>
+    </div>
+  </div>
+</main>
+
+<!-- Product Modal -->
+<div class="modal-overlay" id="productModal" role="dialog" aria-modal="true">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close"><i class="fas fa-times"></i></button>
+    <div class="modal-image-wrap"><img src="" alt="" class="modal-image" id="modalImage"></div>
+    <div class="modal-content">
+      <span class="modal-badge" id="modalBadge">Wholesale</span>
+      <h2 class="modal-title" id="modalTitle">Product</h2>
+      <div class="modal-price" id="modalPrice">R0.00</div>
+      <p class="modal-description" id="modalDescription"></p>
+      <div class="modal-meta" id="modalMeta"></div>
+      <div class="quantity-selector">
+        <label>Quantity (units)</label>
+        <div class="qty-controls">
+          <button class="qty-btn" onclick="updateQty(-1)" aria-label="Decrease">−</button>
+          <span class="qty-display" id="modalQty">1</span>
+          <button class="qty-btn" onclick="updateQty(1)" aria-label="Increase">+</button>
+        </div>
+        <div class="moq-note" id="moqNote"></div>
+      </div>
+      <div class="modal-actions">
+        <button class="modal-add-to-cart" onclick="addToCartFromModal()"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        <a href="#" class="modal-whatsapp-btn" id="modalWhatsappBtn" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Enquire</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Cart -->
+<div class="overlay" id="overlay" onclick="cart.toggleCart()"></div>
+<aside class="cart-sidebar" id="cartSidebar" aria-label="Shopping cart">
+  <div class="cart-header">
+    <h3><i class="fas fa-boxes-stacked"></i> Your Wholesale Cart</h3>
+    <button class="close-cart" onclick="cart.toggleCart()" aria-label="Close cart"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-preference">
+      <label class="preference-label"><i class="fas fa-store"></i> Order Type:</label>
+      <div class="preference-options">
+        <label class="radio-option"><input type="radio" name="orderType" value="Collection" checked onchange="cart.updatePreference('Collection')"><span>Collection</span></label>
+        <label class="radio-option"><input type="radio" name="orderType" value="Delivery" onchange="cart.updatePreference('Delivery')"><span>Delivery</span></label>
+      </div>
+    </div>
+    <div class="cart-totals">
+      <div class="cart-total-row"><span>Subtotal:</span><span id="cartSubtotal">R0.00</span></div>
+      <div class="cart-total-row" id="deliveryRow" style="display:none"><span>Delivery Fee:</span><span>Confirmed on WhatsApp</span></div>
+      <div class="cart-total-row grand-total"><span>Total:</span><span id="cartTotal">R0.00</span></div>
+    </div>
+    <button class="checkout-btn" onclick="cart.checkout()"><i class="fab fa-whatsapp"></i> Complete Order via WhatsApp</button>
+    <button class="clear-cart-btn" onclick="cart.clearCart()"><i class="fas fa-trash-alt"></i> Clear Cart</button>
+  </div>
+</aside>
+
+<div class="whatsapp-float">
+  <a href="#" data-wa data-wa-msg="Hi Zansho! I'd like to enquire about your wholesale products." class="whatsapp-link" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+</div>
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+<div class="toast" id="toast" role="status"></div>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4>ZANSHO</h4>
+      <p>Wholesale &amp; distribution of fast-moving electronics, accessories and homeware across South Africa.</p>
+      <p style="color:var(--accent);font-weight:700;margin-top:.6rem">Proudly South African 🇿</p>
+    </div>
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <a href="#" onclick="scrollToTop(); return false;">Home</a>
+      <a href="#catalogue" onclick="scrollToSection('catalogue'); return false;">Catalogue</a>
+      <!-- TODO: real contact links -->
+      <a href="mailto:sales@zansho.co.za">Contact</a>
+    </div>
+    <div class="footer-section">
+      <h4>Contact Us</h4>
+      <p><i class="fas fa-phone"></i> +27 00 000 0000</p>
+      <p><i class="fas fa-envelope"></i> sales@zansho.co.za</p>
+      <p><i class="fas fa-map-marker-alt"></i> South Africa</p>
+    </div>
+    <div class="footer-section">
+      <h4>Trading Hours</h4>
+      <p>Monday – Friday: 8:00 – 17:00</p>
+      <p>Saturday: 9:00 – 13:00</p>
+      <p>Sunday: Closed</p>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2026 Zansho Wholesale &amp; Distribution. All rights reserved.</p></div>
+</footer>
+
+<script src="js/products-zansho.js" defer></script>
+<script>
+// ===== UI HELPERS =====
+function getCategoryIcon(slug){
+  const m={'chargers':'fa-charging-station','earphones-headphones':'fa-headphones','electronics-gadgets':'fa-microchip','homeware-lifestyle':'fa-couch'};
+  for(const k in m){ if(slug.includes(k)||k.includes(slug)) return m[k]; }
+  return 'fa-box-open';
+}
+const mainHeader=document.getElementById('mainHeader');
+window.addEventListener('scroll',()=>{ mainHeader.style.boxShadow=window.pageYOffset>50?'0 8px 32px rgba(0,0,0,.3)':''; },{passive:true});
+const backToTopBtn=document.getElementById('backToTop');
+window.addEventListener('scroll',()=>{ backToTopBtn.classList.toggle('visible',window.pageYOffset>400); },{passive:true});
+backToTopBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+function scrollToTop(){ window.scrollTo({top:0,behavior:'smooth'}); }
+function scrollToSection(id){
+  if(sideMenu.classList.contains('active')) toggleMenu();
+  setTimeout(()=>{ const el=document.getElementById(id); if(el) el.scrollIntoView({behavior:'smooth'}); },250);
+}
+// ===== MENU =====
+const hamburgerBtn=document.getElementById('hamburgerBtn'),menuOverlay=document.getElementById('menuOverlay'),sideMenu=document.getElementById('sideMenu');
+function toggleMenu(){
+  const a=sideMenu.classList.toggle('active');
+  hamburgerBtn.classList.toggle('active'); menuOverlay.classList.toggle('active');
+  document.body.style.overflow=a?'hidden':''; hamburgerBtn.setAttribute('aria-expanded',a);
+}
+hamburgerBtn.addEventListener('click',toggleMenu); menuOverlay.addEventListener('click',toggleMenu);
+// ===== SEARCH & FILTER =====
+let currentFilter='all',currentSearch='';
+const searchInput=document.getElementById('searchInput'),clearSearchBtn=document.getElementById('clearSearch');
+searchInput.addEventListener('input',e=>{ currentSearch=e.target.value.toLowerCase().trim(); clearSearchBtn.classList.toggle('visible',currentSearch.length>0); filterAndRender(); });
+clearSearchBtn.addEventListener('click',()=>{ searchInput.value=''; currentSearch=''; clearSearchBtn.classList.remove('visible'); filterAndRender(); searchInput.focus(); });
+function setFilter(f){ currentFilter=f; document.querySelectorAll('.filter-chip').forEach(c=>c.classList.toggle('active',c.dataset.filter===f)); filterAndRender(); }
+// ===== RENDER =====
+function getCategories(list){
+  const cats={};
+  list.forEach(p=>{ const s=p.categorySlug||'uncategorized'; if(!cats[s]) cats[s]={slug:s,name:p.category||'Uncategorized',products:[]}; cats[s].products.push(p); });
+  return cats;
+}
+function renderDynamicCategories(){
+  const products=(window.ZANSHO_PRODUCTS||[]);
+  const menuC=document.getElementById('dynamicMenuCategories'),chips=document.getElementById('filterChips');
+  if(!products.length){ document.getElementById('dynamicCategoriesContainer').innerHTML='<p style="text-align:center;padding:3rem;color:#64748b">No products available</p>'; return; }
+  const cats=getCategories(products);
+  menuC.innerHTML=Object.values(cats).map(c=>`<a href="#${c.slug}" class="menu-link" onclick="scrollToSection('${c.slug}'); return false;"><i class="fas ${getCategoryIcon(c.slug)}"></i><span>${c.name}</span></a>`).join('');
+  chips.innerHTML=`<button class="filter-chip active" data-filter="all" onclick="setFilter('all')"><i class="fas fa-th"></i> All</button>`+
+    Object.values(cats).map(c=>`<button class="filter-chip" data-filter="${c.slug}" onclick="setFilter('${c.slug}')"><i class="fas ${getCategoryIcon(c.slug)}"></i> ${c.name}</button>`).join('');
+  filterAndRender();
+}
+function metaPills(p){
+  return `<div class="product-meta"><span class="meta-pill">MOQ ${p.moq||1}</span>${p.rrp?`<span class="meta-pill rrp">RRP ${p.rrp}</span>`:''}</div>`;
+}
+function filterAndRender(){
+  const products=(window.ZANSHO_PRODUCTS||[]);
+  const container=document.getElementById('dynamicCategoriesContainer');
+  let filtered=products;
+  if(currentFilter!=='all') filtered=filtered.filter(p=>p.categorySlug===currentFilter);
+  if(currentSearch) filtered=filtered.filter(p=>(p.name+' '+p.description).toLowerCase().includes(currentSearch));
+  if(!filtered.length){ container.innerHTML=`<div class="no-results"><i class="fas fa-search"></i><h3>No products found</h3><p>Try adjusting your search or filter</p></div>`; return; }
+  const cats=getCategories(filtered);
+  container.innerHTML=Object.values(cats).map(cat=>`
+    <section class="category-section" id="${cat.slug}">
+      <div class="category-header">
+        <h2 class="category-title"><i class="fas ${getCategoryIcon(cat.slug)}"></i> ${cat.name} <span class="category-count">${cat.products.length} item${cat.products.length!==1?'s':''}</span></h2>
+        <p class="category-subtitle">Wholesale pricing • minimum order quantities apply</p>
+      </div>
+      <div class="products-grid">
+        ${cat.products.map(p=>{
+          const oos=p.active===false;
+          return `<article class="product-card${oos?' oos':''}" onclick="openModal('${p.id}')" tabindex="0" onkeypress="if(event.key==='Enter')openModal('${p.id}')">
+            <div class="product-image-wrap">
+              <img src="${p.image}" alt="${p.name}" class="product-image" loading="lazy" onerror="this.onerror=null;this.src='images/zansho-logo.png'">
+              <span class="product-badge${oos?' oos':''}">${oos?'Out of Stock':(p.badge||'Wholesale')}</span>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">${p.name}</h3>
+              <p class="product-description">${p.description}${p.colours?' • Colours: '+p.colours:''}</p>
+              ${metaPills(p)}
+              <div class="product-price">R${(p.price||0).toFixed(2)} <small>/ unit</small></div>
+              <div class="product-actions">
+                <button class="add-to-cart-btn" ${oos?'disabled':''} onclick="event.stopPropagation(); quickAdd('${p.id}')"><i class="fas fa-cart-plus"></i> Add ${p.moq||1}+</button>
+                <a href="#" data-wa data-wa-msg="Hi Zansho! I'm interested in: ${p.name} (R${(p.price||0).toFixed(2)} wholesale). Please confirm availability." class="whatsapp-product-btn" onclick="event.stopPropagation()" aria-label="WhatsApp about ${p.name}"><i class="fab fa-whatsapp"></i></a>
+              </div>
+            </div>
+          </article>`;
+        }).join('')}
+      </div>
+    </section>`).join('');
+  hydrateWhatsAppLinks();
+}
+function quickAdd(id){ const p=(window.ZANSHO_PRODUCTS||[]).find(x=>x.id===id); if(p) cart.addToCart(p, parseInt(p.moq)||1); }
+// ===== MODAL =====
+let currentProduct=null,modalQuantity=1;
+function openModal(id){
+  const p=(window.ZANSHO_PRODUCTS||[]).find(x=>x.id===id); if(!p) return;
+  currentProduct=p; modalQuantity=Math.max(1,parseInt(p.moq)||1);
+  const img=document.getElementById('modalImage'); img.src=p.image; img.alt=p.name;
+  img.onerror=function(){ this.onerror=null; this.src='images/zansho-logo.png'; };
+  document.getElementById('modalTitle').textContent=p.name;
+  document.getElementById('modalPrice').innerHTML=`R${(p.price||0).toFixed(2)} <small>/ unit wholesale</small>`;
+  document.getElementById('modalDescription').textContent=p.description;
+  document.getElementById('modalMeta').innerHTML=metaPills(p)+(p.colours?`<span class="meta-pill">Colours: ${p.colours}</span>`:'');
+  document.getElementById('modalQty').textContent=modalQuantity;
+  document.getElementById('moqNote').textContent=`Minimum order quantity: ${p.moq||1} units`;
+  const badge=document.getElementById('modalBadge');
+  badge.textContent=(p.active===false)?'Out of Stock':(p.badge||'Wholesale');
+  setModalWa();
+  document.getElementById('productModal').classList.add('active');
+  document.body.style.overflow='hidden';
+}
+function setModalWa(){
+  if(!currentProduct) return;
+  const wa=(window.ZANSHO_CONFIG&&window.ZANSHO_CONFIG.WHATSAPP_NUMBER)||'27000000000';
+  const msg=`Hi Zansho! I'd like to order ${modalQuantity} x ${currentProduct.name} (wholesale R${(currentProduct.price||0).toFixed(2)}/unit). Please confirm availability & delivery.`;
+  document.getElementById('modalWhatsappBtn').href=`https://wa.me/${wa}?text=${encodeURIComponent(msg)}`;
+}
+function closeModal(){ document.getElementById('productModal').classList.remove('active'); document.body.style.overflow=''; currentProduct=null; }
+function updateQty(d){
+  const min=Math.max(1,parseInt(currentProduct&&currentProduct.moq)||1);
+  modalQuantity=Math.max(min,modalQuantity+d);
+  document.getElementById('modalQty').textContent=modalQuantity; setModalWa();
+}
+function addToCartFromModal(){ if(currentProduct){ cart.addToCart(currentProduct,modalQuantity); closeModal(); } }
+document.getElementById('productModal').addEventListener('click',e=>{ if(e.target.id==='productModal') closeModal(); });
+// ===== CART (MOQ-AWARE) =====
+const CART_KEY='zansho_cart_v1';
+const cart={
+  items:[], orderType:'Collection',
+  init(){ try{ const s=JSON.parse(localStorage.getItem(CART_KEY)); if(s){ this.items=s.items||[]; this.orderType=s.orderType||'Collection'; const r=document.querySelector(`input[name="orderType"][value="${this.orderType}"]`); if(r) r.checked=true; } }catch(e){} this.updateCart(); },
+  save(){ localStorage.setItem(CART_KEY,JSON.stringify({items:this.items,orderType:this.orderType})); this.updateCart(); },
+  updatePreference(t){ this.orderType=t; this.save(); },
+  addToCart(p,qty){
+    if(p.active===false){ this.showToast('⚠️ This item is out of stock'); return; }
+    const moq=Math.max(1,parseInt(p.moq)||1);
+    const q=Math.max(qty||moq,moq);
+    const ex=this.items.find(i=>i.id===p.id);
+    if(ex){ ex.quantity+=q; } else { this.items.push({id:p.id,name:p.name,price:parseFloat(p.price)||0,image:p.image,moq:moq,quantity:q}); }
+    this.save(); this.showToast(`📦 ${p.name} (x${q}) added to cart!`);
+    const c=document.getElementById('cartCount'); c.classList.remove('bump'); void c.offsetWidth; c.classList.add('bump');
+  },
+  updateQuantity(id,d){
+    const it=this.items.find(i=>i.id===id); if(!it) return;
+    const moq=Math.max(1,parseInt(it.moq)||1);
+    const n=it.quantity+d;
+    if(n<moq){ this.showToast(`Minimum order for ${it.name} is ${moq} units`); return; }
+    it.quantity=n; this.save();
+  },
+  removeItem(id){ this.items=this.items.filter(i=>i.id!==id); this.save(); },
+  clearCart(){ if(!this.items.length) return; if(confirm('Clear your wholesale cart?')){ this.items=[]; this.save(); this.showToast('🗑️ Cart cleared'); } },
+  updateCart(){
+    const box=document.getElementById('cartItems');
+    const count=this.items.reduce((s,i)=>s+i.quantity,0);
+    document.getElementById('cartCount').textContent=count;
+    if(!this.items.length){
+      box.innerHTML=`<div class="empty-cart"><i class="fas fa-boxes-stacked"></i><p>Your cart is empty</p><small>Add stock at wholesale prices!</small></div>`;
+    } else {
+      box.innerHTML=this.items.map(i=>`
+        <div class="cart-item">
+          <img src="${i.image}" alt="${i.name}" class="cart-item-image" onerror="this.onerror=null;this.src='images/zansho-logo.png'">
+          <div class="cart-item-details">
+            <div class="cart-item-name">${i.name}</div>
+            <div class="cart-item-price">R${i.price.toFixed(2)} <span>× ${i.quantity} = R${(i.price*i.quantity).toFixed(2)} • MOQ ${i.moq}</span></div>
+            <div class="cart-item-qty">
+              <button class="qty-btn" onclick="cart.updateQuantity('${i.id}',-1)">−</button>
+              <span style="font-weight:800;min-width:24px;text-align:center">${i.quantity}</span>
+              <button class="qty-btn" onclick="cart.updateQuantity('${i.id}',1)">+</button>
+              <button class="remove-btn" onclick="cart.removeItem('${i.id}')"><i class="fas fa-trash-alt"></i></button>
+            </div>
+          </div>
+        </div>`).join('');
+    }
+    const total=this.items.reduce((s,i)=>s+i.price*i.quantity,0);
+    document.getElementById('cartSubtotal').textContent=`R${total.toFixed(2)}`;
+    document.getElementById('cartTotal').textContent=`R${total.toFixed(2)}`;
+    document.getElementById('deliveryRow').style.display=this.orderType==='Delivery'?'flex':'none';
+  },
+  toggleCart(){
+    const s=document.getElementById('cartSidebar'),o=document.getElementById('overlay');
+    const a=s.classList.toggle('active'); o.classList.toggle('active');
+    document.body.style.overflow=a?'hidden':''; if(a) this.updateCart();
+  },
+  checkout(){
+    if(!this.items.length){ this.showToast('🛒 Your cart is empty!'); return; }
+    const wa=(window.ZANSHO_CONFIG&&window.ZANSHO_CONFIG.WHATSAPP_NUMBER)||'27000000000';
+    let msg=`📦 *New Wholesale Order – Zansho Website*\n*Order Type:* ${this.orderType}\n*Items:*\n`;
+    this.items.forEach(i=>{ msg+=`▫️ ${i.name} (x${i.quantity} @ R${i.price.toFixed(2)}) = R${(i.price*i.quantity).toFixed(2)}\n`; });
+    const total=this.items.reduce((s,i)=>s+i.price*i.quantity,0).toFixed(2);
+    msg+=`\n💰 *Total: R${total}*\n`;
+    msg+=this.orderType==='Delivery'?'Please confirm delivery fee & lead time to my area. Thank you!':'Please confirm collection time. Thank you!';
+    window.open(`https://wa.me/${wa}?text=${encodeURIComponent(msg)}`,'_blank');
+  },
+  showToast(m){ const t=document.getElementById('toast'); t.textContent=m; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),3000); }
+};
+// ===== WHATSAPP LINK HYDRATION (also run by products-zansho.js) =====
+function hydrateWhatsAppLinks(){
+  const wa=(window.ZANSHO_CONFIG&&window.ZANSHO_CONFIG.WHATSAPP_NUMBER)||'27000000000';
+  document.querySelectorAll('a[data-wa]').forEach(a=>{
+    const msg=a.getAttribute('data-wa-msg')||"Hi Zansho! I'd like to enquire about your wholesale products.";
+    a.href=`https://wa.me/${wa}?text=${encodeURIComponent(msg)}`;
+    a.target='_blank'; a.rel='noopener';
+  });
+}
+// ===== BOOT =====
+document.addEventListener('DOMContentLoaded',()=>{
+  cart.init(); hydrateWhatsAppLinks();
+  if(window.ZANSHO_PRODUCTS&&window.ZANSHO_PRODUCTS.length){ renderDynamicCategories(); }
+  document.addEventListener('zansho:products:loaded',()=>renderDynamicCategories());
+  setTimeout(()=>{ if(window.ZANSHO_PRODUCTS&&window.ZANSHO_PRODUCTS.length&&!document.querySelector('.category-section')) renderDynamicCategories(); },2000);
+});
+</script>
+</body>
+</html>
