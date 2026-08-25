@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DTPGZ964FD"></script>
-<title>Hive Times | South Africa's Local Business Directory & Marketplace</title>
-<meta name="description" content="Connecting South Africans with trusted local businesses since 2026. Browse by niche and location, order via WhatsApp.">
+<title>Services | Hive Times - Find Trusted Local Professionals in South Africa</title>
+<meta name="description" content="Connect with verified local service providers across South Africa. Electricians, plumbers, carpenters, cleaners and more. Book via WhatsApp.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;0,9..144,900;1,9..144,600;1,9..144,900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -103,7 +103,7 @@ button{
   outline-offset:2px;
 }
 /* ============================================================
-   SPLASH — “You are now entering THE HIVE”
+   SPLASH — "You are now entering THE HIVE"
    ============================================================ */
 #splash{
   position:fixed;
@@ -653,8 +653,7 @@ body.nav-open .ht-sidenav{
   100%{transform:translate(0,0) rotate(-8deg)}
 }
 /* ============================================================
-   FILTER DECK — the two buttons: Business & Location
-   (behaves exactly like hivetimes: selection filters the grid)
+   FILTER DECK — the two buttons: Service & Location
    ============================================================ */
 .ht-filterdeck{
   position:relative;
@@ -792,7 +791,7 @@ body.nav-open .ht-sidenav{
   transform:rotate(90deg);
 }
 /* ============================================================
-   NICHE TICKER — marquee
+   SERVICE TICKER — marquee
    ============================================================ */
 .ht-ticker{
   background:var(--honey);
@@ -926,7 +925,7 @@ body.nav-open .ht-sidenav{
   margin-top:4px;
 }
 /* ============================================================
-   BUSINESS GRID + CARDS
+   SERVICE GRID + CARDS
    ============================================================ */
 .ht-gridwrap{
   max-width:1240px;
@@ -1137,7 +1136,7 @@ body.nav-open .ht-sidenav{
   transform:translateY(-2px);
 }
 /* ============================================================
-   WHOLESALE SPOTLIGHT — horizontal snap rail
+   EMERGENCY SPOTLIGHT — horizontal snap rail
    ============================================================ */
 .ht-spotlight{
   background:var(--hive-950);
@@ -1541,7 +1540,7 @@ body.nav-open .ht-sidenav{
   font-size:.92rem;
 }
 /* ============================================================
-   PRODUCT QUICKVIEW MODAL
+   SERVICE QUICKVIEW MODAL
    ============================================================ */
 .prod-media{
   border-radius:14px;
@@ -2138,6 +2137,246 @@ body.cart-open .cart-drawer{
     transform:none;
   }
 }
+/* ════════════════════════════════════════════════════════════
+   MOBILE FRIENDLY — 2 business cards side by side on phones
+   ════════════════════════════════════════════════════════════ */
+
+/* ---------- 2 cards per row ---------- */
+@media (max-width: 640px) {
+
+  /* GRID: force 2 columns side by side */
+  .ht-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  /* CARD: compact so both fit nicely */
+  .biz-media {
+    aspect-ratio: 4 / 3;
+  }
+  .biz-body {
+    padding: 12px 11px 14px;
+    gap: 5px;
+  }
+  .biz-top {
+    flex-direction: column;   /* stack name above location pill */
+    gap: 5px;
+  }
+  .biz-top h3 {
+    font-size: .95rem;
+    line-height: 1.25;
+  }
+  .biz-body p {
+    font-size: .78rem;
+    line-height: 1.4;
+    display: -webkit-box;
+    line-clamp: 3;    /* trim long descriptions */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .biz-loc {
+    align-self: flex-start;
+    font-size: .62rem;
+    padding: 3px 8px;
+  }
+  .biz-badge {
+    top: 8px;
+    left: 8px;
+    font-size: .62rem;
+    padding: 4px 9px;
+  }
+  .biz-link {
+    font-size: .78rem;
+  }
+
+  /* cart hexagon: always visible + big enough to tap */
+  .biz-cart-add {
+    width: 34px;
+    height: 34px;
+    font-size: .9rem;
+    top: 6px;
+    right: 6px;
+    opacity: 1;
+    transform: none;
+  }
+
+  /* ---------- FILTER BUTTONS: full width, stacked ---------- */
+  .ht-filterdeck {
+    padding: 14px 12px;
+  }
+  .ht-filterdeck-inner {
+    gap: 10px;
+  }
+  .ht-dropdown {
+    width: 100%;
+  }
+  .ht-drop-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 13px 16px;
+  }
+  .ht-drop-menu {
+    width: 92vw;
+    min-width: 0;
+    max-height: 46vh;
+  }
+
+  /* ---------- SEARCH BAR ---------- */
+  .ht-searchwrap {
+    padding: 18px 14px 24px;
+  }
+  .ht-search input {
+    padding: 13px 16px;
+    font-size: .92rem;
+  }
+  .ht-search button {
+    padding: 0 20px;
+  }
+
+  /* ---------- SLIDER ---------- */
+  .ht-slider {
+    height: 300px;
+  }
+  .ht-slide-content {
+    padding: 0 18px;
+  }
+  .ht-slide-sub {
+    font-size: .88rem;
+  }
+  .ht-slide-cta {
+    padding: 12px 22px;
+    font-size: .9rem;
+  }
+
+  /* ---------- CHIPS: scroll sideways instead of wrapping ---------- */
+  .ht-chips {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .ht-chips::-webkit-scrollbar {
+    display: none;
+  }
+  .ht-chip {
+    flex-shrink: 0;
+    font-size: .8rem;
+    padding: 8px 14px;
+  }
+
+  /* ---------- SECTIONS: tighter spacing ---------- */
+  .ht-explore {
+    padding: 46px 14px 8px;
+  }
+  .ht-explore p {
+    font-size: .9rem;
+  }
+  .ht-gridwrap {
+    padding: 38px 12px 20px;
+  }
+  .ht-grid-head h3 {
+    font-size: 1.25rem;
+  }
+  .ht-grid-count {
+    font-size: .8rem;
+  }
+
+  /* ---------- STATS: keep 2 x 2 ---------- */
+  .ht-stats {
+    padding: 34px 14px;
+  }
+  .ht-stat-num {
+    font-size: 1.7rem;
+  }
+  .ht-stat-label {
+    font-size: .68rem;
+  }
+
+  /* ---------- SPOTLIGHT RAIL: smaller cards ---------- */
+  .spot-card {
+    flex: 0 0 200px;
+  }
+  .spot-card img {
+    height: 110px;
+  }
+
+  /* ---------- HOW IT WORKS ---------- */
+  .how-step {
+    padding: 26px 18px 24px;
+  }
+
+  /* ---------- JOIN BAND ---------- */
+  .ht-join-inner {
+    padding: 34px 20px;
+  }
+  .ht-join-actions {
+    width: 100%;
+  }
+  .btn-hive {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* ---------- MODALS: near full-screen ---------- */
+  .modal-card {
+    padding: 26px 18px 22px;
+    max-height: 92vh;
+  }
+  .grow-title {
+    font-size: 1.4rem;
+  }
+
+  /* ---------- CART DRAWER: full width ---------- */
+  .cart-drawer {
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  /* ---------- CHAT ---------- */
+  .chat-panel {
+    right: 10px;
+    bottom: 92px;
+    width: calc(100vw - 20px);
+    height: 62vh;
+  }
+  .chat-fab {
+    right: 14px;
+    bottom: 14px;
+    width: 58px;
+    height: 64px;
+    font-size: 1.5rem;
+  }
+  .ht-top-btn {
+    left: 14px;
+    bottom: 14px;
+    width: 46px;
+    height: 52px;
+  }
+}
+
+/* ---------- very small phones (Galaxy A series, iPhone SE…) ---------- */
+@media (max-width: 360px) {
+  .ht-grid {
+    gap: 8px;
+  }
+  .biz-body {
+    padding: 10px 8px 12px;
+  }
+  .biz-top h3 {
+    font-size: .85rem;
+  }
+  .biz-body p {
+    line-clamp: 2;
+  }
+  .ht-logo {
+    font-size: 1.1rem;
+  }
+  .ht-slider {
+    height: 280px;
+  }
+}
 </style>
 </head>
 <body>
@@ -2187,42 +2426,42 @@ body.cart-open .cart-drawer{
 <!-- ══════════ SEARCH BAR : under the logo ══════════ -->
 <div class="ht-searchwrap">
   <form class="ht-search" id="searchForm" role="search">
-    <input type="text" id="htSearchInput" placeholder="Search businesses, products, niches…" aria-label="Search businesses">
+    <input type="text" id="htSearchInput" placeholder="Search services: electrician, plumber, carpenter…" aria-label="Search services">
     <button type="submit" aria-label="Search">🔍</button>
   </form>
-  <p class="ht-search-hint">⬡ South Africa's Local Business Directory &amp; Marketplace ⬡</p>
+  <p class="ht-search-hint">⬡ South Africa's Trusted Local Services Directory ⬡</p>
 </div>
 
 <!-- ══════════ HERO SLIDER : under the search bar ══════════ -->
 <section class="ht-slider" id="heroSlider" aria-label="Featured">
   <div class="ht-slide active">
-    <div class="ht-slide-bg" style="background-image:url('https://picsum.photos/seed/hive-market-wholesale-aisle/1600/700')"></div>
+    <div class="ht-slide-bg" style="background-image:url('https://picsum.photos/seed/hive-services-electrician/1600/700')"></div>
     <div class="ht-slide-shade"></div>
     <div class="ht-slide-content">
-      <span class="ht-kicker" data-scramble>The Hive Marketplace</span>
-      <h1 class="ht-slide-title"><span class="lm"><span>Explore <em>Local</em> Businesses</span></span></h1>
-      <p class="ht-slide-sub">Browse trusted South African businesses by niche and location — from wholesale warehouses to artisan bakeries.</p>
-      <a class="ht-slide-cta" href="#directory">Browse the Directory ⬡</a>
+      <span class="ht-kicker" data-scramble>Verified Professionals</span>
+      <h1 class="ht-slide-title"><span class="lm"><span>Find <em>Trusted</em> Local Services</span></span></h1>
+      <p class="ht-slide-sub">Connect with certified electricians, plumbers, carpenters and more across South Africa. Book instantly via WhatsApp.</p>
+      <a class="ht-slide-cta" href="#directory">Browse Services ⬡</a>
     </div>
   </div>
   <div class="ht-slide">
-    <div class="ht-slide-bg" style="background-image:url('https://picsum.photos/seed/hive-beekeeper-golden/1600/700')"></div>
+    <div class="ht-slide-bg" style="background-image:url('https://picsum.photos/seed/hive-emergency-247/1600/700')"></div>
     <div class="ht-slide-shade"></div>
     <div class="ht-slide-content">
-      <span class="ht-kicker" data-scramble>Grow Your Business</span>
-      <h2 class="ht-slide-title"><span class="lm"><span>Reach <em>Thousands</em> of Local Customers Daily</span></span></h2>
-      <p class="ht-slide-sub">Advertise on hivetimes.co.za and unlock direct WhatsApp orders, local visibility and customer trust.</p>
-      <button class="ht-slide-cta" data-open-grow>🐝 Yes, I'm Interested</button>
+      <span class="ht-kicker" data-scramble>24/7 Emergency</span>
+      <h2 class="ht-slide-title"><span class="lm"><span>Urgent <em>Repairs</em> When You Need Them</span></span></h2>
+      <p class="ht-slide-sub">Burst pipes, electrical faults, broken locks? Our emergency services are available around the clock.</p>
+      <button class="ht-slide-cta" data-filter-emergency>🚨 View Emergency Services</button>
     </div>
   </div>
   <div class="ht-slide">
-    <div class="ht-slide-bg" style="background-image:url('https://picsum.photos/seed/hive-cashcarry-warehouse/1600/700')"></div>
+    <div class="ht-slide-bg" style="background-image:url('https://picsum.photos/seed/hive-home-renovation/1600/700')"></div>
     <div class="ht-slide-shade"></div>
     <div class="ht-slide-content">
-      <span class="ht-kicker" data-scramble>Wholesale Hub</span>
-      <h2 class="ht-slide-title"><span class="lm"><span>Cash &amp; Carry, <em>Bulk</em> &amp; Reseller Ready</span></span></h2>
-      <p class="ht-slide-sub">From Devland to Jumbo — find the wholesalers that keep South African spaza shops and traders stocked.</p>
-      <button class="ht-slide-cta ghost" data-filter-wholesale>📦 View Wholesalers</button>
+      <span class="ht-kicker" data-scramble>Home Improvement</span>
+      <h2 class="ht-slide-title"><span class="lm"><span>Transform Your <em>Space</em> Today</span></span></h2>
+      <p class="ht-slide-sub">From kitchen renovations to landscaping, find skilled professionals for every home project.</p>
+      <a class="ht-slide-cta ghost" href="#directory">Explore Home Services ⬡</a>
     </div>
   </div>
   <span class="ht-bee-fly" aria-hidden="true">🐝</span>
@@ -2231,42 +2470,42 @@ body.cart-open .cart-drawer{
   <div class="ht-slider-dots" id="slideDots"></div>
 </section>
 
-<!-- ══════════ FILTER DECK : the two buttons (Business + Location) ══════════ -->
+<!-- ══════════ FILTER DECK : the two buttons (Service + Location) ══════════ -->
 <div class="ht-filterdeck">
   <div class="ht-filterdeck-inner">
-    <!-- BUSINESS button -->
+    <!-- SERVICE button -->
     <div class="ht-dropdown" id="catDropdown">
       <button class="ht-drop-btn" id="catBtn" aria-haspopup="listbox" aria-expanded="false">
-        🐝 <span class="ht-label">Business</span> <span class="caret">▼</span>
+        🛠️ <span class="ht-label">Service Type</span> <span class="caret">▼</span>
       </button>
-      <div class="ht-drop-menu" id="catMenu" role="listbox" aria-label="Business niche">
-        <div class="ht-opt active" role="option" data-value="all">🐝 All Niches</div>
-        <div class="ht-opt" role="option" data-value="household">🏠 Household</div>
-        <div class="ht-opt" role="option" data-value="clothing">👕 Clothing</div>
-        <div class="ht-opt" role="option" data-value="medication">💊 Medication</div>
-        <div class="ht-opt" role="option" data-value="baking">🍰 Baking</div>
-        <div class="ht-opt" role="option" data-value="meat">🥩 Meat</div>
-        <div class="ht-opt" role="option" data-value="frozen">🍦 Frozen</div>
-        <div class="ht-opt" role="option" data-value="electronics">📱 Electronics</div>
+      <div class="ht-drop-menu" id="catMenu" role="listbox" aria-label="Service type">
+        <div class="ht-opt active" role="option" data-value="all">🛠️ All Services</div>
+        <div class="ht-opt" role="option" data-value="electrical">⚡ Electrical</div>
+        <div class="ht-opt" role="option" data-value="plumbing">🔧 Plumbing</div>
+        <div class="ht-opt" role="option" data-value="carpentry">🪵 Carpentry</div>
+        <div class="ht-opt" role="option" data-value="painting">🎨 Painting</div>
+        <div class="ht-opt" role="option" data-value="cleaning">🧹 Cleaning</div>
+        <div class="ht-opt" role="option" data-value="landscaping">🌳 Landscaping</div>
         <div class="ht-opt" role="option" data-value="automotive">🚗 Automotive</div>
-        <div class="ht-opt" role="option" data-value="food-bev">🍽️ Food &amp; Bev</div>
-        <div class="ht-opt" role="option" data-value="building">🧱 Building</div>
-        <div class="ht-opt" role="option" data-value="professional">💼 Professional</div>
-        <div class="ht-opt" role="option" data-value="wholesale">📦 Wholesale</div>
+        <div class="ht-opt" role="option" data-value="security">🔒 Security</div>
+        <div class="ht-opt" role="option" data-value="moving">📦 Moving</div>
+        <div class="ht-opt" role="option" data-value="emergency">🚨 Emergency</div>
+        <div class="ht-opt" role="option" data-value="wellness">💆 Wellness</div>
+        <div class="ht-opt" role="option" data-value="tech">💻 Tech & Digital</div>
       </div>
     </div>
     <!-- LOCATION button -->
     <div class="ht-dropdown" id="locDropdown">
       <button class="ht-drop-btn" id="locBtn" aria-haspopup="listbox" aria-expanded="false">
-        🌍 <span class="ht-label">Location</span> <span class="caret">▼</span>
+        📍 <span class="ht-label">Location</span> <span class="caret">▼</span>
       </button>
       <div class="ht-drop-menu" id="locMenu" role="listbox" aria-label="Location">
-        <div class="ht-opt active" role="option" data-value="all">🌍 All Locations</div>
+        <div class="ht-opt active" role="option" data-value="all">📍 All Locations</div>
         <div class="ht-opt" role="option" data-value="johannesburg">🏙️ Johannesburg</div>
         <div class="ht-opt" role="option" data-value="sandton">🏙️ Sandton</div>
-        <div class="ht-opt" role="option" data-value="lenasia">🏘️ Lenasia</div>
-        <div class="ht-opt" role="option" data-value="azadville">🏘️ Azadville</div>
+        <div class="ht-opt" role="option" data-value="pretoria">🏛️ Pretoria</div>
         <div class="ht-opt" role="option" data-value="capetown">🏔️ Cape Town</div>
+        <div class="ht-opt" role="option" data-value="durban">🌊 Durban</div>
         <div class="ht-opt" role="option" data-value="kwazulu-natal">🌊 KwaZulu-Natal</div>
         <div class="ht-opt" role="option" data-value="eastern-cape">🌿 Eastern Cape</div>
         <div class="ht-opt" role="option" data-value="free-state">🌾 Free State</div>
@@ -2281,21 +2520,21 @@ body.cart-open .cart-drawer{
   </div>
 </div>
 
-<!-- ══════════ NICHE TICKER ══════════ -->
+<!-- ══════════ SERVICE TICKER ══════════ -->
 <div class="ht-ticker" aria-hidden="true">
   <div class="ht-ticker-track" id="tickerTrack">
-    <span>📦 Wholesale</span>
-    <span>🍰 Baking</span>
-    <span>👕 Clothing</span>
+    <span>⚡ Electrical</span>
+    <span>🔧 Plumbing</span>
+    <span>🪵 Carpentry</span>
+    <span>🎨 Painting</span>
+    <span>🧹 Cleaning</span>
+    <span>🌳 Landscaping</span>
     <span>🚗 Automotive</span>
-    <span>🥩 Meat</span>
-    <span>🍦 Frozen</span>
-    <span>📱 Electronics</span>
-    <span>🍽️ Food &amp; Bev</span>
-    <span>🏠 Household</span>
-    <span>💼 Professional</span>
-    <span>🧱 Building</span>
-    <span>💊 Medication</span>
+    <span>🔒 Security</span>
+    <span>📦 Moving</span>
+    <span>🚨 Emergency</span>
+    <span>💆 Wellness</span>
+    <span>💻 Tech & Digital</span>
   </div>
 </div>
 
@@ -2303,20 +2542,20 @@ body.cart-open .cart-drawer{
 
   <!-- ══════════ EXPLORE + CHIPS ══════════ -->
   <section class="ht-explore">
-    <span class="ht-overline">⬡ Categories &amp; Location ⬡</span>
-    <h2 class="rv">Explore Local <em>Businesses</em></h2>
-    <p class="rv">Browse trusted South African businesses by category. Click any category to filter the directory below.</p>
+    <span class="ht-overline">⬡ Service Categories ⬡</span>
+    <h2 class="rv">Explore Local <em>Services</em></h2>
+    <p class="rv">Browse trusted South African service professionals by category. Click any category to filter the directory below.</p>
     <div class="ht-chips rv" id="chipRow">
-      <button class="ht-chip active" data-value="all">🐝 All Businesses</button>
-      <button class="ht-chip" data-value="wholesale">📦 Wholesale</button>
-      <button class="ht-chip" data-value="baking">🍰 Baking</button>
-      <button class="ht-chip" data-value="clothing">👕 Clothing</button>
+      <button class="ht-chip active" data-value="all">🛠️ All Services</button>
+      <button class="ht-chip" data-value="electrical">⚡ Electrical</button>
+      <button class="ht-chip" data-value="plumbing">🔧 Plumbing</button>
+      <button class="ht-chip" data-value="carpentry">🪵 Carpentry</button>
+      <button class="ht-chip" data-value="painting">🎨 Painting</button>
+      <button class="ht-chip" data-value="cleaning">🧹 Cleaning</button>
+      <button class="ht-chip" data-value="emergency">🚨 Emergency</button>
       <button class="ht-chip" data-value="automotive">🚗 Automotive</button>
-      <button class="ht-chip" data-value="meat">🥩 Meat</button>
-      <button class="ht-chip" data-value="food-bev">🍽️ Food &amp; Bev</button>
-      <button class="ht-chip" data-value="frozen">🍦 Frozen</button>
-      <button class="ht-chip" data-value="electronics">📱 Electronics</button>
-      <button class="ht-chip" data-value="household">🏠 Household</button>
+      <button class="ht-chip" data-value="security">🔒 Security</button>
+      <button class="ht-chip" data-value="wellness">💆 Wellness</button>
     </div>
   </section>
 
@@ -2324,446 +2563,282 @@ body.cart-open .cart-drawer{
   <section class="ht-stats">
     <div class="ht-stats-inner">
       <div class="ht-stat">
-        <div class="ht-stat-num" data-target="34">0</div>
-        <div class="ht-stat-label">Businesses Listed</div>
+        <div class="ht-stat-num" data-target="156">0</div>
+        <div class="ht-stat-label">Service Providers</div>
       </div>
       <div class="ht-stat">
-        <div class="ht-stat-num" data-target="13">0</div>
-        <div class="ht-stat-label">Niches Covered</div>
+        <div class="ht-stat-num" data-target="12">0</div>
+        <div class="ht-stat-label">Service Categories</div>
       </div>
       <div class="ht-stat">
-        <div class="ht-stat-num" data-target="13">0</div>
-        <div class="ht-stat-label">Regions of SA</div>
+        <div class="ht-stat-num" data-target="9">0</div>
+        <div class="ht-stat-label">Provinces Covered</div>
       </div>
       <div class="ht-stat">
-        <div class="ht-stat-num" data-target="2400" data-suffix="+">0</div>
-        <div class="ht-stat-label">WhatsApp Orders</div>
+        <div class="ht-stat-num" data-target="4800" data-suffix="+">0</div>
+        <div class="ht-stat-label">Jobs Completed</div>
       </div>
     </div>
   </section>
 
-  <!-- ══════════ DIRECTORY GRID ══════════ -->
+  <!-- ══════════ SERVICE DIRECTORY GRID ══════════ -->
   <section class="ht-gridwrap" id="directory">
     <div class="ht-grid-head">
-      <h3>⬡ The Directory</h3>
-      <span class="ht-grid-count" id="gridCount">Showing 34 of 34 businesses</span>
+      <h3>⬡ Service Directory</h3>
+      <span class="ht-grid-count" id="gridCount">Showing 45 of 45 services</span>
     </div>
 
     <div class="ht-grid" id="bizGrid">
 
-      <article class="biz-card rv" style="--i:0" data-category="wholesale" data-location="johannesburg" data-name="Zansho" data-desc="Wholesaler operating in Johannesburg with the main focus on the online reseller community">
+        <article class="biz-card rv" style="--i:0" data-category="electrical" data-location="johannesburg" data-name="Presto Electrical" data-desc="Professional electrical contractor with 22+ years experience">
         <div class="biz-media">
-          <img src="https://user16425.na.imgto.link/public/20260821/image.avif" alt="Zansho wholesale" loading="lazy">
-          <span class="biz-badge">📦 Wholesale</span>
+          <img src="https://image.qwenlm.ai/public_source/dfd7f989-ac52-460e-97e5-06e3b06fb164/4283c5e0a-b74b-4353-80db-d1be32efebaa9032.png" alt="Presto Electrical" loading="lazy">
+          <span class="biz-badge">⚡ Electrical</span>
+        </div>
+        <div class="biz-body">
+          <div class="biz-top"><h3>Presto Electrical</h3><span class="biz-loc">📍 Johannesburg</span></div>
+          <p>Professional electrical contractor with 22+ years experience. Specializing in tenant installations, commercial maintenance, HT/MV services, generators, and 24-hour emergency electrical solutions.</p>
+          <a class="biz-link" href="https://www.prestoelectrical.co.za/">Visit Website <span>→</span></a>
+        </div>
+      </article>
+
+      <article class="biz-card rv" style="--i:1" data-category="electrical" data-location="johannesburg" data-name="Genlec Electrical" data-desc="Turnkey electrical and solar solutions provider">
+        <div class="biz-media">
+          <img src="https://image.qwenlm.ai/public_source/dfd7f989-ac52-460e-97e5-06e3b06fb164/2283c5e0a-b74b-4353-80db-d1be32efebaa5467.png" alt="Genlec Electrical" loading="lazy">
+          <span class="biz-badge">⚡ Electrical</span>
+        </div>
+        <div class="biz-body">
+          <div class="biz-top"><h3>Genlec Electrical</h3><span class="biz-loc">📍 Johannesburg</span></div>
+          <p>Johannesburg's leading turnkey electrical and solar solutions provider. Expert solar panel installations, backup power systems, energy analysis, smart metering IoT solutions, heat pumps, and LED conversions.</p>
+          <a class="biz-link" href="https://genlec.co.za/">Visit Website <span>→</span></a>
+        </div>
+      </article>
+
+      <article class="biz-card rv" style="--i:2" data-category="plumbing" data-location="capetown" data-name="Monster Plumbing" data-desc="24/7 plumbing services with 30+ years experience">
+        <div class="biz-media">
+          <img src="https://image.qwenlm.ai/public_source/dfd7f989-ac52-460e-97e5-06e3b06fb164/1283c5e0a-b74b-4353-80db-d1be32efebaa6295.png" alt="Monster Plumbing" loading="lazy">
+          <span class="biz-badge">🔧 Plumbing</span>
+        </div>
+        <div class="biz-body">
+          <div class="biz-top"><h3>Monster Plumbing</h3><span class="biz-loc">📍 Cape Town</span></div>
+          <p>24/7 plumbing services in Cape Town with 30+ years experience. Leak detection, drain unblocking, geyser installation, bathroom/kitchen renovations, plumbing COC certificates, and specialized drain camera inspections.</p>
+          <a class="biz-link" href="https://monsterplumbing.co.za/">Visit Website <span>→</span></a>
+        </div>
+      </article>
+
+      <article class="biz-card rv" style="--i:3" data-category="automotive" data-location="sandton" data-name="Precision Glaze" data-desc="#1 rated auto detailing in Sandton">
+        <div class="biz-media">
+          <img src="https://image.qwenlm.ai/public_source/dfd7f989-ac52-460e-97e5-06e3b06fb164/3283c5e0a-b74b-4353-80db-d1be32efebaa7808.png" alt="Precision Glaze" loading="lazy">
+          <span class="biz-badge">🚗 Automotive</span>
          </div>
         <div class="biz-body">
-          <div class="biz-top"><h3>Zansho</h3><span class="biz-loc">📍 Johannesburg</span></div>
-          <p>Wholesaler operating in Johannesburg with the main focus on the online reseller community.</p>
-          <a class="biz-link" href="/zansho/index.html">Visit Website <span>→</span></a>
+          <div class="biz-top"><h3>Precision Glaze</h3><span class="biz-loc">📍 Sandton</span></div>
+          <p>#1 rated auto detailing in Sandton. Specialists in car polishing, paint correction, ceramic coating, interior detailing, headlight restoration, and vehicle disinfection. World-class service with attention to detail.</p>
+          <a class="biz-link" href="https://precisionglaze.co.za/">Visit Website <span>→</span></a>
         </div>
       </article>
 
-      <article class="biz-card rv" style="--i:1" data-category="clothing" data-location="johannesburg" data-name="BagIt" data-desc="Your trusted source for quality handbags">
+      <article class="biz-card rv" style="--i:4" data-category="emergency" data-location="johannesburg" data-name="DJK Services - 24/7 Emergency" data-desc="24/7 emergency plumber and electrician">
         <div class="biz-media">
-          <img src="https://user16425.na.imgto.link/wadees/20260817/image.avif" alt="BagIt handbags" loading="lazy">
-          <span class="biz-badge">👕 Clothing</span>
-          </div>
-        <div class="biz-body">
-          <div class="biz-top"><h3>BagIt</h3><span class="biz-loc">📍 Johannesburg</span></div>
-          <p>Your trusted source for quality handbags.</p>
-          <a class="biz-link" href="/bagit/index.html">Visit Website <span>→</span></a>
-        </div>
-      </article>
-
-      <article class="biz-card rv" style="--i:2" data-category="wholesale" data-location="lenasia" data-name="An Wholesalers and Retail CC" data-desc="Your trusted source for quality supplies">
-        <div class="biz-media">
-          <img src="images-logo/an-logo.jpg" alt="An Wholesalers and Retail CC" loading="lazy">
-          <span class="biz-badge">📦 Wholesale</span>
+          <img src="https://image.qwenlm.ai/public_source/dfd7f989-ac52-460e-97e5-06e3b06fb164/5283c5e0a-b74b-4353-80db-d1be32efebaa3640.png" alt="DJK Services" loading="lazy">
+          <span class="biz-badge">🚨 Emergency</span>
         </div>
         <div class="biz-body">
-          <div class="biz-top"><h3>An Wholesalers and Retail CC</h3><span class="biz-loc">📍 Lenasia</span></div>
-          <p>Your trusted source for quality supplies.</p>
-          <a class="biz-link" href="https://anwholesalers.hivetimes.co.za/">Visit Website <span>→</span></a>
+          <div class="biz-top"><h3>DJK Services - 24/7 Emergency</h3><span class="biz-loc">📍 Johannesburg</span></div>
+          <p>24/7 emergency plumber and electrician in Johannesburg. No call-out fees, 15+ years experience, licensed and insured. Available for emergency plumbing, electrical repairs, installations, and maintenance services.</p>
+          <a class="biz-link" href="https://djkservices.co.za/">Visit Website <span>→</span></a>
         </div>
       </article>
 
-      <article class="biz-card rv" style="--i:3" data-category="wholesale" data-location="azadville" data-name="Stashsell" data-desc="Your trusted source for quality supplies">
+      <article class="biz-card rv" style="--i:5" data-category="electrical" data-location="johannesburg" data-name="Elexell Electrical Contractors" data-desc="25 years electrical excellence">
         <div class="biz-media">
-          <img src="images-logo/stashdell-logo.jpg" alt="Stashsell" loading="lazy">
-          <span class="biz-badge">📦 Wholesale</span>
+          <img src="https://image.qwenlm.ai/public_source/dfd7f989-ac52-460e-97e5-06e3b06fb164/0283c5e0a-b74b-4353-80db-d1be32efebaa4892.png" alt="Elexell Electrical" loading="lazy">
+          <span class="biz-badge">⚡ Electrical</span>
         </div>
         <div class="biz-body">
-          <div class="biz-top"><h3>Stashsell</h3><span class="biz-loc">📍 Azadville</span></div>
-          <p>Your trusted source for quality supplies.</p>
-          <a class="biz-link" href="https://stashsell.hivetimes.co.za">Visit Website <span>→</span></a>
+          <div class="biz-top"><h3>Elexell Electrical Contractors</h3><span class="biz-loc">📍 Johannesburg</span></div>
+          <p>Johannesburg-based electrical contracting company with 25 years' experience in electrical excellence. Specializing in residential, commercial, and industrial electrical installations, automation systems, and audio-visual installations.</p>
+          <a class="biz-link" href="https://elexell.co.za/">Visit Website <span>→</span></a>
         </div>
       </article>
 
-      <article class="biz-card rv" style="--i:4" data-category="automotive" data-location="sandton" data-name="N2 Auto Dealership" data-desc="Luxury and performance vehicles in Sandton">
+      <article class="biz-card rv" style="--i:6" data-category="electrical" data-location="johannesburg" data-name="Mux Electrical Services" data-desc="High-quality electrical services at competitive prices">
         <div class="biz-media">
-          <img src="images-logo/logo.jpg" alt="N2 Auto Dealership" loading="lazy">
+          <img src="https://image.qwenlm.ai/public_source/dfd7f989-ac52-460e-97e5-06e3b06fb164/2283c5e0a-b74b-4353-80db-d1be32efebaa1150.png" alt="Mux Electrical" loading="lazy">
+          <span class="biz-badge">⚡ Electrical</span>
+        </div>
+        <div class="biz-body">
+          <div class="biz-top"><h3>Mux Electrical Services</h3><span class="biz-loc">📍 Johannesburg</span></div>
+          <p>High-quality electrical services at competitive prices in Johannesburg and Pretoria. Offering electrical inspections, repairs, meter installations, solar installations, and emergency electrical services with free consultations.</p>
+          <a class="biz-link" href="https://www.muxelectricalservices.co.za/">Visit Website <span>→</span></a>
+        </div>
+      </article>
+
+      <article class="biz-card rv" style="--i:7" data-category="electrical" data-location="johannesburg" data-name="Northern Electrical Contractors" data-desc="40+ years experience in electrical services">
+        <div class="biz-media">
+          <img src="https://image.qwenlm.ai/public_source/dfd7f989-ac52-460e-97e5-06e3b06fb164/0283c5e0a-b74b-4353-80db-d1be32efebaa6997.png" alt="Northern Electrical" loading="lazy">
+          <span class="biz-badge">⚡ Electrical</span>
+        </div>
+        <div class="biz-body">
+          <div class="biz-top"><h3>Northern Electrical Contractors</h3><span class="biz-loc">📍 Johannesburg</span></div>
+          <p>Trusted source for commercial, industrial, and domestic electrical services in Johannesburg. Providing comprehensive electrical contracting, solar installations, and maintenance services with 40+ years experience.</p>
+          <a class="biz-link" href="https://electrical.joburg/">Visit Website <span>→</span></a>
+        </div>
+      </article>
+
+      <article class="biz-card rv" style="--i:8" data-category="electrical" data-location="johannesburg" data-name="Total Electric" data-desc="25 years trusted residential and commercial contractors">
+        <div class="biz-media">
+          <img src="https://image.qwenlm.ai/public_source/dfd7f989-ac52-460e-97e5-06e3b06fb164/3283c5e0a-b74b-4353-80db-d1be32efebaa2362.png" alt="Total Electric" loading="lazy">
+          <span class="biz-badge">⚡ Electrical</span>
+        </div>
+        <div class="biz-body">
+          <div class="biz-top"><h3>Total Electric</h3><span class="biz-loc">📍 Johannesburg</span></div>
+          <p>Trusted residential and commercial electrical contractors in Johannesburg northern suburbs for 25 years. Specializing in fault finding, repairs, installations, upgrades, and electrical maintenance services.</p>
+          <a class="biz-link" href="https://totalelectric.co.za/">Visit Website <span>→</span></a>
+        </div>
+      </article>
+
+      <article class="biz-card rv" style="--i:9" data-category="automotive" data-location="johannesburg" data-name="RZ Auto Spa" data-desc="Premium mobile detailing with 30+ five-star reviews">
+        <div class="biz-media">
+          <img src="https://image.qwenlm.ai/public_source/dfd7f989-ac52-460e-97e5-06e3b06fb164/1283c5e0a-b74b-4353-80db-d1be32efebaa7075.png" alt="RZ Auto Spa" loading="lazy">
           <span class="biz-badge">🚗 Automotive</span>
         </div>
         <div class="biz-body">
-          <div class="biz-top"><h3>N2 Auto Dealership</h3><span class="biz-loc">📍 Sandton</span></div>
-          <p>Luxury &amp; Performance Vehicles in Sandton.</p>
-          <a class="biz-link" href="https://n2auto.hivetimes.co.za">Visit Website <span>→</span></a>
+          <div class="biz-top"><h3>RZ Auto Spa</h3><span class="biz-loc">📍 Johannesburg</span></div>
+          <p>Premium mobile detailing service in Johannesburg with 30+ five-star Google reviews. Specializing in paint correction, headlight restoration, interior detailing, ceramic coating, and deep cleaning - we come to you.</p>
+          <a class="biz-link" href="https://rzautospa.co.za/">Visit Website <span>→</span></a>
         </div>
       </article>
 
-      <article class="biz-card rv" style="--i:5" data-category="baking" data-location="johannesburg" data-name="Bake N Co" data-desc="Custom cakes and baked goods for special occasions">
+      <article class="biz-card rv" style="--i:10" data-category="automotive" data-location="johannesburg" data-name="Doctor Detail" data-desc="Premium mobile car detailing">
         <div class="biz-media">
-          <img src="images-logo/bakenco-logo.jpg" alt="Bake N Co cakes" loading="lazy">
-          <span class="biz-badge">🍰 Baking</span>
-        </div>
-        <div class="biz-body">
-          <div class="biz-top"><h3>Bake N Co</h3><span class="biz-loc">📍 Johannesburg</span></div>
-          <p>Custom cakes and baked goods for special occasions.</p>
-          <a class="biz-link" href="https://bakenco.hivetimes.co.za">Visit Website <span>→</span></a>
-        </div>
-      </article>
-
-      <article class="biz-card rv" style="--i:6" data-category="baking" data-location="capetown" data-name="Sweet Lane" data-desc="Freshly baked goods and sweet treats in Cape Town">
-        <div class="biz-media">
-          <img src="images-logo/sweetlane-logo.jpg" alt="Sweet Lane bakery" loading="lazy">
-          <span class="biz-badge">🍰 Baking</span>
-        </div>
-        <div class="biz-body">
-          <div class="biz-top"><h3>Sweet Lane</h3><span class="biz-loc">📍 Cape Town</span></div>
-          <p>Freshly baked goods and sweet treats in Cape Town.</p>
-          <a class="biz-link" href="https://sweetlane.hivetimes.co.za">Visit Website <span>→</span></a>
-        </div>
-      </article>
-
-      <article class="biz-card rv" style="--i:7" data-category="meat" data-location="johannesburg" data-name="Butcher Block Wholesale" data-desc="Premium meat supplier for retailers and foodservice">
-        <div class="biz-media">
-          <img src="images-logo/butcherblock-logo.jpg" alt="Butcher Block Wholesale" loading="lazy">
-          <span class="biz-badge">🥩 Meat</span>
-        </div>
-        <div class="biz-body">
-          <div class="biz-top"><h3>Butcher Block Wholesale</h3><span class="biz-loc">📍 Johannesburg</span></div>
-          <p>Premium meat supplier for retailers and foodservice.</p>
-          <a class="biz-link" href="https://butcherblock.hivetimes.co.za">Visit Website <span>→</span></a>
-        </div>
-      </article>
-
-      <article class="biz-card rv" style="--i:8" data-category="baking" data-location="kwazulu-natal" data-name="Dough &amp; Co" data-desc="Freshly baked bread, pastries, and sweet treats">
-        <div class="biz-media">
-          <img src="images-logo/doughandco.logo.jpg" alt="Dough and Co" loading="lazy">
-          <span class="biz-badge">🍰 Baking</span>
-         </div>
-        <div class="biz-body">
-          <div class="biz-top"><h3>Dough &amp; Co</h3><span class="biz-loc">📍 KwaZulu-Natal</span></div>
-          <p>Freshly baked bread, pastries, and sweet treats.</p>
-          <a class="biz-link" href="https://hivetimes.co.za/doughandco/index.html">Visit Website <span>→</span></a>
-        </div>
-      </article>
-
-      <article class="biz-card rv" style="--i:9" data-category="household" data-location="kwazulu-natal" data-name="Shupz" data-desc="Premium dishwashing liquid, laundry detergent, soaps and industrial cleaning supplies">
-        <div class="biz-media">
-          <img src="images-logo/shupz-logo.jpg" alt="Shupz cleaning supplies" loading="lazy">
-          <span class="biz-badge">🏠 Household</span>
-        </div>
-        <div class="biz-body">
-          <div class="biz-top"><h3>Shupz</h3><span class="biz-loc">📍 KwaZulu-Natal</span></div>
-          <p>Premium dishwashing liquid, laundry detergent, soaps &amp; industrial cleaning supplies.</p>
-          <a class="biz-link" href="http://shupz.hivetimes.co.za">Visit Website <span>→</span></a>
-        </div>
-      </article>
-
-      <article class="biz-card rv" style="--i:10" data-category="wholesale" data-location="johannesburg" data-name="Nothing Fancy" data-desc="Wholesale toilet paper, 2-ply bales, kitchen towels and paper products">
-        <div class="biz-media">
-          <img src="images-logo/nothing-fancy-logo.jpg" alt="Nothing Fancy paper products" loading="lazy">
-          <span class="biz-badge">📦 Wholesale</span>
-        </div>
-        <div class="biz-body">
-          <div class="biz-top"><h3>Nothing Fancy</h3><span class="biz-loc">📍 Johannesburg</span></div>
-          <p>Wholesale toilet paper, 2-ply bales, kitchen towels &amp; paper products.</p>
-          <a class="biz-link" href="https://hivetimes.co.za/nothingfancy.html">Visit Website <span>→</span></a>
-        </div>
-      </article>
-
-      <article class="biz-card rv" style="--i:11" data-category="meat" data-location="kwazulu-natal" data-name="Mumtaz Biltong" data-desc="Authentic South African biltong and snacks">
-        <div class="biz-media">
-          <img src="images-logo/m" alt="Mumtaz Biltong" loading="lazy">
-          <span class="biz-badge">🥩 Meat</span>
-       </div>
-        <div class="biz-body">
-          <div class="biz-top"><h3>Mumtaz Biltong</h3><span class="biz-loc">📍 KwaZulu-Natal</span></div>
-          <p>Authentic South African Biltong and Snacks.</p>
-          <a class="biz-link" href="https://mumtazbiltong.hivetimes.co.za">Visit Website <span>→</span></a>
-        </div>
-      </article>
-
-      <article class="biz-card rv" style="--i:0" data-category="automotive" data-location="sandton" data-name="MK Investment Holdings" data-desc="Quality pre-owned vehicles in Sandton">
-        <div class="biz-media">
-          <img src="images-logo/mkinvest-logo.jpg" alt="MK Investment Holdings" loading="lazy">
+          <img src="https://image.qwenlm.ai/public_source/dfd7f989-ac52-460e-97e5-06e3b06fb164/4283c5e0a-b74b-4353-80db-d1be32efebaa6338.png" alt="Doctor Detail" loading="lazy">
           <span class="biz-badge">🚗 Automotive</span>
         </div>
         <div class="biz-body">
-          <div class="biz-top"><h3>MK Investment Holdings</h3><span class="biz-loc">📍 Sandton</span></div>
-          <p>Quality Pre-Owned Vehicles in Sandton.</p>
-          <a class="biz-link" href="https://mkinvest.hivetimes.co.za">Visit Website <span>→</span></a>
+          <div class="biz-top"><h3>Doctor Detail</h3><span class="biz-loc">📍 Johannesburg</span></div>
+          <p>Premium mobile car detailing in Johannesburg. Expert paint correction, ceramic coating, interior restoration, and PPF applications. Open 7 days a week, serving Johannesburg, Pretoria & surrounding areas.</p>
+          <a class="biz-link" href="https://doctordetail.co.za/">Visit Website <span>→</span></a>
         </div>
       </article>
 
-      <article class="biz-card rv" style="--i:1" data-category="baking" data-location="capetown" data-name="Dainty Delicacies" data-desc="Artisanal cakes, pastries and cupcakes in Cape Town">
+      <article class="biz-card rv" style="--i:11" data-category="automotive" data-location="sandton" data-name="BUFF Detailing" data-desc="Top-rated mobile car detailing in Sandton">
         <div class="biz-media">
-          <img src="images-logo/daintydelicacies-logo.jpg" alt="Dainty Delicacies" loading="lazy">
-          <span class="biz-badge">🍰 Baking</span>
+          <img src="https://image.qwenlm.ai/public_source/dfd7f989-ac52-460e-97e5-06e3b06fb164/2283c5e0a-b74b-4353-80db-d1be32efebaa4301.png" alt="BUFF Detailing" loading="lazy">
+          <span class="biz-badge">🚗 Automotive</span>
         </div>
         <div class="biz-body">
-          <div class="biz-top"><h3>Dainty Delicacies</h3><span class="biz-loc">📍 Cape Town</span></div>
-          <p>Artisanal Cakes, Pastries &amp; Cupcakes in Cape Town.</p>
-          <a class="biz-link" href="https://daintydelicacies.hivetimes.co.za">Visit Website <span>→</span></a>
+          <div class="biz-top"><h3>BUFF Detailing</h3><span class="biz-loc">📍 Sandton</span></div>
+          <p>Johannesburg's top-rated mobile car detailing service operating in Sandton, Hyde Park, and Bryanston. Specializing in paint correction, ceramic coating, interior restoration, and premium hand car detailing.</p>
+          <a class="biz-link" href="https://www.buffdetailing.co.za/">Visit Website <span>→</span></a>
         </div>
       </article>
 
-      <article class="biz-card rv" style="--i:2" data-category="baking" data-location="johannesburg" data-name="Cupcake Plantation" data-desc="Bakery, cheesecakes, pastries, cakes and brownies">
+      <article class="biz-card rv" style="--i:12" data-category="automotive" data-location="johannesburg" data-name="Cleansmith Mobile Car Wash" data-desc="4.9/5 rated premium mobile car wash">
         <div class="biz-media">
-          <img src="images-logo/cupcakeplantation-logo.jpg" alt="Cupcake Plantation" loading="lazy">
-          <span class="biz-badge">🍰 Baking</span>
+          <img src="https://image.qwenlm.ai/public_source/dfd7f989-ac52-460e-97e5-06e3b06fb164/0283c5e0a-b74b-4353-80db-d1be32efebaa5936.png" alt="Cleansmith" loading="lazy">
+          <span class="biz-badge">🚗 Automotive</span>
         </div>
         <div class="biz-body">
-          <div class="biz-top"><h3>Cupcake Plantation</h3><span class="biz-loc">📍 Johannesburg</span></div>
-          <p>Bakery, Cheesecakes, Pastries, Cakes &amp; Brownies.</p>
-          <a class="biz-link" href="http://cupcakeplantation.hivetimes.co.za">Visit Website <span>→</span></a>
+          <div class="biz-top"><h3>Cleansmith Mobile Car Wash</h3><span class="biz-loc">📍 Johannesburg</span></div>
+          <p>Premium mobile car wash and detailing service in Johannesburg. 4.9/5 rated with 1000+ cars detailed. Professional service at your home, office, or anywhere - no queues, just spotless results.</p>
+          <a class="biz-link" href="https://cleansmith.co.za/">Visit Website <span>→</span></a>
         </div>
       </article>
 
-      <article class="biz-card rv" style="--i:3" data-category="baking" data-location="lenasia" data-name="Delectable Dippers" data-desc="Cakes, cupcakes, milktarts and biscuits">
+      <article class="biz-card rv" style="--i:13" data-category="carpentry" data-location="johannesburg" data-name="Horizon Home Designs" data-desc="Custom furniture and built-in installations">
         <div class="biz-media">
-          <img src="images-logo/delectabledippers-logo.jpg" alt="Delectable Dippers" loading="lazy">
-          <span class="biz-badge">🍰 Baking</span>
+          <img src="image-services/horizonhomedesigns-logo.jpg" alt="Horizon Home Designs" loading="lazy">
+          <span class="biz-badge">🪵 Carpentry</span>
         </div>
         <div class="biz-body">
-          <div class="biz-top"><h3>Delectable Dippers</h3><span class="biz-loc">📍 Lenasia</span></div>
-          <p>Cakes, Cupcakes, Milktarts &amp; Biscuits.</p>
-          <a class="biz-link" href="http://delectabledippers.hivetimes.co.za">Visit Website <span>→</span></a>
+          <div class="biz-top"><h3>Horizon Home Designs</h3><span class="biz-loc">📍 Johannesburg</span></div>
+          <p>Custom furniture: built-in kitchens, wardrobes, bedroom suites, granite/quartz installation & TV stands. Quality craftsmanship for your home.</p>
+          <a class="biz-link" href="https://hivetimes.co.za/horizonhomedesigner.html">Visit Website <span>→</span></a>
         </div>
       </article>
 
-      <article class="biz-card rv" style="--i:4" data-category="frozen" data-location="johannesburg" data-name="Polar Ice Cream" data-desc="Artisanal ice cream, stick novelties and frozen desserts">
+      <article class="biz-card rv" style="--i:14" data-category="security" data-location="johannesburg" data-name="Intell Security" data-desc="Comprehensive security solutions provider">
         <div class="biz-media">
-          <img src="images-logo/polar-ice-cream-logo.png" alt="Polar Ice Cream" loading="lazy">
-          <span class="biz-badge">🍦 Frozen</span>
+          <img src="image-services/intellsecurity-logo.jpg" alt="Intell Security" loading="lazy">
+          <span class="biz-badge">🔒 Security</span>
         </div>
         <div class="biz-body">
-          <div class="biz-top"><h3>Polar Ice Cream</h3><span class="biz-loc">📍 Johannesburg</span></div>
-          <p>Artisanal Ice cream, Stick Novelties &amp; Frozen Desserts.</p>
-          <a class="biz-link" href="https://polaricecream.hivetimes.co.za/">Visit Website <span>→</span></a>
+          <div class="biz-top"><h3>Intell Security</h3><span class="biz-loc">📍 Johannesburg</span></div>
+          <p>Intell Security is a leading provider of comprehensive security solutions, offering cutting-edge technology and expert services to protect your business and assets.</p>
+          <a class="biz-link" href="https://www.intellsecurity.co.za/">Visit Website <span>→</span></a>
         </div>
       </article>
 
-      <article class="biz-card rv" style="--i:5" data-category="food-bev" data-location="johannesburg" data-name="Marrakesh Bites" data-desc="Authentic Moroccan cuisine in a vibrant setting">
+      <article class="biz-card rv" style="--i:15" data-category="emergency" data-location="johannesburg" data-name="24/7 Care Electrical & Plumbing" data-desc="24/7 emergency electrical & plumbing services">
         <div class="biz-media">
-          <img src="images-logo/marrakeshbites-logo.jpg" alt="Marrakesh Bites" loading="lazy">
-          <span class="biz-badge">🍽️ Food &amp; Bev</span>
+          <img src="image-services/247care-logo.jpg" alt="24/7 Care" loading="lazy">
+          <span class="biz-badge">🚨 Emergency</span>
         </div>
         <div class="biz-body">
-          <div class="biz-top"><h3>Marrakesh Bites</h3><span class="biz-loc">📍 Johannesburg</span></div>
-          <p>Authentic Moroccan cuisine in a vibrant setting.</p>
-          <a class="biz-link" href="https://hivetimes.co.za/marrakeshbites.html">Visit Website <span>→</span></a>
+          <div class="biz-top"><h3>24/7 Care Electrical & Plumbing</h3><span class="biz-loc">📍 Johannesburg</span></div>
+          <p>24/7 emergency electrical & plumbing: fault finding, installations, leak repairs, geyser solutions & loadshedding backups.</p>
+          <a class="biz-link" href="https://247careelectricalandplumbing.simdif.com">Visit Website <span>→</span></a>
         </div>
       </article>
 
-      <article class="biz-card rv" style="--i:6" data-category="wholesale" data-location="johannesburg" data-name="Sweet Mart" data-desc="Confectionery and candy wholesale supplier">
+      <article class="biz-card rv" style="--i:16" data-category="electrical" data-location="johannesburg" data-name="P E Electrical Johannesburg" data-desc="Professional residential & commercial electrical solutions">
         <div class="biz-media">
-          <img src="images-logo/sw" alt="Sweet Mart" loading="lazy">
-          <span class="biz-badge">📦 Wholesale</span>
+          <img src="image-services/peelectrical-logo.jpg" alt="PE Electrical" loading="lazy">
+          <span class="biz-badge">⚡ Electrical</span>
         </div>
         <div class="biz-body">
-          <div class="biz-top"><h3>Sweet Mart</h3><span class="biz-loc">📍 Johannesburg</span></div>
-          <p>Confectionery &amp; Candy Wholesale Supplier.</p>
-          <a class="biz-link" href="https://hivetimes.co.za/Sweet%20Mart.html">Visit Website <span>→</span></a>
+          <div class="biz-top"><h3>P E Electrical Johannesburg</h3><span class="biz-loc">📍 Johannesburg</span></div>
+          <p>Professional residential & commercial electrical solutions in Parktown: installations, repairs & COC certifications.</p>
+          <a class="biz-link" href="https://pandeelectricaljohannesburg.co.za/">Visit Website <span>→</span></a>
         </div>
       </article>
 
-      <article class="biz-card rv" style="--i:7" data-category="wholesale" data-location="johannesburg" data-name="Sweet Deport" data-desc="Confectionery distributor and wholesale supplier SA">
+      <article class="biz-card rv" style="--i:17" data-category="tech" data-location="johannesburg" data-name="UrbanFix" data-desc="Expert phone repairs & accessories">
         <div class="biz-media">
-          <img src="https://picsum.photos/seed/sweetdepot-candy-warehouse/640/420" alt="Sweet Deport" loading="lazy">
-          <span class="biz-badge">📦 Wholesale</span>
+          <img src="image-services/urbanfix-logo.jpg" alt="UrbanFix" loading="lazy">
+          <span class="biz-badge">💻 Tech & Digital</span>
         </div>
         <div class="biz-body">
-          <div class="biz-top"><h3>Sweet Deport</h3><span class="biz-loc">📍 Johannesburg</span></div>
-          <p>Confectionery Distributor &amp; Wholesale Supplier SA.</p>
-          <a class="biz-link" href="https://www.sweetdepot.co.za">Visit Website <span>→</span></a>
+          <div class="biz-top"><h3>UrbanFix</h3><span class="biz-loc">📍 Johannesburg</span></div>
+          <p>Expert phone repairs & accessories. Screen replacements, battery swaps, and all smartphone repairs.</p>
+          <a class="biz-link" href="/urbanfix.html">Visit Website <span>→</span></a>
         </div>
       </article>
 
-      <article class="biz-card rv" style="--i:8" data-category="clothing" data-location="johannesburg" data-name="The Ahsan Store" data-desc="Islamic clothing, thobes, hijabs, prayer mats and gifts">
+      <article class="biz-card rv" style="--i:18" data-category="tech" data-location="johannesburg" data-name="JTC Consulting" data-desc="Results-driven digital solutions">
         <div class="biz-media">
-          <img src="images-logo/ahsanstore-logo.jpg" alt="The Ahsan Store" loading="lazy">
-          <span class="biz-badge">👕 Clothing</span>
+          <img src="image-services/jassatattorneys-logo.jpg" alt="JTC Consulting" loading="lazy">
+          <span class="biz-badge">💻 Tech & Digital</span>
         </div>
         <div class="biz-body">
-          <div class="biz-top"><h3>The Ahsan Store</h3><span class="biz-loc">📍 Johannesburg</span></div>
-          <p>Islamic clothing, thobes, hijabs, prayer mats &amp; gifts.</p>
-          <a class="biz-link" href="https://ahsan.co.za">Visit Website <span>→</span></a>
+          <div class="biz-top"><h3>JTC Consulting</h3><span class="biz-loc">📍 Johannesburg</span></div>
+          <p>Results-driven digital solutions: web development, SEO, branding & online growth strategies for SA businesses.</p>
+          <a class="biz-link" href="http://jtc.hivetimes.co.za/">Visit Website <span>→</span></a>
         </div>
       </article>
 
-      <article class="biz-card rv" style="--i:9" data-category="clothing" data-location="sandton" data-name="Laila Couture" data-desc="Luxury modest wear, designer abayas and Islamic fashion">
+      <article class="biz-card rv" style="--i:19" data-category="wellness" data-location="johannesburg" data-name="Nabd by K" data-desc="Authentic Sunnah Cupping & Acudetox Therapy">
         <div class="biz-media">
-          <img src="images-logo/la" alt="Laila Couture" loading="lazy">
-          <span class="biz-badge">👕 Clothing</span>
+          <img src="image-services/nabdbyk-logo.jpg" alt="Nabd by K" loading="lazy">
+          <span class="biz-badge">💆 Wellness</span>
         </div>
         <div class="biz-body">
-          <div class="biz-top"><h3>Laila Couture</h3><span class="biz-loc">📍 Sandton</span></div>
-          <p>Luxury modest wear, designer abayas &amp; Islamic fashion.</p>
-          <a class="biz-link" href="https://lailacouture.co.za">Visit Website <span>→</span></a>
+          <div class="biz-top"><h3>Nabd by K</h3><span class="biz-loc">📍 Johannesburg</span></div>
+          <p>Authentic Sunnah Cupping & Acudetox Therapy for women in Emmarentia.</p>
+          <a class="biz-link" href="https://nabdhbyk.hivetimes.co.za/">Visit Website <span>→</span></a>
         </div>
       </article>
 
-      <article class="biz-card rv" style="--i:10" data-category="household" data-location="johannesburg" data-name="Islamic Design House" data-desc="Premium Islamic home decor, wall art and spiritual furnishings">
+      <article class="biz-card rv" style="--i:20" data-category="security" data-location="johannesburg" data-name="IES Consulting Elevator" data-desc="Premium commercial & home elevator solutions">
         <div class="biz-media">
-          <img src="images-logo/is" alt="Islamic Design House" loading="lazy">
-          <span class="biz-badge">🏠 Household</span>
+          <img src="image-services/ies-elavators-logo.jpg" alt="IES Elevators" loading="lazy">
+          <span class="biz-badge">🔒 Security</span>
         </div>
         <div class="biz-body">
-          <div class="biz-top"><h3>Islamic Design House</h3><span class="biz-loc">📍 Johannesburg</span></div>
-          <p>Premium Islamic home decor, wall art &amp; spiritual furnishings.</p>
-          <a class="biz-link" href="https://islamicdesignhouse.co.za">Visit Website <span>→</span></a>
-        </div>
-      </article>
-
-      <article class="biz-card rv" style="--i:11" data-category="food-bev" data-location="sandton" data-name="1701 Nougat &amp; Luxury Gift Boxes" data-desc="Chocolates, candy, nougat and gifting concierge">
-        <div class="biz-media">
-          <img src="https://picsum.photos/seed/1701nougat-luxury-gifts/640/420" alt="1701 Nougat" loading="lazy">
-          <span class="biz-badge">🍽️ Food &amp; Bev</span>
-          <button class="biz-cart-add" data-biz="1701 Nougat" data-product="Luxury Gift Box" data-price="650" data-img="https://picsum.photos/seed/1701nougat-luxury-gifts/640/420" aria-label="Add 1701 Nougat product to cart">🛒</button>
-        </div>
-        <div class="biz-body">
-          <div class="biz-top"><h3>1701 Nougat &amp; Luxury Gift Boxes</h3><span class="biz-loc">📍 Sandton</span></div>
-          <p>Chocolates, Candy, Nougat &amp; Gifting Concierge.</p>
-          <a class="biz-link" href="https://1701luxury.com">Visit Website <span>→</span></a>
-        </div>
-      </article>
-
-      <article class="biz-card rv" style="--i:0" data-category="wholesale" data-location="johannesburg" data-name="Sunrise Sweet Market" data-desc="Chocolates, candy, biscuits and gummies wholesale">
-        <div class="biz-media">
-          <img src="https://picsum.photos/seed/sunrisesweets-wholesale/640/420" alt="Sunrise Sweet Market" loading="lazy">
-          <span class="biz-badge">📦 Wholesale</span>
-          <button class="biz-cart-add" data-biz="Sunrise Sweet Market" data-product="Gummies Bulk Bag" data-price="180" data-img="https://picsum.photos/seed/sunrisesweets-wholesale/640/420" aria-label="Add Sunrise Sweet Market product to cart">🛒</button>
-        </div>
-        <div class="biz-body">
-          <div class="biz-top"><h3>Sunrise Sweet Market</h3><span class="biz-loc">📍 Johannesburg</span></div>
-          <p>Chocolates, Candy, Biscuits &amp; Gummies Wholesale.</p>
-          <a class="biz-link" href="http://sunrisesweets.co.za">Visit Website <span>→</span></a>
-        </div>
-      </article>
-
-      <article class="biz-card rv" style="--i:1" data-category="wholesale" data-location="johannesburg" data-name="Tasko Sweets" data-desc="Confectionery and gifting wholesale">
-        <div class="biz-media">
-          <img src="https://picsum.photos/seed/taskosweets-confectionery/640/420" alt="Tasko Sweets" loading="lazy">
-          <span class="biz-badge">📦 Wholesale</span>
-          <button class="biz-cart-add" data-biz="Tasko Sweets" data-product="Gifting Hamper" data-price="310" data-img="https://picsum.photos/seed/taskosweets-confectionery/640/420" aria-label="Add Tasko Sweets product to cart">🛒</button>
-        </div>
-        <div class="biz-body">
-          <div class="biz-top"><h3>Tasko Sweets</h3><span class="biz-loc">📍 Johannesburg</span></div>
-          <p>Confectionery &amp; Gifting Wholesale.</p>
-          <a class="biz-link" href="https://taskosweetsonline.co.za">Visit Website <span>→</span></a>
-        </div>
-      </article>
-
-      <article class="biz-card rv" style="--i:2" data-category="food-bev" data-location="kwazulu-natal" data-name="Dicks Sweets" data-desc="Traditional confectionery and nougat">
-        <div class="biz-media">
-          <img src="https://picsum.photos/seed/dickssweets-nougat/640/420" alt="Dicks Sweets" loading="lazy">
-          <span class="biz-badge">🍽️ Food &amp; Bev</span>
-          <button class="biz-cart-add" data-biz="Dicks Sweets" data-product="Nougat Slab" data-price="140" data-img="https://picsum.photos/seed/dickssweets-nougat/640/420" aria-label="Add Dicks Sweets product to cart">🛒</button>
-        </div>
-        <div class="biz-body">
-          <div class="biz-top"><h3>Dicks Sweets</h3><span class="biz-loc">📍 KwaZulu-Natal</span></div>
-          <p>Traditional Confectionery &amp; Nougat.</p>
-          <a class="biz-link" href="https://www.dickssweets.co.za">Visit Website <span>→</span></a>
-        </div>
-      </article>
-
-      <article class="biz-card rv" style="--i:3" data-category="electronics" data-location="johannesburg" data-name="White House Lighting &amp; Electrical" data-desc="LED lighting solutions and durable electrical accessories">
-        <div class="biz-media">
-          <img src="https://picsum.photos/seed/whitehouselighting-led/640/420" alt="White House Lighting" loading="lazy">
-          <span class="biz-badge">📱 Electronics</span>
-          <button class="biz-cart-add" data-biz="White House Lighting" data-product="LED Downlight 6-Pack" data-price="240" data-img="https://picsum.photos/seed/whitehouselighting-led/640/420" aria-label="Add White House Lighting product to cart">🛒</button>
-        </div>
-        <div class="biz-body">
-          <div class="biz-top"><h3>White House Lighting &amp; Electrical</h3><span class="biz-loc">📍 Johannesburg</span></div>
-          <p>LED lighting solutions &amp; durable electrical accessories.</p>
-          <a class="biz-link" href="https://whitehouselightingandelectrical.co.za">Visit Website <span>→</span></a>
-        </div>
-      </article>
-
-      <article class="biz-card rv" style="--i:4" data-category="electronics" data-location="johannesburg" data-name="Laptop Solution" data-desc="Laptop parts, repairs, screens, keyboards and accessories">
-        <div class="biz-media">
-          <img src="images-logo/la" alt="Laptop Solution" loading="lazy">
-          <span class="biz-badge">📱 Electronics</span>
-        </div>
-        <div class="biz-body">
-          <div class="biz-top"><h3>Laptop Solution</h3><span class="biz-loc">📍 Johannesburg</span></div>
-          <p>Laptop Parts, Repairs, Screens, Keyboards &amp; Accessories.</p>
-          <a class="biz-link" href="https://laptopsolutions.co.za">Visit Website <span>→</span></a>
-        </div>
-      </article>
-
-      <article class="biz-card rv" style="--i:5" data-category="wholesale" data-location="johannesburg" data-name="Africa Cash &amp; Carry" data-desc="Major FMCG wholesaler: toiletries, hair care, electronics and household">
-        <div class="biz-media">
-          <img src="images-logo/africa-cash-n-carry-logo.jpg" alt="Africa Cash and Carry" loading="lazy">
-          <span class="biz-badge">📦 Wholesale</span>
-        </div>
-        <div class="biz-body">
-          <div class="biz-top"><h3>Africa Cash &amp; Carry</h3><span class="biz-loc">📍 Johannesburg</span></div>
-          <p>Major FMCG wholesaler: toiletries, hair care, electronics &amp; household.</p>
-          <a class="biz-link" href="https://africacnc.co.za">Visit Website <span>→</span></a>
-        </div>
-      </article>
-
-      <article class="biz-card rv" style="--i:6" data-category="wholesale" data-location="johannesburg" data-name="Devland Cash &amp; Carry" data-desc="Bulk FMCG, groceries and household goods for retailers">
-        <div class="biz-media">
-          <img src="images-logo/devland-logo.jpg" alt="Devland Cash and Carry" loading="lazy">
-          <span class="biz-badge">📦 Wholesale</span>
-         </div>
-        <div class="biz-body">
-          <div class="biz-top"><h3>Devland Cash &amp; Carry</h3><span class="biz-loc">📍 Johannesburg</span></div>
-          <p>Bulk FMCG, groceries &amp; household goods for retailers.</p>
-          <a class="biz-link" href="https://www.devland.co.za">Visit Website <span>→</span></a>
-        </div>
-      </article>
-
-      <article class="biz-card rv" style="--i:7" data-category="wholesale" data-location="johannesburg" data-name="Continental Cash &amp; Carry" data-desc="Wholesale supplier for independent retailers since 2012">
-        <div class="biz-media">
-          <img src="https://picsum.photos/seed/continentalcashandcarry-retail/640/420" alt="Continental Cash and Carry" loading="lazy">
-          <span class="biz-badge">📦 Wholesale</span>
-          <button class="biz-cart-add" data-biz="Continental Cash &amp; Carry" data-product="Retailer Restock Pack" data-price="499" data-img="https://picsum.photos/seed/continentalcashandcarry-retail/640/420" aria-label="Add Continental Cash and Carry product to cart">🛒</button>
-        </div>
-        <div class="biz-body">
-          <div class="biz-top"><h3>Continental Cash &amp; Carry</h3><span class="biz-loc">📍 Johannesburg</span></div>
-          <p>Wholesale supplier for independent retailers since 2012.</p>
-          <a class="biz-link" href="https://www.ccnc.co.za">Visit Website <span>→</span></a>
-        </div>
-      </article>
-
-      <article class="biz-card rv" style="--i:8" data-category="wholesale" data-location="johannesburg" data-name="Jumbo Cash &amp; Carry" data-desc="Massmart-owned wholesaler for traders and small businesses">
-        <div class="biz-media">
-          <img src="https://picsum.photos/seed/jumbocashandcarry-trader/640/420" alt="Jumbo Cash and Carry" loading="lazy">
-          <span class="biz-badge">📦 Wholesale</span>
-          <button class="biz-cart-add" data-biz="Jumbo Cash &amp; Carry" data-product="Trader Bundle" data-price="479" data-img="https://picsum.photos/seed/jumbocashandcarry-trader/640/420" aria-label="Add Jumbo Cash and Carry product to cart">🛒</button>
-        </div>
-        <div class="biz-body">
-          <div class="biz-top"><h3>Jumbo Cash &amp; Carry</h3><span class="biz-loc">📍 Johannesburg</span></div>
-          <p>Massmart-owned wholesaler for traders and small businesses.</p>
-          <a class="biz-link" href="https://my-catalogue.co.za/retailers/jumbo-cash-and-carry">Visit Website <span>→</span></a>
-        </div>
-      </article>
-
-      <article class="biz-card rv" style="--i:9" data-category="clothing" data-location="capetown" data-name="JAM Clothing" data-desc="Brand-name apparel, footwear and accessories at discounted prices">
-        <div class="biz-media">
-          <img src="https://picsum.photos/seed/jamclothing-apparel/640/420" alt="JAM Clothing" loading="lazy">
-          <span class="biz-badge">👕 Clothing</span>
-          <button class="biz-cart-add" data-biz="JAM Clothing" data-product="Apparel Mystery Pack" data-price="399" data-img="https://picsum.photos/seed/jamclothing-apparel/640/420" aria-label="Add JAM Clothing product to cart">🛒</button>
-        </div>
-        <div class="biz-body">
-          <div class="biz-top"><h3>JAM Clothing</h3><span class="biz-loc">📍 Cape Town</span></div>
-          <p>Brand-name apparel, footwear &amp; accessories at discounted prices.</p>
-          <a class="biz-link" href="https://jamclothing.co.za">Visit Website <span>→</span></a>
+          <div class="biz-top"><h3>IES Consulting Elevator</h3><span class="biz-loc">📍 Johannesburg</span></div>
+          <p>Premium commercial & home elevator solutions: design, installation, maintenance & compliance across SA.</p>
+          <a class="biz-link" href="https://ieselevators.hivetimes.co.za/">Visit Website <span>→</span></a>
         </div>
       </article>
 
@@ -2771,75 +2846,59 @@ body.cart-open .cart-drawer{
 
     <div class="ht-empty" id="emptyState">
       <span class="big-bee">🐝</span>
-      <h4>No businesses in this part of the hive yet…</h4>
-      <p>Try a different niche or location — or clear your filters below.</p>
+      <h4>No services found in this area yet…</h4>
+      <p>Try a different service type or location — or clear your filters below.</p>
       <button id="resetFilters">Reset All Filters</button>
     </div>
   </section>
 
-  <!-- ══════════ WHOLESALE SPOTLIGHT ══════════ -->
+  <!-- ══════════ EMERGENCY SPOTLIGHT ══════════ -->
   <section class="ht-spotlight">
     <div class="ht-spotlight-head">
       <div>
-        <h3>Wholesale &amp; Cash &amp; Carry <em>Spotlight</em></h3>
-        <p>Bulk suppliers keeping South African traders stocked. Swipe →</p>
+        <h3>24/7 Emergency <em>Services</em></h3>
+        <p>Urgent repairs and assistance when you need it most. Swipe →</p>
       </div>
     </div>
     <div class="ht-rail">
-      <a class="spot-card" href="/zansho/index.html">
-        <img src="https://picsum.photos/seed/zansho-wholesale-reseller/500/300" alt="Zansho" loading="lazy">
-        <div><small>Johannesburg</small><h4>Zansho</h4></div>
+      <a class="spot-card" href="https://djkservices.co.za/">
+        <img src="https://picsum.photos/seed/djk-emergency-plumber/500/300" alt="DJK Services" loading="lazy">
+        <div><small>Johannesburg</small><h4>DJK Services</h4></div>
       </a>
-      <a class="spot-card" href="https://africacnc.co.za">
-        <img src="https://picsum.photos/seed/africacashandcarry-fmcg/500/300" alt="Africa Cash and Carry" loading="lazy">
-        <div><small>Johannesburg</small><h4>Africa Cash &amp; Carry</h4></div>
+      <a class="spot-card" href="https://247careelectricalandplumbing.simdif.com">
+        <img src="https://picsum.photos/seed/247-care-electrical/500/300" alt="24/7 Care" loading="lazy">
+        <div><small>Johannesburg</small><h4>24/7 Care</h4></div>
       </a>
-      <a class="spot-card" href="https://www.devland.co.za">
-        <img src="https://picsum.photos/seed/devlandcashandcarry-grocery/500/300" alt="Devland Cash and Carry" loading="lazy">
-        <div><small>Johannesburg</small><h4>Devland Cash &amp; Carry</h4></div>
+      <a class="spot-card" href="https://monsterplumbing.co.za/">
+        <img src="https://picsum.photos/seed/monster-plumbing-emergency/500/300" alt="Monster Plumbing" loading="lazy">
+        <div><small>Cape Town</small><h4>Monster Plumbing</h4></div>
       </a>
-      <a class="spot-card" href="https://www.ccnc.co.za">
-        <img src="https://picsum.photos/seed/continentalcashandcarry-retail/500/300" alt="Continental Cash and Carry" loading="lazy">
-        <div><small>Johannesburg</small><h4>Continental C&amp;C</h4></div>
-      </a>
-      <a class="spot-card" href="https://my-catalogue.co.za/retailers/jumbo-cash-and-carry">
-        <img src="https://picsum.photos/seed/jumbocashandcarry-trader/500/300" alt="Jumbo Cash and Carry" loading="lazy">
-        <div><small>Johannesburg</small><h4>Jumbo Cash &amp; Carry</h4></div>
-      </a>
-      <a class="spot-card" href="https://hivetimes.co.za/nothingfancy.html">
-        <img src="https://picsum.photos/seed/nothingfancy-paper-bales/500/300" alt="Nothing Fancy" loading="lazy">
-        <div><small>Johannesburg</small><h4>Nothing Fancy</h4></div>
-      </a>
-      <a class="spot-card" href="https://hivetimes.co.za/Sweet%20Mart.html">
-        <img src="https://picsum.photos/seed/sweetmart-confectionery/500/300" alt="Sweet Mart" loading="lazy">
-        <div><small>Johannesburg</small><h4>Sweet Mart</h4></div>
-      </a>
-      <a class="spot-card" href="https://anwholesalers.hivetimes.co.za/">
-        <img src="https://picsum.photos/seed/an-wholesalers-lenasia/500/300" alt="An Wholesalers" loading="lazy">
-        <div><small>Lenasia</small><h4>An Wholesalers</h4></div>
+      <a class="spot-card" href="https://www.prestoelectrical.co.za/">
+        <img src="https://picsum.photos/seed/presto-emergency-electrical/500/300" alt="Presto Electrical" loading="lazy">
+        <div><small>Johannesburg</small><h4>Presto Electrical</h4></div>
       </a>
     </div>
   </section>
 
   <!-- ══════════ HOW IT WORKS ══════════ -->
   <section class="ht-how">
-    <span class="ht-overline">⬡ From Hive to Home ⬡</span>
+    <span class="ht-overline">⬡ From Search to Service ⬡</span>
     <h2 class="rv">How the <em>Hive</em> Works</h2>
     <div class="ht-how-grid">
       <div class="how-step rv" style="--i:0">
         <div class="how-hex">1</div>
         <h4>Discover</h4>
-        <p>Filter by niche and location, or search the hive. Every listing links straight to the business's own website.</p>
+        <p>Filter by service type and location, or search the hive. Every listing links straight to the professional's website.</p>
       </div>
       <div class="how-step rv" style="--i:1">
         <div class="how-hex">2</div>
-        <h4>Connect</h4>
-        <p>Tap 🛒 on any card to build a cart per business, then send your order or enquiry directly via WhatsApp.</p>
+        <h4>Request</h4>
+        <p>Tap 📋 on any card to request a quote, then send your enquiry directly via WhatsApp to the service provider.</p>
       </div>
       <div class="how-step rv" style="--i:2">
         <div class="how-hex">3</div>
-        <h4>Grow</h4>
-        <p>Business owners: join the hive, get your own premium website and start receiving WhatsApp orders daily.</p>
+        <h4>Book</h4>
+        <p>Get quotes, compare prices, and book trusted professionals for your home, business, or emergency needs.</p>
       </div>
     </div>
   </section>
@@ -2848,11 +2907,11 @@ body.cart-open .cart-drawer{
   <section class="ht-join">
     <div class="ht-join-inner">
       <div class="ht-join-copy">
-        <h3>Advertise &amp; Get <em>WhatsApp Orders?</em> 🐝</h3>
-        <p>List on hivetimes.co.za and unlock direct WhatsApp orders, boosted local visibility and customer trust.</p>
+        <h3>Are You a <em>Service Provider?</em> 🐝</h3>
+        <p>List on hivetimes.co.za and get discovered by thousands of local customers looking for your expertise.</p>
       </div>
       <div class="ht-join-actions">
-        <button class="btn-hive dark" data-open-grow>🚀 Get a Premium Website Now</button>
+        <button class="btn-hive dark" data-open-grow>🚀 List Your Services Now</button>
         <a class="btn-hive line" href="https://hivetimes.co.za/about%20page%20home.html">✨ Join the Hive</a>
       </div>
     </div>
@@ -2865,14 +2924,15 @@ body.cart-open .cart-drawer{
   <div class="ht-footer-inner">
     <div>
       <h5>🐝 Hive<em>Times</em></h5>
-      <p class="tag">Connecting South Africans with trusted local businesses since 2026.</p>
+      <p class="tag">Connecting South Africans with trusted local services & professionals since 2026.</p>
     </div>
     <div>
-      <h6>Directory</h6>
+      <h6>Services</h6>
       <ul>
-        <li><a href="https://business.hivetimes.co.za/">Businesses</a></li>
-        <li><a href="https://services.hivetimes.co.za/">Services</a></li>
-        <li><a href="#directory" data-filter-wholesale>Wholesale</a></li>
+        <li><a href="/services/electrical">Electrical</a></li>
+        <li><a href="/services/plumbing">Plumbing</a></li>
+        <li><a href="/services/carpentry">Carpentry</a></li>
+        <li><a href="#directory" data-filter-emergency>Emergency</a></li>
       </ul>
     </div>
     <div>
@@ -2900,11 +2960,11 @@ body.cart-open .cart-drawer{
     <button class="modal-close" data-close-grow aria-label="Close">×</button>
     <div id="growOffer">
       <span class="grow-icon">🐝</span>
-      <h3 class="grow-title">Grow Your <em>Business</em></h3>
-      <p class="grow-sub">Reach thousands of local customers daily. Advertise &amp; get WhatsApp orders?</p>
+      <h3 class="grow-title">Grow Your <em>Service Business</em></h3>
+      <p class="grow-sub">Reach thousands of local customers daily. Get found, get booked, get paid.</p>
       <ul class="grow-list">
         <li>📣 Advertise to Thousands</li>
-        <li>💬 Direct WhatsApp Orders</li>
+        <li>💬 Direct WhatsApp Enquiries</li>
         <li>📍 Boost Local Visibility</li>
         <li>🤝 Build Customer Trust</li>
       </ul>
@@ -2916,20 +2976,20 @@ body.cart-open .cart-drawer{
     <div class="grow-success" id="growSuccess">
       <span class="spin-bee">🐝</span>
       <h4>Redirecting to WhatsApp…</h4>
-      <p>We'll get back to you shortly with pricing &amp; setup details.</p>
+      <p>We'll get back to you shortly with pricing & setup details.</p>
     </div>
   </div>
 </div>
 
-<!-- ══════════ PRODUCT QUICKVIEW MODAL ══════════ -->
-<div class="modal-veil" id="prodModal" role="dialog" aria-modal="true" aria-label="Product details">
+<!-- ══════════ SERVICE QUICKVIEW MODAL ══════════ -->
+<div class="modal-veil" id="prodModal" role="dialog" aria-modal="true" aria-label="Service details">
   <div class="modal-card">
     <button class="modal-close" id="prodClose" aria-label="Close">×</button>
     <span class="prod-biz" id="prodBiz"></span>
     <h3 class="prod-name" id="prodName"></h3>
     <div class="prod-media">
-      <img id="prodImg" src="" alt="Product">
-      <div class="prod-loading" id="prodLoading">🐝 Loading product…</div>
+      <img id="prodImg" src="" alt="Service">
+      <div class="prod-loading" id="prodLoading">🐝 Loading service…</div>
     </div>
     <div class="prod-price" id="prodPrice"></div>
     <div class="qty-row">
@@ -2941,19 +3001,19 @@ body.cart-open .cart-drawer{
       </div>
     </div>
     <div class="prod-actions">
-      <button class="btn-hive dark" id="prodAdd">🛒 Add to Cart</button>
-      <button class="btn-hive line" id="prodBuy" style="border-color:var(--hive-950);color:var(--hive-950)">💬 Buy via WhatsApp</button>
+      <button class="btn-hive dark" id="prodAdd">📋 Add to Quote List</button>
+      <button class="btn-hive line" id="prodBuy" style="border-color:var(--hive-950);color:var(--hive-950)">💬 Request via WhatsApp</button>
     </div>
-    <a class="prod-details" id="prodDetails" href="#" target="_blank" rel="noopener">Product Details ↗</a>
+    <a class="prod-details" id="prodDetails" href="#" target="_blank" rel="noopener">Service Details ↗</a>
   </div>
 </div>
 
 <!-- ══════════ CART DRAWER ══════════ -->
 <div class="ht-overlay" id="cartOverlay"></div>
-<aside class="cart-drawer" id="cartDrawer" aria-label="Your carts">
+<aside class="cart-drawer" id="cartDrawer" aria-label="Your quotes">
   <div class="cart-head">
-    <h4>🛒 Your Carts <span class="sub">You have items from multiple businesses. Select a cart to view or manage:</span></h4>
-    <button class="cart-close" id="cartClose" aria-label="Close cart">×</button>
+    <h4>📋 My Quote Requests <span class="sub">You have requests from multiple service providers. Select to view or manage:</span></h4>
+    <button class="cart-close" id="cartClose" aria-label="Close">×</button>
   </div>
   <div class="cart-body" id="cartBody"></div>
   <div class="cart-foot" id="cartFoot"></div>
@@ -2971,13 +3031,13 @@ body.cart-open .cart-drawer{
     <button id="chatClose" aria-label="Close chat">×</button>
   </div>
   <div class="chat-msgs" id="chatMsgs">
-    <div class="msg bot">👋 Hi! I'm Beelal, the Hive Assistant. How may I <strong>Bee</strong> of service?</div>
+    <div class="msg bot">👋 Hi! I'm Beelal, the Hive Assistant. Need help finding a service provider?</div>
   </div>
   <div class="chat-quick" id="chatQuick">
-    <button data-q="What is Hive Times?">What is Hive Times?</button>
-    <button data-q="How to join?">How to join?</button>
-    <button data-q="Benefits?">Benefits?</button>
-    <button data-q="Business Growth?">Business Growth?</button>
+    <button data-q="Find an electrician">Find an electrician</button>
+    <button data-q="Emergency plumber">Emergency plumber</button>
+    <button data-q="How to book?">How to book?</button>
+    <button data-q="List my business">List my business</button>
   </div>
   <form class="chat-input" id="chatForm">
     <input type="text" id="chatInput" placeholder="Ask Beelal anything…" aria-label="Chat message">
@@ -3098,28 +3158,22 @@ $$("[data-scramble]").forEach(function(k){ k.setAttribute("data-text", k.textCon
 restartAuto();
 
 /* ============================================================
-   FILTERS — Business + Location buttons work like hivetimes:
-   choosing an option filters the directory grid live.
+   FILTERS — Service + Location buttons
    ============================================================ */
 var state = { cat: "all", loc: "all", q: "" };
 var cards = $$(".biz-card");
 var totalCards = cards.length;
 
 var CAT_LABELS = {
-  all:"All Niches", household:"Household", clothing:"Clothing", medication:"Medication",
-  baking:"Baking", meat:"Meat", frozen:"Frozen", electronics:"Electronics",
-  automotive:"Automotive", "food-bev":"Food & Bev", building:"Building",
-  professional:"Professional", wholesale:"Wholesale"
+  all:"All Services", electrical:"Electrical", plumbing:"Plumbing", carpentry:"Carpentry",
+  painting:"Painting", cleaning:"Cleaning", landscaping:"Landscaping", automotive:"Automotive",
+  security:"Security", moving:"Moving", emergency:"Emergency", wellness:"Wellness", tech:"Tech & Digital"
 };
 var LOC_LABELS = {
-  all:"All Locations", johannesburg:"Johannesburg", sandton:"Sandton", lenasia:"Lenasia",
-  azadville:"Azadville", capetown:"Cape Town", "kwazulu-natal":"KwaZulu-Natal",
-  "eastern-cape":"Eastern Cape", "free-state":"Free State", limburg:"Limpopo",
-  limburg2:"Limpopo", limburg3:"Limpopo",
-  limburg4:"Limpopo",
-  limburg5:"Limpopo",
-  "north-west":"North West", "northern-cape":"Northern Cape",
-  mpumalanga:"Mpumalanga", limpopo:"Limpopo"
+  all:"All Locations", johannesburg:"Johannesburg", sandton:"Sandton", pretoria:"Pretoria",
+  capetown:"Cape Town", durban:"Durban", "kwazulu-natal":"KwaZulu-Natal",
+  "eastern-cape":"Eastern Cape", "free-state":"Free State", limpopo:"Limpopo",
+  mpumalanga:"Mpumalanga", "north-west":"North West", "northern-cape":"Northern Cape"
 };
 
 function applyFilters(){
@@ -3133,11 +3187,11 @@ function applyFilters(){
     card.classList.toggle("hide", !show);
     if (show) visible++;
   });
-  $("#gridCount").textContent = "Showing " + visible + " of " + totalCards + " businesses";
+  $("#gridCount").textContent = "Showing " + visible + " of " + totalCards + " services";
   $("#filterResult").innerHTML =
     "Filtering: <strong>" + CAT_LABELS[state.cat] + "</strong> · <strong>" +
     (LOC_LABELS[state.loc] || "All Locations") + "</strong>" +
-    (state.q ? " · “" + state.q + "”" : "");
+    (state.q ? " · " + state.q : "");
   $("#emptyState").classList.toggle("show", visible === 0);
   renderPills();
 }
@@ -3146,7 +3200,7 @@ function renderPills(){
   var box = $("#activePills");
   box.innerHTML = "";
   if (state.cat !== "all"){
-    box.appendChild(makePill("🐝 " + CAT_LABELS[state.cat], function(){ setCategory("all"); }));
+    box.appendChild(makePill("🛠️ " + CAT_LABELS[state.cat], function(){ setCategory("all"); }));
   }
   if (state.loc !== "all"){
     box.appendChild(makePill("📍 " + (LOC_LABELS[state.loc] || state.loc), function(){ setLocation("all"); }));
@@ -3247,12 +3301,12 @@ $("#resetFilters").addEventListener("click", function(){
   setLocation("all");
   toast("Filters cleared 🐝");
 });
-$$("[data-filter-wholesale]").forEach(function(el){
+$$("[data-filter-emergency]").forEach(function(el){
   el.addEventListener("click", function(e){
     if (el.tagName === "BUTTON") e.preventDefault();
-    setCategory("wholesale");
+    setCategory("emergency");
     $("#directory").scrollIntoView({ behavior: RM ? "auto" : "smooth" });
-    toast("Showing Wholesale businesses 📦");
+    toast("Showing Emergency Services 🚨");
   });
 });
 
@@ -3340,20 +3394,23 @@ function growWa(message){
   setTimeout(closeGrow, 3400);
 }
 $("#growYes").addEventListener("click", function(){
-  growWa("Hi Hive Times! ✅ Yes, I'm interested in advertising & getting WhatsApp orders for my business. Please send me pricing & setup details. 🐝");
+  growWa("Hi Hive Times! ✅ Yes, I'm interested in listing my service business. Please send me pricing & setup details. 🐝");
 });
 $("#growPremium").addEventListener("click", function(){
   growWa("Hi Hive Times! 🚀 I'd like a Premium Website on hivetimes.co.za. Please send me pricing & setup details.");
 });
 
 /* ============================================================
-   PRODUCT QUICKVIEW + MULTI-BUSINESS CART
+   SERVICE QUICKVIEW + MULTI-PROVIDER QUOTE LIST
    ============================================================ */
 var prodModal = $("#prodModal");
 var prodState = { biz:"", product:"", price:0, qty:1, url:"" };
 var carts = {}; /* biz -> [{name, price, qty}] */
 
-function money(n){ return "R" + n.toLocaleString("en-ZA", { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+function money(n){
+  if (n === 0) return "Free Quote";
+  return "R" + n.toLocaleString("en-ZA", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
 
 function openProd(btn){
   var card = btn.closest(".biz-card");
@@ -3427,13 +3484,13 @@ function updateCartBadge(){
 $("#prodAdd").addEventListener("click", function(){
   addToCart(prodState.biz, prodState.product, prodState.price, prodState.qty);
   closeProd();
-  toast("Added to " + prodState.biz + "'s cart 🛒🐝");
+  toast("Added to " + prodState.biz + "'s quote list 📋🐝");
   renderCart(currentCartView);
 });
 $("#prodBuy").addEventListener("click", function(){
-  var msg = "Hi " + prodState.biz + "! 🐝 I'd like to order: " +
+  var msg = "Hi " + prodState.biz + "! 🐝 I'd like to request: " +
     prodState.qty + " × " + prodState.product +
-    " (" + money(prodState.price * prodState.qty) + ") via Hive Times.";
+    (prodState.price > 0 ? " (" + money(prodState.price * prodState.qty) + ")" : "") + " via Hive Times.";
   window.open("https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(msg), "_blank");
 });
 
@@ -3471,8 +3528,8 @@ function renderCart(view){
     body.innerHTML =
       '<div class="cart-empty">' +
         '<span class="big-bee">🐝</span>' +
-        '<h4 style="font-family:var(--font-display);margin-top:10px">Your carts are empty</h4>' +
-        '<p style="margin-top:6px;font-size:.9rem">Browse the hive and tap the 🛒 hexagon on any business card to add products.</p>' +
+        '<h4 style="font-family:var(--font-display);margin-top:10px">Your quote list is empty</h4>' +
+        '<p style="margin-top:6px;font-size:.9rem">Browse the hive and tap the 📋 hexagon on any service card to request a quote.</p>' +
       '</div>';
     return;
   }
@@ -3481,7 +3538,7 @@ function renderCart(view){
   if (!currentCartView){
     var total = document.createElement("div");
     total.className = "cart-combined-total";
-    total.innerHTML = "<span>All Carts Combined</span><span>" + money(cartTotal()) + "</span>";
+    total.innerHTML = "<span>All Quotes Combined</span><span>" + money(cartTotal()) + "</span>";
     body.appendChild(total);
 
     bizKeys.forEach(function(b){
@@ -3490,7 +3547,7 @@ function renderCart(view){
       var row = document.createElement("div");
       row.className = "cart-biz-row";
       row.innerHTML =
-        "<div><h5>" + b + "</h5><small>" + count + " item" + (count > 1 ? "s" : "") + " · " + money(sub) + "</small></div>" +
+        "<div><h5>" + b + "</h5><small>" + count + " request" + (count > 1 ? "s" : "") + " · " + money(sub) + "</small></div>" +
         '<span class="chev">→</span>';
       row.addEventListener("click", function(){ renderCart(b); });
       body.appendChild(row);
@@ -3498,16 +3555,16 @@ function renderCart(view){
 
     var wa = document.createElement("button");
     wa.className = "btn-hive dark";
-    wa.textContent = "💬 Order All via WhatsApp";
+    wa.textContent = "💬 Request All via WhatsApp";
     wa.addEventListener("click", function(){
-      var lines = ["Hi Hive Times! 🐝 My combined order:"];
+      var lines = ["Hi Hive Times! 🐝 My combined service requests:"];
       bizKeys.forEach(function(b){
         lines.push("— " + b + ":");
         carts[b].forEach(function(i){
-          lines.push("   " + i.qty + " × " + i.name + " (" + money(i.price * i.qty) + ")");
+          lines.push("   " + i.qty + " × " + i.name + (i.price > 0 ? " (" + money(i.price * i.qty) + ")" : ""));
         });
       });
-      lines.push("TOTAL: " + money(cartTotal()));
+      if (cartTotal() > 0) lines.push("ESTIMATED TOTAL: " + money(cartTotal()));
       window.open("https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(lines.join("\n")), "_blank");
     });
     foot.appendChild(wa);
@@ -3562,13 +3619,13 @@ function renderCart(view){
     '<div class="cart-subtotal"><span>Subtotal — ' + currentCartView + '</span><span>' + money(sub2) + '</span></div>';
   var waBtn = document.createElement("button");
   waBtn.className = "btn-hive dark";
-  waBtn.textContent = "💬 Order via WhatsApp";
+  waBtn.textContent = "💬 Request via WhatsApp";
   waBtn.addEventListener("click", function(){
-    var lines = ["Hi " + currentCartView + "! 🐝 My order via Hive Times:"];
+    var lines = ["Hi " + currentCartView + "! 🐝 My service request via Hive Times:"];
     items.forEach(function(i){
-      lines.push(i.qty + " × " + i.name + " (" + money(i.price * i.qty) + ")");
+      lines.push(i.qty + " × " + i.name + (i.price > 0 ? " (" + money(i.price * i.qty) + ")" : ""));
     });
-    lines.push("TOTAL: " + money(sub2));
+    if (sub2 > 0) lines.push("ESTIMATED TOTAL: " + money(sub2));
     window.open("https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(lines.join("\n")), "_blank");
   });
   foot.appendChild(waBtn);
@@ -3576,15 +3633,15 @@ function renderCart(view){
   var links = document.createElement("div");
   links.className = "mini-links";
   var other = document.createElement("button");
-  other.textContent = "View Other Carts";
+  other.textContent = "View Other Quotes";
   other.addEventListener("click", function(){ renderCart(null); });
   var clear = document.createElement("button");
-  clear.textContent = "Clear This Cart";
+  clear.textContent = "Clear This List";
   clear.addEventListener("click", function(){
     delete carts[currentCartView];
     updateCartBadge();
     renderCart(null);
-    toast("Cart cleared 🐝");
+    toast("Quote list cleared 🐝");
   });
   links.appendChild(other);
   links.appendChild(clear);
@@ -3629,16 +3686,20 @@ function botReply(text, delay){
 }
 
 var ANSWERS = [
-  { keys: ["what is", "about", "hive times?"], a: "Hive Times is South Africa's local business directory &amp; marketplace 🐝 — connecting you with trusted local businesses since 2026. Browse by niche and location, then order straight via WhatsApp!" },
-  { keys: ["join", "sign up", "register", "list my"], a: "Joining the hive is easy! ✨ Tap <strong>Join the Hive</strong> in the menu, tell us your business name, products and location, then request a quote via WhatsApp. We'll set everything up for you." },
-  { keys: ["benefit", "why", "advantage"], a: "The benefits: 💬 direct WhatsApp orders, 📍 boosted local visibility, 🤝 customer trust, and 🚀 your own premium website under hivetimes.co.za." },
-  { keys: ["grow", "growth", "advertise", "market", "premium"], a: "Ready to buzz? 🐝 Listing on hivetimes.co.za puts you in front of thousands of local customers daily. Tap the 🚀 <strong>Get a Premium Website</strong> button and we'll sort you out!" },
-  { keys: ["price", "cost", "quote", "how much", "fee"], a: "Every business is quoted individually — and getting a quote is free! 🐝 Tap <strong>Join the Hive</strong> and request one via WhatsApp. We'll get back to you shortly with pricing &amp; setup details." },
-  { keys: ["whatsapp", "order", "buy"], a: "Most of our businesses take orders directly on WhatsApp 💬 — tap 🛒 on a card, build your cart, then hit <em>Order via WhatsApp</em>. Simple!" },
-  { keys: ["location", "area", "where", "region", "province"], a: "The hive covers all of South Africa 🇿🇦 — Johannesburg, Sandton, Lenasia, Azadville, Cape Town, KwaZulu-Natal, and every province in between. Use the 🌍 Location button to filter!" },
-  { keys: ["wholesale", "bulk", "cash & carry", "cash and carry"], a: "We love our wholesalers 📦! Use the 🐝 Business button → <strong>Wholesale</strong> to see Cash &amp; Carry giants like Devland, Africa C&amp;C, Jumbo and more." },
-  { keys: ["contact", "phone", "email", "support", "help"], a: "You can reach the hive on 📞 <a href='tel:+27649220145' style='color:var(--honey-deep);font-weight:700'>+27 64 922 0145</a> or ✉️ hivetimes.co.za@gmail.com. We respond fast — bee-lieve it! 🐝" },
-  { keys: ["hi", "hello", "hey", "sawubona", "dumela"] , a: "Hello there! 👋 Welcome to the hive. Ask me about joining, benefits, or how to get WhatsApp orders for your business. 🐝" }
+  { keys: ["electrician", "electrical", "electric", "wiring", "coc", "solar", "inverter", "loadshedding"], a: "Looking for an electrician? ⚡ Use the <strong>Service Type</strong> button and select <em>Electrical Services</em> or <em>Emergency</em> to find trusted professionals like Presto Electrical, Genlec, and Elexell across Johannesburg and beyond!" },
+  { keys: ["plumber", "plumbing", "leak", "geyser", "pipe", "drain", "emergency plumber"], a: "Need a plumber? 🔧 Filter by <em>Emergency Services</em> or search for 'plumbing' to find 24/7 experts like Monster Plumbing and DJK Services for leak detection, geyser installations, and burst pipe repairs." },
+  { keys: ["carpenter", "wood", "furniture", "cupboards", "kitchen", "flooring", "laminate", "vinyl"], a: "For woodwork and flooring 🪵, check out our <em>Carpentry & Woodwork</em> and <em>Flooring Solutions</em> categories. You'll find experts like Horizon Home Designs, Finfloor, and Derrington Floors for custom furniture and premium installations." },
+  { keys: ["catering", "food", "event", "wedding", "platters"], a: "Planning an event? 🎉 Browse our <em>Catering & Events</em> category to find premium caterers like JEM Catering, Moemas, and The Kitchen Mafia for weddings, corporate functions, and private parties." },
+  { keys: ["car wash", "detailing", "auto", "mechanic", "car"], a: "Need car care? 🚗 Check out <em>Automotive Services</em> for top-rated mobile detailing like Precision Glaze, RZ Auto Spa, and Cleansmith. They come to you for paint correction, ceramic coating, and deep cleaning!" },
+  { keys: ["security", "cctv", "alarm", "guard", "elevator"], a: "For security and access 🔒, explore providers like Intell Security and IES Consulting Elevator for CCTV, alarms, biometric access, and premium elevator solutions." },
+  { keys: ["tech", "digital", "web", "seo", "phone repair", "marketing"], a: "Need digital or tech help? 💻 Filter by <em>Digital & Tech</em> to find experts like JTC Consulting for web dev/SEO, or UrbanFix for expert phone repairs and accessories." },
+  { keys: ["charity", "npo", "donate", "community", "wellness"], a: "Want to give back or find wellness? ❤️ Check out <em>Charity & Community</em> for NPOs like Shining Stars and Water Of Life, or <em>Health & Wellness</em> for services like Nabd by K." },
+  { keys: ["join", "sign up", "register", "list my", "advertise", "list my business"], a: "Joining the hive is easy! ✨ Tap <strong>Join the Hive</strong> in the menu, tell us your business name, services and location, then request a quote via WhatsApp. We'll set everything up for you." },
+  { keys: ["benefit", "why", "advantage"], a: "The benefits: 💬 direct WhatsApp enquiries, 📍 boosted local visibility, 🤝 customer trust, and 🚀 your own premium website under hivetimes.co.za." },
+  { keys: ["price", "cost", "quote", "how much", "fee"], a: "Every service provider sets their own rates, and getting a quote is free! 🐝 Tap 📋 on any service card to request a quote directly via WhatsApp." },
+  { keys: ["whatsapp", "contact", "book", "request", "how to book"], a: "Most of our professionals take bookings directly on WhatsApp 💬 — tap 📋 on a card, build your quote list, then hit <em>Request via WhatsApp</em>. Simple!" },
+  { keys: ["location", "area", "where", "region", "province"], a: "The hive covers all of South Africa 🇿🇦 — Johannesburg, Sandton, Cape Town, KwaZulu-Natal, and National providers. Use the 📍 Location button to filter!" },
+  { keys: ["hi", "hello", "hey", "sawubona", "dumela"] , a: "Hello there! 👋 Welcome to the Hive Times Services Directory. Ask me about finding an electrician, plumber, caterer, or how to list your business. 🐝" }
 ];
 
 function answerFor(q){
